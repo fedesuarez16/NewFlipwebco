@@ -6,19 +6,19 @@ import Image from 'next/image';
 const slider1 = [
     {
         color: "#e3e5e7",
-        src: "c2.jpg"
+        src: "sanvicente.jpeg"
     },
     {
         color: "#d6d7dc",
-        src: "decimal.jpg"
+        src: "lionseg.png"
     },
     {
         color: "#e3e3e3",
-        src: "funny.jpg"
+        src: "hexopanels.png"
     },
     {
         color: "#21242b",
-        src: "google.jpg"
+        src: "yecyoc.jpeg"
     }
 ]
 
@@ -29,7 +29,7 @@ const slider2 = [
     },
     {
         color: "#e5e0e1",
-        src: "panda.jpg"
+        src: "sanvicente2.jpeg"
     },
     {
         color: "#d7d4cf",
@@ -37,7 +37,7 @@ const slider2 = [
     },
     {
         color: "#e1dad6",
-        src: "wix.jpg"
+        src: "aberturas.png"
     }
 ]
 
