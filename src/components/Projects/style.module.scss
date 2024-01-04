@@ -70,3 +70,24 @@
     
 }
 
+
+@media (max-width: 768px) {
+    .projects {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .body {
+        padding: 1rem;
+    }
+
+    .modalContainer {
+        width: 90vw;
+    }
+
+    .cursor, .cursorLabel {
+        width: 8vw;
+        height: 8vw;
+        font-size: 2vw;
+    }
+}
