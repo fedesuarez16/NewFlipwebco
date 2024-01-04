@@ -19,7 +19,7 @@ export default function index() {
                 }
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Somos la convergencia entre el diseño, la tecnologia y la innovacion.</motion.p>
-                <div data-scroll data-scroll-speed={0.1}>
+                <div data-scroll data-scroll-speed={0.5}>
                     <Rounded className={styles.button}>
                         <p>Ver mas</p>
                     </Rounded>
