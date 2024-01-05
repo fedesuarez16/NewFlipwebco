@@ -14,7 +14,7 @@ const projects = [
     color: "#000000"
   },
   {
-    title: "Aplicaciones Web & Moviles",
+    title: "Apps Web & Moviles",
     src: "officestudio.png",
     color: "#8C8C8C"
   },
