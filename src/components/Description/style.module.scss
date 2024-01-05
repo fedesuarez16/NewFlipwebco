@@ -21,7 +21,7 @@
                 }
                 .mask{
                     position: relative;
-                    overflow: hidden;
+                    
                     display: inline-flex;
                 }
             }
@@ -59,63 +59,64 @@
         border: 1px solid grey;
     }
 }
-
 @media (max-width: 768px) {
-
-    .description{
-        padding-left: 200px;
-        padding-right: 200px;
-        margin-top: 200px;
-        display: flex;
-        justify-content: center;
-        .body{
-            max-width: 1400px;
-            display: flex;
-            gap: 50px;
-            position: relative;
-            p{
-                margin: 0px;
-                &:nth-of-type(1){
-                    font-size: 22px;
-                    gap: 8px;
-                    line-height: 1.3;
-                    span{
-                        margin-left: 2px;
-                    }
-                    .mask{
-                        position: relative;
-                        overflow: hidden;
-                        display: inline-flex;
-                    }
-                }
-                &:nth-of-type(2){
-                    font-size: 16px;
-                    width: 80%;
-                    font-weight: 300;
-                }
+    .description {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+  
+      .body {
+        max-width: 100%;
+        flex-direction: column; /* Adjust the layout for mobile */
+        
+        p {
+          margin: 0px;
+          &:nth-of-type(1) {
+            font-size: 22px;
+            gap: 8px;
+            line-height: 1.3;
+            span {
+              margin-left: 2px;
             }
-            .button{
-                top: 80%;
-                left: calc(100% - 200px); 
-                width: 180px;
-                height: 180px;
-                background-color: #1C1D20;
-                color: white;
-                border-radius: 50%;
-                position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                p{
-                    margin: 0px;
-                    font-size: 16px;
-                    font-weight: 300;
-                    position: relative;
-                    z-index: 1;
-                }
+            .mask {
+              position: relative;
+              overflow: hidden;
+              display: inline-flex;
             }
+          }
+          &:nth-of-type(2) {
+            font-size: 16px;
+            width: 100%; /* Adjust the width for mobile */
+            font-weight: 300;
+          }
         }
-
-    
-    }}
+  
+        .button {
+          top: auto; /* Remove top property for mobile */
+          left: auto; /* Remove left property for mobile */
+          margin-top: 20px; /* Add margin-top for separation */
+          width: 100%;
+          max-width: 180px;
+          height: 180px;
+          background-color: #1C1D20;
+          color: white;
+          border-radius: 50%;
+          position: static; /* Change to static for mobile */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          p {
+            margin: 0px;
+            font-size: 16px;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+  
