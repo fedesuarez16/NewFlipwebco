@@ -49,7 +49,7 @@ export default function index() {
                 </p>
                        
             </div>
-            <div className={styles.nav}>
+            {/* <div className={styles.nav}>
                 <Magnetic>
                     <div className={styles.el}>
                         <a>Work</a>
@@ -68,7 +68,7 @@ export default function index() {
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
-            </div>
+            </div> */}
         </div>
         <div ref={button} className={styles.headerButtonContainer}>
             <Rounded onClick={() => {setIsActive(!isActive)}} className={`${styles.button}`}>

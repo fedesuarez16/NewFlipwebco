@@ -14,7 +14,7 @@
   
       // Adjusted styles for all screens
       width: 100%;
-      left: 0;
+      left: -40px;
   
       .project {
         width: 25%;
@@ -25,7 +25,7 @@
   
         .imageContainer {
           position: relative;
-          width: 80%;
+          width: 90%;
           height: 80%;
   
           img {
@@ -36,7 +36,7 @@
     }
   
     .circleContainer {
-      background-color: red;
+      background-color: rgb(56, 56, 56);
       position: relative;
       margin-top: 100px;
       width: 91%;
@@ -52,7 +52,18 @@
         box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
       }
     }
-  
+
+    @media (max-width: 768px) {
+
+        .slider {
+           width: 100%;
+           left: -80px;
+
+        }      
+       
+      }
 
   }
+
+
   
