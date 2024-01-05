@@ -9,7 +9,7 @@ export default function index() {
     const description = useRef(null);
     const isInView = useInView(description)
     return (
-        <div ref={description} className={styles.description}>
+        <div data-scroll data-scroll-speed={1}  ref={description} className={styles.description}>
             <div className={styles.body}>
                 <p>
                 {
@@ -20,7 +20,9 @@ export default function index() {
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Somos la convergencia entre el diseño, la tecnologia y la innovacion.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
-                
+                    <Rounded className={styles.button}>
+                        <p>Ver mas</p>
+                    </Rounded>
                 </div>
             </div>
         </div>
