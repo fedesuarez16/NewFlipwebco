@@ -59,53 +59,63 @@
         border: 1px solid grey;
     }
 }
+
 @media (max-width: 768px) {
-    .description {
-        padding-left: 20px;  /* Adjust the padding for smaller screens */
-        padding-right: 20px;  /* Adjust the padding for smaller screens */
+
+    .description{
+        padding-left: 200px;
+        padding-right: 200px;
         margin-top: 200px;
         display: flex;
         justify-content: center;
-
-        .body {
-            max-width: 100%;  /* Adjust the max-width for smaller screens */
-            width: 100%;  /* Adjust the width for smaller screens */
+        .body{
+            max-width: 1400px;
             display: flex;
-            flex-direction: column;  /* Stack elements vertically on smaller screens */
-            align-items: center;  /* Center elements on smaller screens */
-            
-            p {
-                margin: 0;
-
-                &:nth-of-type(1) {
+            gap: 50px;
+            position: relative;
+            p{
+                margin: 0px;
+                &:nth-of-type(1){
                     font-size: 22px;
                     gap: 8px;
                     line-height: 1.3;
-                    span {
+                    span{
                         margin-left: 2px;
                     }
-                    .mask {
+                    .mask{
                         position: relative;
                         overflow: hidden;
                         display: inline-flex;
                     }
                 }
-
-                &:nth-of-type(2) {
+                &:nth-of-type(2){
                     font-size: 16px;
                     width: 80%;
                     font-weight: 300;
                 }
             }
-
-            .button {
-                top: auto;  /* Adjust the positioning for smaller screens */
-                left: auto;  /* Adjust the positioning for smaller screens */
-                bottom: 20px;  /* Adjust the positioning for smaller screens */
-                right: 20px;  /* Adjust the positioning for smaller screens */
-                width: 100%;  /* Adjust the width for smaller screens */
-                max-width: 180px;  /* Adjust the max-width for smaller screens */
+            .button{
+                top: 80%;
+                left: calc(100% - 200px); 
+                width: 180px;
+                height: 180px;
+                background-color: #1C1D20;
+                color: white;
+                border-radius: 50%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                p{
+                    margin: 0px;
+                    font-size: 16px;
+                    font-weight: 300;
+                    position: relative;
+                    z-index: 1;
+                }
             }
         }
-    }
-}
+
+    
+    }}
