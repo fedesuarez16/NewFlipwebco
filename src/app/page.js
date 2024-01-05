@@ -9,6 +9,7 @@ import Description from '../components/Description';
 import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import Head from 'next/head';
+import Proj from '@/components/Proj';
 
 
 export default function Home() {
@@ -42,6 +43,7 @@ export default function Home() {
       <Description />
       <Projects />
       <SlidingImages />
+      <Proj/>
       <Contact />
     </main>
   )
