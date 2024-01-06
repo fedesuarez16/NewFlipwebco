@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const slider1 = [
     {
-        color: "#f6f6a5",
+        color: "#FFFF00",
         src: "sanvicente.jpeg"
     },
     {
@@ -32,7 +32,7 @@ const slider2 = [
         src: "sanvicente2.jpeg"
     },
     {
-        color: "#f6f6a5",
+        color: "#FFFF00",
         src: "powell.jpg"
     },
     {
