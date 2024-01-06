@@ -7,7 +7,7 @@
 
     img{
       object-fit: cover;
-      filter: brightness(5%);
+      filter: brightness(10%);
 
     }
     
@@ -54,5 +54,27 @@
         margin-bottom: 40px;
       }
     }
+
+    @media (max-width: 768px) {
+      .description{
+        left: 55%;
+      }
+
+       
+    .slider p{
+      
+      font-size: 180px;
+      top: 20%;
+      width: 100%;
+
+    
+    }
+    
+
+            
+    
+    }
   }
+
+  
   

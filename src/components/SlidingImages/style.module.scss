@@ -1,9 +1,26 @@
+
+.container {
+    text-align: center;  
+    margin-top: 200px;
+
+
+  }
+  
+  .title {
+   
+    
+    font-size: 3.6em; 
+    font-weight: 400;
+    padding: 20px;
+    
+  }
+  
 .slidingImages {
     display: flex;
     flex-direction: column;
     gap: 3vw;
+    padding-top: 100px;
     position: relative;
-    margin-top: 200px;
     background-color: white;
     z-index: 1;
   
@@ -11,10 +28,10 @@
       display: flex;
       position: relative;
       gap: 3vw;
+      justify-content: center; // Center the items horizontally
   
       // Adjusted styles for all screens
       width: 100%;
-      left: -40px;
   
       .project {
         width: 25%;
@@ -36,7 +53,6 @@
     }
   
     .circleContainer {
-      background-color: rgb(56, 56, 56);
       position: relative;
       margin-top: 100px;
       width: 91%;
@@ -52,18 +68,28 @@
         box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
       }
     }
-
+  
     @media (max-width: 768px) {
 
-        .slider {
-           width: 100%;
-           left: -80px;
+        .title {
+            font-size: 1.6em; 
+            font-weight: 400;
+            padding: 20px;
+        }
 
-        }      
-       
-      }
+        .container {
+            text-align: center;  
+            margin-top: 200px;
+        
+          }
+        .slidingImages {
+            margin-top: 200px;
 
+        }
+
+          
+           
+
+    }
   }
-
-
   

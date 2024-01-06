@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 const slider1 = [
     {
-        color: "#e3e5e7",
+        color: "#f6f6a5",
         src: "sanvicente.jpeg"
     },
     {
-        color: "#d6d7dc",
+        color: "#30302d",
         src: "lionseg.png"
     },
     {
@@ -24,7 +24,7 @@ const slider1 = [
 
 const slider2 = [
     {
-        color: "#d4e3ec",
+        color: "#30302d",
         src: "maven.jpg"
     },
     {
@@ -32,7 +32,7 @@ const slider2 = [
         src: "sanvicente2.jpeg"
     },
     {
-        color: "#d7d4cf",
+        color: "#f6f6a5",
         src: "powell.jpg"
     },
     {
@@ -54,6 +54,12 @@ export default function index() {
     const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
 
     return (
+
+        <section className={styles.container}>
+          <h2 className={styles.title}>Algunos de nuestros trabajos   <br />
+                <span className={styles.arrowIcon}>↓</span>
+         </h2> {/* Added title */}
+
         <div ref={container} className={styles.slidingImages}>
             <motion.div style={{x: x1}} className={styles.slider}>
                     {
@@ -87,5 +93,7 @@ export default function index() {
                     <div className={styles.circle}></div>
                 </motion.div>
         </div>
+
+        </section>
     )
 }

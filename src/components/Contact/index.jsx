@@ -23,15 +23,15 @@ export default function Index() {
                             <Image 
                             fill={true}
                             alt={"image"}
-                            src={`/images/background.jpg`}
+                            src={`/images/logo.png`}
                             />
                         </div>
-                        <h2>Let's work</h2>
+                        <h2>Trabajemos Juntos </h2>
                     </span>
-                    <h2>together</h2>
+                    <h2>Escribinos</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
-                        <Rounded  backgroundColor={"#334BD3"} className={styles.button}>
-                            <p>Get in touch</p>
+                        <Rounded  backgroundColor={"#30302d"} className={styles.button}>
+                            <p>Contactar</p>
                         </Rounded>
                     </motion.div>
                     <motion.svg style={{rotate, scale: 2}} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
