@@ -3,6 +3,10 @@ import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
+import Image from 'next/image';
+
+
+
 export default function index() {
 
     const phrase = "Impulsando el crecimiento de negocios & marcas a traves del desarrollo de productos digitales exepcionales. ";
@@ -21,7 +25,15 @@ export default function index() {
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Somos la convergencia entre el diseño, la tecnologia y la innovacion.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
-                        <p>Ver mas</p>
+                        <p> 
+                        <Image 
+                            src="/images/logo.png"
+                            alt="background"
+                            height={50} // Specify the numeric height value in pixels
+                            width={70} // Specify the numeric width value in pixels
+                            style={{ display: 'block' }} // Add inline styles as needed
+                        />  
+                        </p>
                     </Rounded>
                 </div>
             </div>

@@ -28,7 +28,7 @@ export default function Index() {
                         </div>
                         <h2>Trabajemos Juntos </h2>
                     </span>
-                    <h2>Escribinos</h2>
+                    <h2>Escribinos un mensaje</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
                         <Rounded  backgroundColor={"#30302d"} className={styles.button}>
                             <p>Contactar</p>

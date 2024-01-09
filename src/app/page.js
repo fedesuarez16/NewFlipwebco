@@ -1,4 +1,6 @@
 'use client';
+/* eslint-disable */
+
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
@@ -12,7 +14,7 @@ import Head from 'next/head';
 import Proj from '@/components/Proj';
 
 
-export default function Home() {
+export default function Page() {
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -33,7 +35,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-    <Head>
+        <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
       </Head>
       <AnimatePresence mode='wait'>
