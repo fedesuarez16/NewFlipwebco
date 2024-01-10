@@ -4,7 +4,6 @@ import Logo from '../src/components/Header/logo';
 import { useRef, useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import { useInView, motion } from 'framer-motion';
-import { slideUp, opacity } from './animation';
 import { FaMobile, FaCog, FaSearch, FaWrench } from 'react-icons/fa'; // Importa los iconos que necesites
 import Rounded from '../src/common/RoundedButton'
 
@@ -50,7 +49,7 @@ export default function Paginas() {
             <p>
               {phrase.split(" ").map((word, index) => (
                 <span key={index} className={styles.mask}>
-                  <motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>
+                  <motion.span  custom={index} animate={isInView ? "open" : "closed"} key={index}>
                     {word}
                   </motion.span>
                 </span>
