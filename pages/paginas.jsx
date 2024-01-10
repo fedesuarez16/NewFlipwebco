@@ -6,6 +6,8 @@ import { Inter } from 'next/font/google';
 import { useInView, motion } from 'framer-motion';
 import { slideUp, opacity } from './animation';
 import { FaMobile, FaCog, FaSearch, FaWrench } from 'react-icons/fa'; // Importa los iconos que necesites
+import Rounded from '../src/common/RoundedButton'
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,6 +33,9 @@ export default function Paginas() {
         </div>
       </div>
 
+
+      
+
       <div className={styles.mainn}>
         <div className={styles.imageColumn}>
           <Image
@@ -49,9 +54,13 @@ export default function Paginas() {
                     {word}
                   </motion.span>
                 </span>
+
               ))}
-            </p>
+              <div className={styles.line}></div>
+               
+              </p>
           </div>
+          
         </div>
       </div>
 
@@ -59,30 +68,38 @@ export default function Paginas() {
       {/* Cuatro columnas con títulos, texto y iconos */}
       <div className={styles.fourColumns}>
         <div className={styles.column}>
-          <FaMobile size={40} color="#333" />
+          <FaMobile size={30} color="#2e2e2e" />
           <h3>Desarrollo Responsivo</h3>
-          <p>Nos aseguramos de que tu página web sea accesible desde cualquier dispositivo...</p>
+          <p>Creamos páginas web que se adaptan fluidamente a cualquier dispositivo, brindando una experiencia óptima. Garantizamos accesibilidad y atractivo visual en computadoras, tabletas y teléfonos móviles.</p>
         </div>
         <div className={styles.column}>
-          <FaCog size={40} color="#333" />
-          <h3>Funcionalidades Avanzadas</h3>
-          <p>Implementamos funcionalidades avanzadas según tus necesidades...</p>
+          <FaCog size={30} color="#2e2e2e" />
+          <h3>Diseño atractivo e intuitivo</h3>
+          <p>Un diseño visualmente atractivo que refleje la identidad de la marca y atraiga a los usuarios y Una estructura de navegación lógica y fácil de usar para mejorar la experiencia del usuario.</p>
         </div>
         <div className={styles.column}>
-          <FaSearch size={40} color="#333" />
+          <FaSearch size={30} color="#2e2e2e" />
           <h3>Optimización para Motores de Búsqueda (SEO)</h3>
-          <p>Nos aseguramos de que tu página sea fácilmente encontrada en los motores de búsqueda...</p>
+          <p>NPotenciamos la visibilidad online de tu página web. Implementamos estrategias que mejoran su posicionamiento en motores de búsqueda, aumentando la relevancia y atrayendo audiencias específicas.</p>
         </div>
         <div className={styles.column}>
-          <FaWrench size={40} color="#333" />
+          <FaWrench size={30} color="#2e2e2e" />
           <h3>Mantenimiento y Soporte Continuo</h3>
           <p>Nuestro compromiso no termina con el lanzamiento de tu página web...</p>
         </div>
       </div>
+      
       {/* Texto centrado debajo de las dos columnas */}
       <div className={styles.centeredText}>
+      <div className={styles.line}></div>
         <p>Transforma tu presencia digital con nuestras páginas web excepcionales y a medida. En [Tu Empresa], creamos experiencias online impactantes que cautivan a tus usuarios.</p>
+   
       </div>
+      
+
+
+
     </section>
+
   );
 }
