@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5% 10%;
-    border-top: 1px solid rgb(201, 201, 201);
+    border-bottom: 1px solid rgb(201, 201, 201);
     cursor: pointer;
     transition: all 0.2s;
     margin-right: 2%;
@@ -14,11 +14,10 @@
     .linkContainer {
 
     h2 {
-        font-size: 4vw;
+        font-size: 10vh;
         margin: 0;
         font-weight: 400;
         transition: all 0.4s;
-        color: black;
 
     }
 
@@ -26,11 +25,12 @@
         transition: all 0.4s;
         font-weight: 300;
         margin-top: 5px;
+        text-decoration: none;
 
     }
 
     &:last-of-type {
-        border-bottom: 1px solid rgb(201, 201, 201);
+        border-bottom: 1px solid rgb(252, 252, 252);
     }
 
     &:hover {
@@ -48,13 +48,15 @@
     }
 
     @media (max-width: 768px) {
+
+        .linkContainer{
             width: 90%;
         padding: 5% 5%;
         margin-left: 0;
         margin-right: 0;
 
         h2 {
-            font-size: 2.4rem;
+            font-size: 5vh;
         }
 
         &:hover {
@@ -66,4 +68,4 @@
             }
         }
     }
-}
+}}

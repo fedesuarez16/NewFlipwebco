@@ -13,13 +13,13 @@ export default function Project({ index, title, manageModal, route }) {
         manageModal(false, index, e.clientX, e.clientY);
       }}
       className={styles.project}
-      style={{ textDecoration: 'none' }} 
+     
     >
-      <Link href={route} style={{ textDecoration: 'none' }}  passHref >
-        <div style={{ textDecoration: 'none' }} s className={styles.linkContainer}>
-          <h2 style={{ textDecoration: 'none' }}   className={styles.title}>{title}</h2>
+        <div  className={styles.linkContainer}>
+          <h2 >{title}</h2>
         </div>
-      </Link>
+      
+      <Link href={route} passHref >
       <p>
         <Image
           src="/images/logo.png"
@@ -29,6 +29,7 @@ export default function Project({ index, title, manageModal, route }) {
           style={{ display: 'block' }}
         />
       </p>
+      </Link>
     </div>
   );
 }
