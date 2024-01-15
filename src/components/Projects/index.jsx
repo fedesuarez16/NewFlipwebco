@@ -11,29 +11,35 @@ const projects = [
   {
     title: "WebSites",
     src: "c2montreal.png",
-    color: "#000000"
+    color: "#000000",
+    route: "/paginas", // Add the route property
   },
   {
     title: "Apps Web & Moviles",
     src: "officestudio.png",
-    color: "#8C8C8C"
+    color: "#8C8C8C",
+    route: "/apps",
   },
   {
     title: "Plataformas Web",
     src: "locomotive.png",
-    color: "#EFE8D3"
+    color: "#EFE8D3",
+    route: "/platforms",
   },
   {
     title: "SEO",
     src: "silencio.png",
-    color: "#706D63"
+    color: "#706D63",
+    route: "/seo",
   },
   {
     title: "ChatBots AI",
     src: "silencio.png",
-    color: "#706D63"
-  }
-]
+    color: "#706D63",
+    route: "/chatbots",
+  },
+];
+
 
 const scaleAnimation = {
     initial: {scale: 0, x:"-50%", y:"-50%"},
@@ -86,7 +92,7 @@ export default function Home() {
     <div className={styles.body}>
       {
         projects.map( (project, index) => {
-          return <Project index={index} title={project.title} manageModal={manageModal} key={index}/>
+          return <Project  index={index} title={project.title} manageModal={manageModal} key={index}   route={project.route} />
         })
       }
     </div>
@@ -94,7 +100,7 @@ export default function Home() {
       <p>Tenes una idea o un proyecto?</p>
     </Rounded>
     <>
-        <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
+        {/* <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
             <div style={{top: index * -100 + "%"}} className={styles.modalSlider}>
             {
                 projects.map( (project, index) => {
@@ -112,7 +118,7 @@ export default function Home() {
             </div>
         </motion.div>
         <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
-        <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>Ir</motion.div>
+        <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>Ir</motion.div> */}
     </>
   </main>
   )
