@@ -37,16 +37,18 @@
     
   
   .main{
+
       position: relative;
       display: flex;
-      height: 80vh;
+      flex-direction: column; /* Always stack children in a column */
       gap: 50px;
-      margin-bottom: 20vh;
-      overflow: hidden;
+      overflow-x: hidden;
+      height: 60vh;
 
       @media (max-width: 768px) {
-        flex-direction: column;
-        height: auto;
+        margin-bottom: 20vh;
+        height: 0;
+
       }
     }
   
@@ -113,9 +115,13 @@
   }
    
     .imageColumn {
-      position: relative;
-      flex: 1;
+      align-items: center;
+      text-align: center  ;
       overflow: hidden;
+
+     
+
+
     }
     
     .textColumn {
@@ -163,24 +169,30 @@
   
     }
     
-    .sliderContainer{
-      position: absolute;
-      top: calc(100vh - 300px);
-    }
+   
     
     .slider{
       position: relative;
       white-space: nowrap;
+      text-align: center;
+      overflow: hidden;
+
     }
     
-    .slider p{
-      position: relative;
-      margin: 0px;
-      color: white;
+    .slider p {
+      margin-left: 10px;
+      color: rgb(27, 27, 27);
       font-size: 130px;
       font-weight: 500;
-      padding-right: 50px;
+      text-align: center;
+
+    
+      @media (max-width: 768px) {
+        font-size: 44px;
+        font-weight: 500;
+      }
     }
+    
     
     .slider p:nth-of-type(2){
       position: absolute;
@@ -194,7 +206,8 @@
       text-align: center;
       margin-bottom: 50px;
       overflow: hidden;  // Add this line
-  width: 100%;  // Add this line
+      width: 100%;  // Add this line
+      object-fit:contain;
 
       @media (max-width: 768px) {
         margin-bottom: 30px;

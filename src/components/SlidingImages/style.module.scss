@@ -4,15 +4,15 @@
     margin-top: 200px;
 
 
+    .title {
+     
+      
+      font-size: 4em; 
+      font-weight: 400;
+      padding: 20px;
+      
   }
   
-  .title {
-   
-    
-    font-size: 3em; 
-    font-weight: 400;
-    padding: 20px;
-    
   }
   
 .slidingImages {
@@ -71,25 +71,20 @@
   
     @media (max-width: 768px) {
 
-        .title {
-            font-size: 1.6em; 
+      
+      .container {
+        text-align: center;  
+        margin-top: 200px;
+
+        .title  {
             font-weight: 400;
             padding: 20px;
+            font-size: 1rem;
         }
-
-        .container {
-            text-align: center;  
-            margin-top: 200px;
-        
-          }
+      }
         .slidingImages {
             margin-top: 200px;
-
-        }
-
-          
-           
-
+        }      
     }
   }
   
