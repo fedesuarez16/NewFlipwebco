@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust the height as needed */
+    height: 80vh; /* Adjust the height as needed */
     background-color: #141516;
   }
   
@@ -15,7 +15,9 @@
   @media (max-width: 768px) {
 
     .heading {
-      color: #141516; /* Adjust the color as needed */
+        color: #141516; /* Adjust the color as needed */
+        height: 30vh; /* Adjust the height as needed */
+
     }
 
   }

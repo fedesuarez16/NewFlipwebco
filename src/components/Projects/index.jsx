@@ -97,7 +97,7 @@ export default function Home() {
       }
     </div>
     <Rounded>
-      <p>Tenes una idea o un proyecto?</p>
+      <p className={styles.button}>Tenes una idea o un proyecto?</p>
     </Rounded>
     <>
         {/* <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>

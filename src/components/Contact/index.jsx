@@ -4,6 +4,8 @@ import Rounded from '../../common/RoundedButton';
 import { useRef } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
 import Magnetic from '../../common/Magnetic';
+import { FaWhatsapp } from 'react-icons/fa';
+
 
 export default function Index() {
     const container = useRef(null);
@@ -30,8 +32,12 @@ export default function Index() {
                     </span>
                     <h2>Escribinos un mensaje</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
-                        <Rounded  backgroundColor={"#30302d"} className={styles.button}>
-                            <p>Contactar</p>
+                    <Rounded backgroundColor={"#30302d"} className={styles.button}>
+                        <a
+                           
+                        >
+                            <FaWhatsapp size={24} color="white" />
+                        </a>
                         </Rounded>
                     </motion.div>
                     <motion.svg style={{rotate, scale: 2}} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">

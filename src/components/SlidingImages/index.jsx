@@ -3,6 +3,7 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';
 import Image from 'next/image';
 import Link from 'next/link'; // Import Link from Next.js
+import Rounded from '../../common/RoundedButton';
 
 const slider1 = [
     {
