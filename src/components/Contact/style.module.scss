@@ -156,8 +156,9 @@
         .title {
           margin-left: 10px; /* Further adjusted margin for smaller screens */
           margin-right: 10px; /* Further adjusted margin for smaller screens */
+          margin-bottom: 180px;
           .buttonContainer {
-            top: calc(100% - 40px); /* Further adjusted top for smaller screens */
+            top: calc(100% - 80px); /* Further adjusted top for smaller screens */
           }
         }
       }

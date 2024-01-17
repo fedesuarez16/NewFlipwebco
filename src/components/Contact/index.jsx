@@ -16,6 +16,11 @@ export default function Index() {
     const x = useTransform(scrollYProgress, [0, 1], [0, 100])
     const y = useTransform(scrollYProgress, [0, 1], [-500, 0])
     const rotate = useTransform(scrollYProgress, [0, 1], [120, 90])
+
+    const handleWhatsappClick = () => {
+        // Use the correct WhatsApp API link here
+        window.open('https://api.whatsapp.com/send?phone=5491133370937', '_blank');
+    };
     return (
         <motion.div style={{y}} ref={container} className={styles.contact}>
             <div className={styles.body}>
@@ -32,53 +37,42 @@ export default function Index() {
                     </span>
                     <h2>Escribinos un mensaje</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
-                    <Rounded backgroundColor={"#30302d"} className={styles.button}>
-                        <a
-                           
-                        >
-                            <FaWhatsapp size={24} color="white" />
-                        </a>
-                        </Rounded>
+                    <Rounded backgroundColor={"#30302d"} className={styles.button} onClick={handleWhatsappClick}>
+                    <p>             
+                        <FaWhatsapp size={30} color="white"  />
+                    </p>
+
+                      </Rounded>
                     </motion.div>
-                    <motion.svg style={{rotate, scale: 2}} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <motion.svg style={{rotate, scale: 2}} width="12" height="12" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z" fill="white"/>
                     </motion.svg>
                 </div>
                 <div className={styles.nav}>
                         <Rounded>
-                            <p>info@dennissnellenberg.com</p>
+                            <p>hello@flipwebco.com</p>
                         </Rounded>
-                        <Rounded>
-                            <p>+31 6 27 84 74 30</p>
+                        <Rounded onClick={handleWhatsappClick} >
+                            <p>+54 9 11 3337 0937</p>
                         </Rounded>
                 </div>
                 <div className={styles.info}>
                     <div>
                         <span>
                             <h3>Version</h3>
-                            <p>2022 © Edition</p>
+                            <p>2024 © All rights reserved</p>
                         </span>
-                        <span>
-                            <h3>Version</h3>
-                            <p>11:49 PM GMT+2</p>
-                        </span>
+                       
                     </div>
                     <div>
                         <span>
                             <h3>socials</h3>
-                            <Magnetic>
-                                <p>Awwwards</p>
-                            </Magnetic>
+                           
                         </span>
                         <Magnetic>
                             <p>Instagram</p>
                         </Magnetic>
-                        <Magnetic>
-                            <p>Dribbble</p>
-                        </Magnetic>
-                        <Magnetic>
-                            <p>Linkedin</p>
-                        </Magnetic>
+                     
                     </div>
                 </div>
             </div>

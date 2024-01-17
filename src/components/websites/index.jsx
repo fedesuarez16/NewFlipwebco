@@ -4,12 +4,17 @@ import Logo from '../Header/logo';
 import { Inter } from 'next/font/google';
 import { useInView } from 'react';
 import { FaMobile, FaCog, FaSearch, FaWrench,  FaChartBar, FaShieldAlt, FaRobot, FaTools} from 'react-icons/fa'; // Importa los iconos que necesites
+import Rounded from '../../common/RoundedButton';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Paginas() {
   const phrase = "Impulsando el crecimiento de negocios & marcas a través del desarrollo de productos digitales excepcionales.";
-
+  const handleWhatsappClick = () => {
+    // Use the correct WhatsApp API link here
+    window.open('https://api.whatsapp.com/send?phone=5491133370937', '_blank');
+};
   return (
     <section className={inter.className}>
       <Logo />
@@ -25,7 +30,7 @@ export default function Paginas() {
 
       <div className={styles.centeredText}>
         <div className={styles.line}></div>
-        <p>Transforma tu presencia digital con nuestras páginas web excepcionales y a medida. En [Tu Empresa], creamos experiencias online impactantes que cautivan a tus usuarios.</p>
+        <p>Transforma tu presencia digital con nuestras páginas web excepcionales y a medida. En Flipwebco, creamos experiencias online impactantes que cautivan a tus usuarios.</p>
       </div>
 
     
@@ -60,7 +65,13 @@ export default function Paginas() {
           <h3>Mantenimiento y Soporte Continuo</h3>
           <p>Nuestro compromiso no termina con el lanzamiento de tu página web...</p>
         </div>
+      </div>    
+      < div className={styles.roundedButton}  onClick={handleWhatsappClick}>
+      <Rounded >
+        Hablemos!
+      </Rounded>
       </div>
+      
 
       {/* Banner con imagen */}
       <div className={styles.banner}>
