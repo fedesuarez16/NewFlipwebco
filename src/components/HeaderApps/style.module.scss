@@ -46,6 +46,8 @@ $main-color: #ffe747;
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 2rem;  // Ajusta el tamaño del título para pantallas pequeñas
+    font-size: 2rem;
+    margin-top: 3rem;
+      // Ajusta el tamaño del título para pantallas pequeñas
   }
 }

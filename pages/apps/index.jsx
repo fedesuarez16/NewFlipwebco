@@ -10,7 +10,7 @@ import styles from './style.module.scss';
 
 export default function apps () {
   return (
-    <div className={styles.main}>
+    <div className={styles.mainn}>
      <Header/>
      <Service/>
      <AppsColumn/>
