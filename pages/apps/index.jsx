@@ -5,11 +5,12 @@ import Header from '@/components/HeaderApps'
 import Service from '@/components/introServiceApp.jsx/index.jsx'
 import AppsColumn from '@/components/AppsColumn'
 import AppText from '@/components/AppText'
+import styles from './style.module.scss';
 
 
 export default function apps () {
   return (
-    <div>
+    <div className={styles.main}>
      <Header/>
      <Service/>
      <AppsColumn/>
