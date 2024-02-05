@@ -16,16 +16,16 @@ export default function Paginas() {
     window.open('https://api.whatsapp.com/send?phone=5491133370937', '_blank');
 };
   return (
-    <section className={inter.className}>
-      <Logo />
-      <div className={styles.main}>
-      
-        <div className={styles.sliderContainer}>
-          <div className={styles.slider}>
-            <p>Paginas Web </p>
+      <section className={inter.className}>
+        <Logo />
+        <div className={styles.main}>
+        
+          <div className={styles.sliderContainer}>
+            <div className={styles.slider}>
+              <p>Paginas Web </p>
+            </div>
           </div>
         </div>
-      </div>
 
 
       <div className={styles.centeredText}>

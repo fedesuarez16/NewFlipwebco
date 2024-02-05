@@ -15,7 +15,7 @@ export default function  index ()  {
     
       <div className={styles.sliderContainer}>
         <div className={styles.slider}>
-          <p>Web mobile apps  </p>
+          <p>Aplicaciones web <br /> y móviles  </p>
         </div>
       </div>
     </div>

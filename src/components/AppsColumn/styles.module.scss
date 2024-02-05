@@ -1,0 +1,34 @@
+
+.fourColumns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px; /* Ajusta según sea necesario */
+    margin-bottom: 100px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 50px;
+    }
+  }
+  
+  .column {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff; /* Ajusta el color de fondo gris según sea necesario */
+    color: #2e2e2e;
+  
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .roundedButton {
+    margin:90px 400px;
+    overflow: hidden;
+    
+    @media (max-width: 768px) {
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+    }
+    }

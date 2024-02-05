@@ -1,5 +1,4 @@
 'use client';
-/* eslint-disable */
 
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react'
