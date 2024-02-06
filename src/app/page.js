@@ -46,7 +46,7 @@ export default function Page() {
           description: 'Diseño y desarrollo de productos digitales para empresas',
           images: [
             {
-              url: 'URL de la imagen Open Graph',
+              url: 'https://ibb.co/QM27RMB',
               width: 1200,
               height: 630,
               alt: 'Descripción de la imagen',
