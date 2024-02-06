@@ -10,7 +10,7 @@ const clientLogos = [
   '/images/lionseglogogris.png',
   '/images/aserraderogris.png',
   '/images/tecxio.png',
-  '/images/delsur.png',
+  '/images/delsur.png'
   // Agrega más logos según sea necesario
 ];
 
