@@ -34,7 +34,28 @@ export default function Page() {
   }, [])
 
   return (
+
+    
     <main className={styles.main}>
+       <NextSeo
+        title="Desarrollo Software - Flipwebco"
+        description="Somos la reinvención"
+        openGraph={{
+          title: 'Desarrollo de Software ',
+          description: 'Diseño y desarrollo de productos digitales para empresas',
+          images: [
+            {
+              url: 'URL de la imagen Open Graph',
+              width: 1200,
+              height: 630,
+              alt: 'Descripción de la imagen',
+            },
+          ],
+          type: 'website',
+          url: 'https://www.flipwebco.com/',
+          site_name: 'Flipwebco',
+        }}
+      />
         <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
       </Head>
