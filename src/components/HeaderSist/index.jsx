@@ -6,7 +6,7 @@ import Logo from '../Header/logo';
 const inter = Inter({ subsets: ['latin'] });
 
 
-export default function  index ()  {
+export default function  Index ()  {
   return (
 
     <section className={inter.className}>
