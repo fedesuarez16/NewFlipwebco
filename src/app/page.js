@@ -12,6 +12,7 @@ import Contact from '../components/Contact';
 import Head from 'next/head';
 import Proj from '@/components/Proj';
 import Clients from '@/components/Clients';
+import { NextSeo } from 'next-seo';
 
 
 export default function Page() {
