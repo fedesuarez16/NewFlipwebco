@@ -1,6 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Header from '../components/Header';
+import { NextSeo } from 'next-seo';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,6 +14,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+         <NextSeo
+        title="Desarrollo Software - Flipwebco"
+        description="Somos la reinvención"
+        openGraph={{
+          title: 'Desarrollo de Software ',
+          description: 'Diseño y desarrollo de productos digitales para empresas',
+          images: [
+            {
+              url: 'https://ibb.co/QM27RMB',
+              width: 1200,
+              height: 630,
+              alt: 'Descripción de la imagen',
+            },
+          ],
+          type: 'website',
+          url: 'https://www.flipwebco.com/',
+          site_name: 'Flipwebco',
+        }}
+      />
       
       <body className={inter.className}>
         <Header />
