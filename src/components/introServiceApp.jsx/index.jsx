@@ -23,9 +23,7 @@ export default function Index() {
         <Image src="/images/vector.png" alt="Description of the image" width={500} height={400} />
       </div>
 
-      <div className={styles.roundedButton} onClick={handleWhatsappClick}>
-        <Rounded>Hablemos!</Rounded>
-      </div>
+     
     </section>
   );
 }

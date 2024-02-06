@@ -21,7 +21,7 @@ const projects = [
     route: "/apps",
   },
   {
-    title: "Plataformas Web",
+    title: "Sistemas de Gestión",
     src: "locomotive.png",
     color: "#EFE8D3",
     route: "/platforms",

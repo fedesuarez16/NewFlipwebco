@@ -23,12 +23,10 @@
   }
 
   .roundedButton {
-    margin:90px 400px;
-    overflow: hidden;
-    
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; /* Ajusta el margen según sea necesario */
     @media (max-width: 768px) {
-     align-items: center;
-     justify-content: center;
-     text-align: center;
+      margin: 20px auto;
     }
-    }
+  }
