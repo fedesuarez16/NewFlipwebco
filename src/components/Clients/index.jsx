@@ -8,6 +8,7 @@ import styles from './style.module.scss';
 const clientLogos = [
   '/images/yecyoc.png',
   '/images/lionseglogogris.png',
+  '/images/dromex.png',
   '/images/aserraderogris.png',
   '/images/tecxio.png',
   '/images/delsur.png',
