@@ -11,6 +11,7 @@ import SlidingImages from '../components/SlidingImages';
 import Contact from '../components/Contact';
 import Head from 'next/head';
 import Proj from '@/components/Proj';
+import Clients from '@/components/Clients';
 
 
 export default function Page() {
@@ -43,6 +44,7 @@ export default function Page() {
       <Landing />
       <Description />
       <Projects />
+      <Clients/>
       <SlidingImages />
       <Proj/>
       <Contact />
