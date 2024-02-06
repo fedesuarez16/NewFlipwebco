@@ -24,7 +24,7 @@ const projects = [
     title: "Sistemas de Gestión",
     src: "locomotive.png",
     color: "#EFE8D3",
-    route: "/platforms",
+    route: "/sistemas de gestion",
   },
   {
     title: "SEO",
