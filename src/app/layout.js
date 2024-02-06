@@ -10,35 +10,25 @@ import Head from 'next/head'; // Import Head from next/head
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Flipwebco',
-  description: 'Diseño y desarrollo Software',
-}
+  title: 'Flipwebco - Desarrollo Software',
+  description: 'Somos la convergencia entre el diseño, la tecnologia y la innovacion',
+  type: 'website', // Specify the type of content (website, article, etc.)
+  locale: 'es_ES', // Specify the locale (language and country)
+  url: 'https://www.flipwebco.com/', // Specify the canonical URL of the page
+  site_name: 'Flipwebco', // Specify the name of the website
+  images: [
+    {
+      width: 1200, // Width of the image
+      height: 630, // Height of the image
+      alt: 'Flipwebco', // Alt text for the image
+    },
+  ],
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        {/* Move NextSeo component here */}
-        <NextSeo
-          title="Desarrollo Software - Flipwebco"
-          description="Somos la reinvención"
-          openGraph={{
-            title: 'Desarrollo de Software ',
-            description: 'Diseño y desarrollo de productos digitales para empresas',
-            images: [
-              {
-                url: 'URL de la imagen Open Graph',
-                width: 1200,
-                height: 630,
-                alt: 'Descripción de la imagen',
-              },
-            ],
-            type: 'website',
-            url: 'https://www.flipwebco.com/',
-            site_name: 'Flipwebco',
-          }}
-        />
-      </Head>
+   
       
       <body className={inter.className}>
         <Header />
