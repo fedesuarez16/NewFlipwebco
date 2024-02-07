@@ -1,0 +1,45 @@
+
+.fourColumns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px; /* Ajusta según sea necesario */
+    margin-bottom: 100px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 50px;
+    }
+  }
+  
+  .column {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff; /* Ajusta el color de fondo gris según sea necesario */
+    color: #2e2e2e;
+  
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .roundedButton {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; /* Ajusta el margen según sea necesario */
+    @media (max-width: 768px) {
+      margin: 20px auto;
+    }
+  }
+
+  /* style.module.scss */
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; /* Adjust margin as needed */
+  }
+  
+  .banner img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  }

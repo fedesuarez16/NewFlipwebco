@@ -1,0 +1,36 @@
+/* TuComponente.module.css (o .scss) */
+
+.wrapper {
+  display: flex;
+  height: auto; /* Change height to auto to allow for dynamic content */
+}
+
+.introText {
+  text-align: center;
+  font-size: 9vh;
+  padding: 40px 50px; /* Adjust padding for better spacing */
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    font-size: 3vh;
+  }
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden; /* Hide any content that exceeds the container's dimensions */
+  }
+  
+  .image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  
+
+.fixedColumn {
+  width: 100px;
+  background-color: black;
+}

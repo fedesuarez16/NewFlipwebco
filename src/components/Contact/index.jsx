@@ -5,6 +5,11 @@ import { useRef } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
 import Magnetic from '../../common/Magnetic';
 import { FaWhatsapp } from 'react-icons/fa';
+import { Inter } from 'next/font/google';
+
+
+const inter = Inter({ subsets: ['latin'] });
+
 
 
 export default function Index() {
@@ -22,6 +27,9 @@ export default function Index() {
         window.open('https://api.whatsapp.com/send?phone=5491133370937', '_blank');
     };
     return (
+
+        <section className={inter.className}>
+
         <motion.div style={{y}} ref={container} className={styles.contact}>
             <div className={styles.body}>
                 <div className={styles.title}>
@@ -77,5 +85,7 @@ export default function Index() {
                 </div>
             </div>
         </motion.div>
+
+        </section>
     )
 }

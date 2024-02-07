@@ -24,7 +24,7 @@ const projects = [
     title: "Sistemas de Gestión",
     src: "locomotive.png",
     color: "#EFE8D3",
-    route: "/sistemas de gestion",
+    route: "/sistemas",
   },
   {
     title: "SEO",
@@ -36,7 +36,7 @@ const projects = [
     title: "ChatBots AI",
     src: "silencio.png",
     color: "#706D63",
-    route: "/chatbots",
+    route: "/IA",
   },
 ];
 

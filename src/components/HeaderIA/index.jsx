@@ -6,7 +6,7 @@ import Logo from '../Header/logo';
 const inter = Inter({ subsets: ['latin'] });
 
 
-export default function  Headersist()  {
+export default function  index ()  {
   return (
 
     <section className={inter.className}>
@@ -15,7 +15,7 @@ export default function  Headersist()  {
     
       <div className={styles.sliderContainer}>
         <div className={styles.slider}>
-          <p>Sistemas <br /> de Gestión  </p>
+          <p>IA <br /> Inteligencia Artificial  </p>
         </div>
       </div>
     </div>
