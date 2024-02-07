@@ -18,10 +18,7 @@ export default function Index() {
         <p>"Potencia tu negocio con chatbots inteligentes que automatizan tareas, mejoran la atención al cliente y aumentan la eficiencia operativa"</p>
       </div>
 
-      <div className={styles.imageContainer}>
-        {/* Use Next.js Image component to import the image */}
-        <Image src="/images/vectorIA.png" alt="Description of the image" width={500} height={400} />
-      </div>
+     
 
      
     </section>

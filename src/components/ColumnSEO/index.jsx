@@ -17,6 +17,11 @@ export default function AppsColumn() {
   return (
     <section className={inter.className}>
 
+          {/* Banner Image */}
+          <div className={styles.banner}>
+          <Image src="/images/bannersist.png" alt="Banner" width={1200} height={400} />
+        </div> 
+
       {/* Cuatro columnas con títulos, texto y iconos */}
       <div className={styles.fourColumns}>
         <Column
@@ -45,10 +50,7 @@ export default function AppsColumn() {
         <Rounded>Tenes una idea?</Rounded>
       </div>
 
-        {/* Banner Image */}
-        <div className={styles.banner}>
-          <Image src="/images/bannersist.png" alt="Banner" width={1200} height={400} />
-        </div>
+      
     
     </section>
   );

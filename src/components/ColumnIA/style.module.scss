@@ -38,8 +38,10 @@
     justify-content: center;
     align-items: center;
     margin-top: 80px; /* Adjust margin as needed */
+    margin-bottom: 600px;
   }
   
   .banner img {
     max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    object-fit: cover;
   }
