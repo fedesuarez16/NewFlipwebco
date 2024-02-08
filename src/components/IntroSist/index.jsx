@@ -15,7 +15,7 @@ export default function Index() {
   return (
     <section className={inter.className}>
       <div className={styles.introText}>
-        <p>"Un producto digital que impulse el crecimiento de tu negocio más allá de los límites."</p>
+        <p>Potencia tu empresa con sistemas de gestión que impulsan la eficiencia y el crecimiento sostenible.</p>
       </div>
 
       <div className={styles.imageContainer}>

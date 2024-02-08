@@ -21,28 +21,28 @@ export default function AppsColumn() {
       <div className={styles.fourColumns}>
         <Column
           icon={<FaMobile size={30} color="#ffe747" />}
-          title="Desarrollo Responsivo"
-          description="Creamos páginas web que se adaptan fluidamente a cualquier dispositivo, brindando una experiencia óptima. Garantizamos accesibilidad y atractivo visual en computadoras, tabletas y teléfonos móviles."
+          title="Gestión Integral"
+          description="Nuestro sistema centraliza y automatiza procesos clave como contabilidad, inventario y recursos humanos, brindando una visión completa y actualizada del estado operativo de la empresa para una toma de decisiones más informada y ágil."
         />
         <Column
           icon={<FaCog size={30} color="#ffe747" />}
-          title="Diseño atractivo e intuitivo"
-          description="Un diseño visualmente atractivo que refleje la identidad de la marca y atraiga a los usuarios y Una estructura de navegación lógica y fácil de usar para mejorar la experiencia del usuario."
+          title="Reportes y Análisis Avanzados"
+          description="Con capacidades robustas de generación de informes y análisis de datos, nuestro sistema ofrece insights detallados sobre el desempeño financiero, operativo y estratégico de la empresa, permitiendo identificar áreas de mejora y oportunidades de crecimiento."
         />
         <Column
           icon={<FaSearch size={30} color="#ffe747" />}
-          title="Optimización para Motores de Búsqueda (SEO)"
-          description="Potenciamos la visibilidad online de tu página web. Implementamos estrategias que mejoran su posicionamiento en motores de búsqueda, aumentando la relevancia y atrayendo audiencias específicas."
+          title="Gestión de Clientes y Proveedores"
+          description=" Facilitamos la administración de relaciones con clientes y proveedores, desde la gestión de contactos y contratos hasta el seguimiento de transacciones y comunicaciones, garantizando una colaboración eficiente y una experiencia satisfactoria para todas las partes involucradas."
         />
         <Column
           icon={<FaWrench size={30} color="#ffe747" />}
-          title="Mantenimiento y Soporte Continuo"
-          description="Nuestro compromiso no termina con el lanzamiento de tu página web..."
+          title="Seguridad y Cumplimiento"
+          description="Incorporamos medidas de seguridad avanzadas y cumplimos con los estándares regulatorios para proteger los datos confidenciales de la empresa y garantizar el cumplimiento normativo, minimizando riesgos y asegurando la integridad y confidencialidad de la información."
         />
       </div>
 
       <div className={styles.roundedButton} onClick={handleWhatsappClick}>
-        <Rounded>Tenes una idea?</Rounded>
+        <Rounded>Listo para empezar?</Rounded>
       </div>
 
         {/* Banner Image */}

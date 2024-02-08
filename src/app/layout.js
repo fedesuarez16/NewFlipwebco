@@ -10,8 +10,8 @@ import Head from 'next/head'; // Import Head from next/head
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Flipwebco - Desarrollo Software',
-  description: 'Somos la convergencia entre el diseño, la tecnologia y la innovacion',
+  title: 'Flipwebco - Software | Haciendo la reinvención empresarial tecnológica',
+  description: 'Impulsando la transición de las empresas hacia la reinvención digital. Estamos enfocados en la facilitación de procesos empresariales a través de productos digitales',
   type: 'website', // Specify the type of content (website, article, etc.)
   locale: 'es_ES', // Specify the locale (language and country)
   url: 'https://www.flipwebco.com/', // Specify the canonical URL of the page
