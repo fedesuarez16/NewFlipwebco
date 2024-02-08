@@ -1,7 +1,6 @@
 // Hero.js
 
 import styles from './style.module.scss';
-import React from 'react';
 import { Inter } from 'next/font/google';
 import { TypeAnimation } from 'react-type-animation'; 
 import { useInView } from 'react-intersection-observer';
