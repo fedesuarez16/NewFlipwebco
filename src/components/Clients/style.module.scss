@@ -1,6 +1,11 @@
 .clientCarousel {
     max-width: 800px; /* Ajusta según tus necesidades */
     margin: 0 auto;
+    margin-top: 200px;
+    @media (max-width: 768px) {
+        margin-top:150px;
+
+      }
   }
   
   .logoContainer {
