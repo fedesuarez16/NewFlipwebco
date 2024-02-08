@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
     <div className={styles.gallery}>
-      <p>Lee acerca de las ultimas novedades en Tech</p>
+      <h6>Lee acerca de las ultimas novedades en Tech</h6>
       {projects.map((project, index) => ( // Utiliza una función de flecha con index
         <Project key={index} project={project} />
       ))}

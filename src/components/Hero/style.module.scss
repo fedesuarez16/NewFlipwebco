@@ -12,11 +12,20 @@
     margin-top: 150px;
     border-radius: 20px; /* Ajusta el valor según sea necesario para redondear los bordes */
 
+    @media (max-width: 768px) {
+        margin-top: 50px;
+
+      }
+
   }
   
   .text {
     text-align: center;
     color:aliceblue;
     font-size: 8vh ;
+    @media (max-width: 768px) {
+            font-size: 5vh;
+            margin: 10px;
+      }
   }
   
