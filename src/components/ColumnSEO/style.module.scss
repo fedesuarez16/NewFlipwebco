@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 100px; /* Ajusta según sea necesario */
-    margin-bottom: 100px;
+    margin-bottom: 400px;
     @media (max-width: 768px) {
       flex-direction: column;
       margin-top: 50px;
@@ -38,12 +38,11 @@
     justify-content: center;
     align-items: center;
     margin-top: 80px; /* Adjust margin as needed */
-    margin-bottom: 600px;
-    object-fit: cover;
+    
+    
+}
 
-
-  }
-  
-  .banner img {
+.banner img {
+      object-fit: cover;
     max-width: 100%; /* Ensure the image doesn't exceed its container width */
   }

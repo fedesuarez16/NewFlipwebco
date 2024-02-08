@@ -19,7 +19,7 @@ export default function AppsColumn() {
 
           {/* Banner Image */}
           <div className={styles.banner}>
-          <Image src="/images/bannersist.png" alt="Banner" width={1200} height={400} />
+          <Image src="/images/bannerSEO.png" alt="Banner" width={1200} height={400} />
         </div> 
 
       {/* Cuatro columnas con títulos, texto y iconos */}
