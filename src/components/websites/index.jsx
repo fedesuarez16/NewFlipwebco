@@ -7,7 +7,7 @@ import { FaMobile, FaCog, FaSearch, FaWrench,  FaChartBar, FaShieldAlt, FaRobot,
 import Rounded from '../../common/RoundedButton';
 
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });  
 
 export default function Paginas() {
   const phrase = "Impulsando el crecimiento de negocios & marcas a través del desarrollo de productos digitales excepcionales.";
@@ -77,7 +77,7 @@ export default function Paginas() {
       <div className={styles.banner}>
         <Image
           src="/images/bannerImg.jpg"
-          width={1000}  // Ajusta el ancho de acuerdo a tus necesidades
+          width={1200}  // Ajusta el ancho de acuerdo a tus necesidades
           height={400}  // Ajusta la altura de acuerdo a tus necesidades
           alt="Banner"
         />

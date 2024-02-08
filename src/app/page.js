@@ -12,7 +12,9 @@ import Contact from '../components/Contact';
 import Head from 'next/head';
 import Proj from '@/components/Proj';
 import Clients from '@/components/Clients';
+import Blog from '@/components/Blog';
 import { NextSeo } from 'next-seo';
+import Hero from '@/components/Hero';
 
 
 export default function Page() {
@@ -38,25 +40,7 @@ export default function Page() {
 
     
     <main className={styles.main}>
-       <NextSeo
-        title="Desarrollo Software - Flipwebco"
-        description="Somos la reinvención"
-        openGraph={{
-          title: 'Desarrollo de Software ',
-          description: 'Diseño y desarrollo de productos digitales para empresas',
-          images: [
-            {
-              url: 'https://ibb.co/QM27RMB',
-              width: 1200,
-              height: 630,
-              alt: 'Descripción de la imagen',
-            },
-          ],
-          type: 'website',
-          url: 'https://www.flipwebco.com/',
-          site_name: 'Flipwebco',
-        }}
-      />
+    
         <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
       </Head>
@@ -67,6 +51,8 @@ export default function Page() {
       <Description />
       <Projects />
       <Clients/>
+      <Hero/>
+      <Blog/>
       <SlidingImages />
       <Proj/>
       <Contact />

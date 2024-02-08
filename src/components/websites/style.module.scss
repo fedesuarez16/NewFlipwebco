@@ -214,8 +214,7 @@
       text-align: center;
       margin-bottom: 50px;
       overflow: hidden;  // Add this line
-      width: 100%;  // Add this line
-      object-fit:contain;
+      object-fit:cover;
 
       @media (max-width: 768px) {
         margin-bottom: 30px;

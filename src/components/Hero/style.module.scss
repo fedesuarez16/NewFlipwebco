@@ -1,0 +1,22 @@
+/* Hero.module.css */
+
+.hero {
+    background-image: url('../../../public/images/bannerHero.png');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    border-radius: 20px; /* Ajusta el valor según sea necesario para redondear los bordes */
+
+  }
+  
+  .text {
+    text-align: center;
+    color:aliceblue;
+    font-size: 8vh ;
+  }
+  
