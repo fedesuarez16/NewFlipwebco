@@ -9,7 +9,7 @@ export default function Home() {
       title1: "Como La IA esta",
       title2: "transformando empresas",
       src: "jomor_design.jpeg",
-      link: "/como-la-ia-esta-transformando-empresas" // Agrega la ruta de la página a la que deseas redirigir
+      link: "/como-la-ia-esta-transformando-empresas" 
     },
     {
       title1: "La eficiencia liderada",
@@ -21,7 +21,7 @@ export default function Home() {
       title1: "El impacto de Reinvencion digital",
       title2: "en el mundo",
       src: "deux_huit_huit.jpeg",
-      link: "/impacto-reinvencion-digital"
+      link: "/impacto-reinvencion"
     },
     {
       title1: "Nothing",
