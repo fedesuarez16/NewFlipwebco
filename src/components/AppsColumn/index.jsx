@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import Logo from '../Header/logo';
 import { Inter } from 'next/font/google';
 import { useInView } from 'react';
-import { FaMobile, FaCog, FaSearch, FaWrench, FaChartBar, FaShieldAlt, FaRobot, FaTools } from 'react-icons/fa'; // Importa los iconos que necesites
+import { FaMobileAlt, FaCogs, FaEye, FaToolbox } from 'react-icons/fa'; // Importa los iconos que necesites
 import Rounded from '../../common/RoundedButton';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -18,26 +18,27 @@ export default function AppsColumn() {
     <section className={inter.className}>
 
       {/* Cuatro columnas con títulos, texto y iconos */}
-      <div className={styles.fourColumns}>
+       {/* Cuatro columnas con títulos, texto y iconos */}
+       <div className={styles.fourColumns}>
         <Column
-          icon={<FaMobile size={30} color="#ffe747" />}
-          title="Desarrollo Responsivo"
-          description="Creamos páginas web que se adaptan fluidamente a cualquier dispositivo, brindando una experiencia óptima. Garantizamos accesibilidad y atractivo visual en computadoras, tabletas y teléfonos móviles."
+          icon={<FaMobileAlt size={30} color="#ffe747" />}
+          title="Mejora la Experiencia del Cliente"
+          description="Una aplicación empresarial brinda comodidad y accesibilidad las 24 horas del día, permitiendo a los clientes acceder fácilmente a productos, servicios y soporte, lo que aumenta la satisfacción y fidelidad del cliente."
         />
         <Column
-          icon={<FaCog size={30} color="#ffe747" />}
-          title="Diseño atractivo e intuitivo"
-          description="Un diseño visualmente atractivo que refleje la identidad de la marca y atraiga a los usuarios y Una estructura de navegación lógica y fácil de usar para mejorar la experiencia del usuario."
+          icon={<FaCogs size={30} color="#ffe747" />}
+          title="Optimización de Procesos Internos"
+          description="Automatiza tareas repetitivas, mejora la eficiencia operativa y facilita la colaboración entre equipos al integrar sistemas y proporcionar herramientas de gestión centralizadas."
         />
         <Column
-          icon={<FaSearch size={30} color="#ffe747" />}
-          title="Optimización para Motores de Búsqueda (SEO)"
-          description="Potenciamos la visibilidad online de tu página web. Implementamos estrategias que mejoran su posicionamiento en motores de búsqueda, aumentando la relevancia y atrayendo audiencias específicas."
+          icon={<FaEye size={30} color="#ffe747" />}
+          title="Mayor Visibilidad y Alcance"
+          description="Una app empresarial aumenta la visibilidad de la marca al estar disponible en las tiendas de aplicaciones, lo que amplía el alcance del negocio y atrae a nuevos clientes a través de estrategias de marketing digital."
         />
         <Column
-          icon={<FaWrench size={30} color="#ffe747" />}
-          title="Mantenimiento y Soporte Continuo"
-          description="Nuestro compromiso no termina con el lanzamiento de tu página web..."
+          icon={<FaToolbox size={30} color="#ffe747" />}
+          title="Recopilación de Datos y Análisis"
+          description="Permite la recopilación de datos detallados sobre el comportamiento del usuario y las interacciones con la aplicación, lo que proporciona información valiosa para mejorar productos, servicios y estrategias comerciales mediante análisis y toma de decisiones basadas en datos."
         />
       </div>
 
