@@ -1,0 +1,21 @@
+/* Header.module.scss */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(12, 12, 12);
+}
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #d6d6d6; /* Color del texto */
+  }
+  
+  .logo img {
+    width: 100px; /* Tamaño del logo */
+    height: auto;
+  }
+  

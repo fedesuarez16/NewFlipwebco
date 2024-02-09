@@ -51,8 +51,8 @@ export default function Page() {
       <Description />
       <Projects />
       <Hero/>
-      <Clients/>
       <Blog/>
+      <Clients/>
       <SlidingImages />
       <Proj/>
       <Contact />

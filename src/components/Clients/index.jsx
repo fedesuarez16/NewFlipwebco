@@ -20,7 +20,7 @@ const ClientCarousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true, // Hacer que el carrusel se desplace automáticamente
     autoplaySpeed: 1000, // Velocidad de desplazamiento automático en milisegundos
