@@ -49,8 +49,8 @@ export default function Page() {
       </AnimatePresence>
       <Landing />
       <Description />
-      <Hero/>
       <Projects />
+      <Hero/>
       <Blog/>
       <Clients/>
       <SlidingImages />
