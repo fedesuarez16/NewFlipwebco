@@ -28,7 +28,44 @@ export default function Home() {
       title2: "Design Studio",
       src: "nothing_design_studio.png",
       link: "/nothing-design-studio"
+    },
+    {
+      title1: "Como La IA esta",
+      title2: "transformando empresas",
+      src: "jomor_design.jpeg",
+      link: "/como-la-ia-esta-transformando-empresas" 
+    },
+    {
+      title1: "La eficiencia liderada",
+      title2: "por la Tecnologia",
+      src: "la_grange.jpeg",
+      link: "/eficiencia-por-tecnologia"
+    },
+    {
+      title1: "El impacto de Reinvencion digital",
+      title2: "en el mundo",
+      src: "deux_huit_huit.jpeg",
+      link: "/impacto-reinvencion"
+    }, 
+    {
+      title1: "Como La IA esta",
+      title2: "transformando empresas",
+      src: "jomor_design.jpeg",
+      link: "/como-la-ia-esta-transformando-empresas" 
+    },
+    {
+      title1: "La eficiencia liderada",
+      title2: "por la Tecnologia",
+      src: "la_grange.jpeg",
+      link: "/eficiencia-por-tecnologia"
+    },
+    {
+      title1: "El impacto de Reinvencion digital",
+      title2: "en el mundo",
+      src: "deux_huit_huit.jpeg",
+      link: "/impacto-reinvencion"
     }
+    
   ];
 
   return (
