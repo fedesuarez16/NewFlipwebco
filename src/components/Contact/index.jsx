@@ -86,13 +86,13 @@ export default function Index() {
                         <Rounded onClick={handleWhatsappClick} >
                             <p>+54 9 11 3337 0937</p>
                         </Rounded>
-                        <motion.div style={{ x }} >
+                       
                             <Rounded backgroundColor={"#30302d"}  onClick={handleWhatsappClick}>
                                 <p>
                                     <FaWhatsapp size={30} color="white" />
                                 </p>
                             </Rounded>
-                        </motion.div>
+                       
                     </div>
                     <div className={styles.info}>
                         <div>
