@@ -74,7 +74,11 @@ export default function Index() {
                                     <input type="text" name="number" placeholder="Numero" value={formData.number} onChange={handleChange} />
                                     <input type="text" name="company" placeholder="Empresa" value={formData.company} onChange={handleChange} />
                                     <textarea name="query" placeholder="Tu consulta" value={formData.query} onChange={handleChange}></textarea>
-                                    <button type="submit">Enviar</button>
+                                    <button type="submit">
+                                        <Rounded>
+                                            Enviar
+                                        </Rounded>
+                                    </button>
                                 </form>
                             </div>
                         </div>

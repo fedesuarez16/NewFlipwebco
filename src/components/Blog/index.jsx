@@ -24,20 +24,19 @@ export default function Home() {
       link: "/impacto-reinvencion"
     },
     {
-      title1: "Nothing",
-      title2: "Design Studio",
+      title1: "Posiciona 1ra ",
+      title2: "tu empresa en internet",
       src: "nothing_design_studio.png",
       link: "/nothing-design-studio"
     },
     {
-      title1: "Como La IA esta",
-      title2: "transformando empresas",
+      title1: " Aumenta las Búsquedas de tu Empresa",
       src: "jomor_design.jpeg",
       link: "/como-la-ia-esta-transformando-empresas" 
     },
     {
-      title1: "La eficiencia liderada",
-      title2: "por la Tecnologia",
+      title1: "SEO y Redes Sociales",
+      title2: " Maximizar el Impacto",
       src: "la_grange.jpeg",
       link: "/eficiencia-por-tecnologia"
     },
