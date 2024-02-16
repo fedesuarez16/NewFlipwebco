@@ -28,7 +28,7 @@ const ClientCarousel = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3, // Mostrar tres logos a la vez en dispositivos móviles
         },
       },
     ],
