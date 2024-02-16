@@ -39,7 +39,7 @@ const ClientCarousel = () => {
       <Slider {...settings}>
         {clientLogos.map((logo, index) => (
           <div key={index} className={styles.logoContainer}>
-            <img src={logo} alt={`Client Logo ${index + 1}`} />
+            <img src={logo} title={`Client Logo ${index + 1}`} alt={`Client Logo ${index + 1}`} />
           </div>
         ))}
       </Slider>

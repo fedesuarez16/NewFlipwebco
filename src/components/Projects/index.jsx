@@ -9,22 +9,22 @@ import Rounded from '../../common/RoundedButton';
 
 const projects = [
   {
-    title: "WebSites",
+    title: "Paginas Web",
     src: "c2montreal.png",
     color: "#000000",
-    route: "/paginas", // Add the route property
+    route: "/paginas-web", // Add the route property
   },
   {
     title: "Apps Web & Moviles",
     src: "officestudio.png",
     color: "#8C8C8C",
-    route: "/apps",
+    route: "/aplicaciones-web-moviles",
   },
   {
     title: "Sistemas de Gestión",
     src: "locomotive.png",
     color: "#EFE8D3",
-    route: "/sistemas",
+    route: "/sistemas-de-gestion",
   },
   {
     title: "SEO",

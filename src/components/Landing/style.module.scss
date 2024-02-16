@@ -53,12 +53,27 @@
         transform: scale(2);
         margin-bottom: 40px;
       }
+       h1 {
+        font-weight: 200;
+        font-size: 5vh;
+        margin-bottom: 10px;
+        margin: 0px;
+
+
+       }
     }
 
     @media (max-width: 768px) {
       .description{
         left: 55%;
+        
+        h1{
+          font-size: 3.5vh;
+
+
+        }
       }
+
 
        
     .slider p{
