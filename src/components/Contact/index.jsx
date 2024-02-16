@@ -65,7 +65,7 @@ export default function Index() {
                                         height={50}
                                     />
                                 </div>
-                                <h2>Trabajemos Juntos <br /> Nos contactaremos con vos</h2>
+                                <h6>Listo para comenzar? <br /> Hablemos!</h6>
                             </span>
                             <div className={styles.form}>
                                 <form onSubmit={handleSubmit}>
@@ -75,7 +75,7 @@ export default function Index() {
                                     <input type="text" name="company" placeholder="Empresa" value={formData.company} onChange={handleChange} />
                                     <textarea name="query" placeholder="Tu consulta" value={formData.query} onChange={handleChange}></textarea>
                                     <button type="submit">
-                                        <Rounded>
+                                        <Rounded  >
                                             Enviar
                                         </Rounded>
                                     </button>

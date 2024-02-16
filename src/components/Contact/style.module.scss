@@ -34,7 +34,7 @@
             }
         }
     
-        h2 {
+        h6 {
             font-size: 5vw;
             margin: 0px;
             font-weight: 300;
@@ -42,6 +42,7 @@
             @media (max-width: 768px) {
               font-size: 6vw;
               font-weight: 500;
+              margin-bottom: 6vh;
 
 
 
@@ -205,3 +206,9 @@
 .form button:hover {
   background-color: #272727;
 }
+
+.button {
+  @media (max-width: 768px) {
+    padding: 300px;
+
+}}
