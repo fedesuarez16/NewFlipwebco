@@ -35,16 +35,10 @@ export default function Index() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          await axios.post('/pages/api/submit-form', formData); // Make a POST request to the API route
+          await axios.post('/api/submitForm', formData); // Make a POST request to the API route
           alert('Form submitted successfully!');
           // Reset form after successful submission
-          setFormData({
-            name: '',
-            email: '',
-            number: '',
-            company: '',
-            query: ''
-          });
+        
         } catch (error) {
           console.error('Error submitting form:', error);
           alert('Error submitting form. Please try again later.');
@@ -80,7 +74,7 @@ export default function Index() {
                                     <input type="text" name="number" placeholder="Numero" value={formData.number} onChange={handleChange} />
                                     <input type="text" name="company" placeholder="Empresa" value={formData.company} onChange={handleChange} />
                                     <textarea name="query" placeholder="Tu consulta" value={formData.query} onChange={handleChange}></textarea>
-                                    <Rounded type="submit">Enviar</Rounded>
+                                    <button type="submit">Enviar</button>
                                 </form>
                             </div>
                         </div>
