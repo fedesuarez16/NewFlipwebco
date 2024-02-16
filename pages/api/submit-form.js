@@ -1,10 +1,11 @@
-// pages/api/submit-form.js
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
+
+  console.log('Received form submission:', req.body);
 
   const { name, email, number, company, query } = req.body;
 
@@ -19,8 +20,8 @@ export default async function handler(req, res) {
 
   // Configure email options
   const mailOptions = {
-    from: process.env.EMAIL_USER, // Sender address
-    to: process.env.EMAIL_USER, // List of recipients
+    from: 'coflipweb@gmail.com', // Sender address
+    to: 'coflipweb@gmail.com', // List of recipients
     subject: 'New Form Submission',
     text: `
         Name: ${name}
@@ -31,9 +32,12 @@ export default async function handler(req, res) {
     `
   };
 
+  console.log('Sending email with the following options:', mailOptions);
+
   // Send email
   try {
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent:', info.response);
     res.status(200).json({ message: 'Form submission successful' });
   } catch (error) {
     console.error('Error sending email:', error);
