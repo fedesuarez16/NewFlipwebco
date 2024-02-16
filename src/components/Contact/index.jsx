@@ -35,7 +35,7 @@ export default function Index() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          await axios.post('/api/submit-form', formData); // Make a POST request to the API route
+          await axios.post('/pages/api/submit-form', formData); // Make a POST request to the API route
           alert('Form submitted successfully!');
           // Reset form after successful submission
           setFormData({
@@ -51,7 +51,7 @@ export default function Index() {
         }
       };
 
-      
+
     const handleWhatsappClick = () => {
         window.open('https://api.whatsapp.com/send?phone=5491133370937', '_blank');
     };
