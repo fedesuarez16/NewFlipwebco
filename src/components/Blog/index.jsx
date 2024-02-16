@@ -8,60 +8,60 @@ export default function Home() {
     {
       title1: "Como La IA esta",
       title2: "transformando empresas",
-      src: "jomor_design.jpeg",
+      src: "logo.png",
       link: "/como-la-ia-esta-transformando-empresas" 
     },
     {
       title1: "La eficiencia liderada",
       title2: "por la Tecnologia",
-      src: "la_grange.jpeg",
+      src: "logo.png",
       link: "/eficiencia-por-tecnologia"
     },
     {
       title1: "El impacto de Reinvencion digital",
       title2: "en el mundo",
-      src: "deux_huit_huit.jpeg",
+      src: "logo.png",
       link: "/impacto-reinvencion"
     },
     {
       title1: "Posiciona 1ra ",
       title2: "tu empresa en internet",
-      src: "nothing_design_studio.png",
-      link: "/nothing-design-studio"
+      src: "logo.png",
+      link: "/pocisiona-tu-empresa-seo"
     },
     {
       title1: " Aumenta las Búsquedas de tu Empresa",
-      src: "jomor_design.jpeg",
-      link: "/como-la-ia-esta-transformando-empresas" 
+      src: "logo.png",
+      link: "/aumenta-el-trafico-de-tu-web-negocio" 
     },
     {
       title1: "SEO y Redes Sociales",
-      title2: " Maximizar el Impacto",
-      src: "la_grange.jpeg",
-      link: "/eficiencia-por-tecnologia"
+      title2: " Maximizar el Impacto  ",
+      src: "logo.png",
+      link: "/seo-y-redes-sociales-maximizar-crecimiento"
     },
     {
       title1: "El impacto de Reinvencion digital",
       title2: "en el mundo",
-      src: "deux_huit_huit.jpeg",
+      src: "logo.png",
       link: "/impacto-reinvencion"
     }, 
     {
       title1: "Como La IA esta",
       title2: "transformando empresas",
-      src: "jomor_design.jpeg",
+      src: "logo.png",
       link: "/como-la-ia-esta-transformando-empresas" 
     },
     {
       title1: "La eficiencia liderada",
       title2: "por la Tecnologia",
-      src: "la_grange.jpeg",
+      src: "logo.png",
       link: "/eficiencia-por-tecnologia"
     },
     {
       title1: "El impacto de Reinvencion digital",
       title2: "en el mundo",
-      src: "deux_huit_huit.jpeg",
+      src: "logo.png",
       link: "/impacto-reinvencion"
     }
     
