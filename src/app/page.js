@@ -15,6 +15,7 @@ import Clients from '@/components/Clients';
 import Blog from '@/components/Blog';
 import { NextSeo } from 'next-seo';
 import Hero from '@/components/Hero';
+import ThreeColumnsComponent from '@/components/Columns';
 
 
 export default function Page() {
@@ -49,6 +50,7 @@ export default function Page() {
       </AnimatePresence>
       <Landing />
       <Description />
+      <ThreeColumnsComponent/>
       <Projects />
       <Hero/>
       <Blog/>

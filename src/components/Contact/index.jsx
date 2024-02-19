@@ -51,22 +51,22 @@ export default function Index() {
     };
 
     return (
-        <section className={inter.className}>
+        <section id='contact' className={inter.className}>
             <motion.div style={{ y }} ref={container} className={styles.contact}>
                 <div className={styles.body}>
                     <div className={styles.title}>
-                        <div className={styles.titleContent}>
-                            <span>
-                                <div className={styles.imageContainer}>
-                                    <Image
-                                        alt={"image"}
-                                        src={`/images/logo.png`}
-                                        width={60}
-                                        height={50}
-                                    />
-                                </div>
-                                <h6>Listo para comenzar? <br /> Hablemos!</h6>
-                            </span>
+                    <div className={styles.titleContent}>
+                        <div className={styles.imageContainer}>
+                        <Image
+                            alt="image"
+                            src={`/images/logo.png`}
+                            width={60}
+                            height={50}
+                        />
+                        </div>
+                        <h6>Listo para comenzar? <br /> Hablemos!</h6>
+                    </div>
+
                             <div className={styles.form}>
                                 <form onSubmit={handleSubmit}>
                                     <input type="text" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
@@ -83,6 +83,9 @@ export default function Index() {
                             </div>
                         </div>
                     </div>
+
+                    <div className={styles.footer}>
+
                     <div className={styles.nav}>
                         <Rounded>
                             <p>hello@flipwebco.com</p>
@@ -98,6 +101,7 @@ export default function Index() {
                             </Rounded>
                        
                     </div>
+
                     <div className={styles.info}>
                         <div>
                             <span>
@@ -114,7 +118,7 @@ export default function Index() {
                             </Magnetic>
                         </div>
                     </div>
-                </div>
+                    </div>
             </motion.div>
         </section>
     )

@@ -21,7 +21,7 @@ export default function Home() {
       title1: "El impacto de Reinvencion digital",
       title2: "en el mundo",
       src: "logo.png",
-      link: "/impacto-reinvencion"
+      link: "/impacto-reinvencion-digital"
     },
     {
       title1: "Posiciona 1ra ",
@@ -44,7 +44,7 @@ export default function Home() {
       title1: "El impacto de Reinvencion digital",
       title2: "en el mundo",
       src: "logo.png",
-      link: "/impacto-reinvencion"
+      link: "/impacto-reinvencion-digital"
     }, 
     {
       title1: "Como La IA esta",
@@ -57,12 +57,6 @@ export default function Home() {
       title2: "por la Tecnologia",
       src: "logo.png",
       link: "/eficiencia-por-tecnologia"
-    },
-    {
-      title1: "El impacto de Reinvencion digital",
-      title2: "en el mundo",
-      src: "logo.png",
-      link: "/impacto-reinvencion"
     }
     
   ];
