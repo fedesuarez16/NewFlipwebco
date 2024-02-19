@@ -19,7 +19,9 @@
     text-align: center;
     border-radius: 10px; /* Agrega bordes redondeados para que parezca una tarjeta */
     transition: transform 0.3s ease; /* Agrega una transición suave */
-    margin: 10px;
+    margin: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
 
   }
   
@@ -51,3 +53,19 @@
     justify-content: center;
 
 }
+
+@media (max-width: 768px) {
+        
+    .column h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        font-weight: 400;
+      }
+
+      .column p {
+        font-size: 23px;
+        margin-bottom: 20px;
+        color: #6d6d6d;
+        font-weight: 300;
+      }
+  }
