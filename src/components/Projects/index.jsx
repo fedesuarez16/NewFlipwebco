@@ -8,17 +8,18 @@ import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 
 const projects = [
-  {
-    title: "Paginas Web",
-    src: "c2montreal.png",
-    color: "#000000",
-    route: "/paginas-web", // Add the route property
-  },
+ 
   {
     title: "Apps Web & Moviles",
     src: "officestudio.png",
     color: "#8C8C8C",
     route: "/aplicaciones-web-moviles",
+  },
+  {
+    title: "Inteligencia Artificial",
+    src: "silencio.png",
+    color: "#706D63",
+    route: "/IA",
   },
   {
     title: "Sistemas de Gestión",
@@ -27,17 +28,18 @@ const projects = [
     route: "/sistemas-de-gestion",
   },
   {
+    title: "Paginas Web",
+    src: "c2montreal.png",
+    color: "#000000",
+    route: "/paginas-web", // Add the route property
+  },
+  {
     title: "SEO",
     src: "silencio.png",
     color: "#706D63",
     route: "/seo",
   },
-  {
-    title: "ChatBots AI",
-    src: "silencio.png",
-    color: "#706D63",
-    route: "/IA",
-  },
+ 
 ];
 
 
