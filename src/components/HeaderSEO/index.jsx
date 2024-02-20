@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Index() {
   return (
     <section className={inter.className}>
-      <Logo />
       <div className={styles.main}>
+      <Logo />
         <div className={styles.sliderContainer}>
           
             <p className={styles.slider}>SEO</p>

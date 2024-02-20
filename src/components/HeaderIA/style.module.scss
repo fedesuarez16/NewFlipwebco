@@ -10,6 +10,7 @@ $main-color: #ffe747;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
@@ -39,7 +40,6 @@ $main-color: #ffe747;
 }
 
 .slider p {
-  margin-left: 10px;
   color:rgb(190, 190, 190);
   font-size: 90px;  // Ajusta el tamaño del título según tus necesidades
   font-weight: 500;

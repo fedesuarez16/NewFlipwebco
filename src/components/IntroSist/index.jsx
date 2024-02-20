@@ -20,7 +20,7 @@ export default function Index() {
 
       <div className={styles.imageContainer}>
         {/* Use Next.js Image component to import the image */}
-        <Image src="/images/vectorsist.png" alt="Description of the image" width={500} height={400} />
+        <Image src="/images/vectorsist.png" alt="Description of the image" width={400} height={300} />
       </div>
 
      

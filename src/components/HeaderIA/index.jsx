@@ -10,8 +10,8 @@ export default function  index ()  {
   return (
 
     <section className={inter.className}>
-    <Logo />
     <div className={styles.main}>
+    <Logo />
     
       <div className={styles.sliderContainer}>
         <div className={styles.slider}>

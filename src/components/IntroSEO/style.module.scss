@@ -56,8 +56,11 @@
   .roundedButton {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 20px auto; /* Ajusta el margen según sea necesario */
     @media (max-width: 768px) {
-      margin: 20px auto;
+      justify-content: center;
+      text-align: center;
+
     }
   }
