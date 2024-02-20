@@ -22,7 +22,7 @@ export default function index() {
                     })
                 }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Somos la convergencia entre el diseño, la tecnologia y la innovacion.</motion.p>
+                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Somos la convergencia entre la eficiencia, la tecnología y la innovación.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
                         <p> 

@@ -28,7 +28,7 @@ const projects = [
     route: "/sistemas-de-gestion",
   },
   {
-    title: "Paginas Web",
+    title: "Páginas Web",
     src: "c2montreal.png",
     color: "#000000",
     route: "/paginas-web", // Add the route property

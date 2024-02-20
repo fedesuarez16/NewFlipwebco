@@ -13,13 +13,13 @@ export default function Home() {
     },
     {
       title1: "La eficiencia liderada",
-      title2: "por la Tecnologia",
+      title2: "por la Tecnología",
       src: "logo.png",
       link: "/eficiencia-por-tecnologia"
     },
     {
       title1: "Software: El futuro de",
-      title2: "la gestion empresarial",
+      title2: "la gestión empresarial",
       src: "logo.png",
       link: "/el-futuro-de-la-gestion-empresarial"
     },
@@ -41,8 +41,8 @@ export default function Home() {
       link: "/seo-y-redes-sociales-maximizar-crecimiento"
     },
     {
-      title1: "La Tecnologia el futuro de",
-      title2: "la gestion empresarial",
+      title1: "Software: el futuro de",
+      title2: "la gestión empresarial",
       src: "logo.png",
       link: "/el-futuro-de-la-gestion-empresarial"
     }, 
@@ -54,7 +54,7 @@ export default function Home() {
     },
     {
       title1: "La eficiencia liderada",
-      title2: "por la Tecnologia",
+      title2: "por la Tecnología",
       src: "logo.png",
       link: "/eficiencia-por-tecnologia"
     }

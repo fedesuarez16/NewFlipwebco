@@ -19,10 +19,10 @@ const slider1 = [
         color: "#6a6a6a",
         src: "hexopanels.png",
         link: "https://hexopanels.bjmakers.store/#section1"    },
-    {
-        color: "#abd9f3",
-        src: "yecyoc.jpeg",
-        link: "https://yecyoc.com/"    }
+        {
+            color: "#c1b295",
+            src: "powell.jpg",
+            link: "https://www.aserraderosanvicente.com/"    }
 ];
 
 const slider2 = [
@@ -34,10 +34,11 @@ const slider2 = [
         color: "#e5e0e1",
         src: "sanvicente2.jpeg",
         link: "https://www.aserraderosanvicente.com/"    },
-    {
-        color: "#FFFF00",
-        src: "powell.jpg",
-        link: "https://www.aserraderosanvicente.com/"    },
+    
+        {
+            color: "#abd9f3",
+            src: "yecyoc.jpeg",
+            link: "https://yecyoc.com/"    },
     {
         color: "#e1dad6",
         src: "aberturas.png",
