@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google'
 import { NextSeo } from 'next-seo'; // Import NextSeo
 import Header from '../components/Header';
 import Head from 'next/head'; // Import Head from next/head
+import { Analytics } from '@vercel/analytics/react';
+
 
 
 const inter = Inter({ subsets: ['latin'] });
