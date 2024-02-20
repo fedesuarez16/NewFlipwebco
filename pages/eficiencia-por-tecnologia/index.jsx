@@ -42,7 +42,7 @@ export default function Blog2  () {
             En resumen, la tecnología está liderando una revolución en la eficiencia empresarial al automatizar procesos, optimizar recursos y mejorar la colaboración y la comunicación. Las empresas que adoptan proactivamente la tecnología y la integran en su ADN empresarial están posicionadas para prosperar en un entorno cada vez más competitivo y digitalizado. La eficiencia liderada por la tecnología no solo impulsa el crecimiento y la rentabilidad, sino que también impulsa la innovación y la transformación en todas las áreas de la empresa.
           </p>
         </div>
-        <p className={styles.author}>Por: [Tu nombre]</p>
+        <p className={styles.author}>Por: Flipwebco</p>
       </div>
       <Contact />
     </section>

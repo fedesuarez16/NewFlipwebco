@@ -47,7 +47,7 @@ const BlogPost = () => {
           La Inteligencia Artificial está redefiniendo el panorama empresarial al ofrecer nuevas formas de trabajar, interactuar y crear valor. Las empresas que adoptan proactivamente la IA están posicionándose para liderar en sus respectivos mercados, aprovechando al máximo las oportunidades que esta tecnología innovadora tiene para ofrecer. La transformación empresarial impulsada por la IA es inevitable, y aquellos que la abracen estarán mejor equipados para prosperar en la economía digital del futuro.
         </p>
       </div>
-      <p className={styles.author}>Por: [Tu nombre]</p>
+      <p className={styles.author}>Por: Flipwebco</p>
     </div>
 <Contact/>
     </section>

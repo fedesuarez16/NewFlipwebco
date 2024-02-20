@@ -18,10 +18,10 @@ export default function Home() {
       link: "/eficiencia-por-tecnologia"
     },
     {
-      title1: "El impacto de Reinvencion digital",
-      title2: "en el mundo",
+      title1: "Software: El futuro de",
+      title2: "la gestion empresarial",
       src: "logo.png",
-      link: "/impacto-reinvencion-digital"
+      link: "/el-futuro-de-la-gestion-empresarial"
     },
     {
       title1: "Posiciona 1ra ",
@@ -41,10 +41,10 @@ export default function Home() {
       link: "/seo-y-redes-sociales-maximizar-crecimiento"
     },
     {
-      title1: "El impacto de Reinvencion digital",
-      title2: "en el mundo",
+      title1: "La Tecnologia el futuro de",
+      title2: "la gestion empresarial",
       src: "logo.png",
-      link: "/impacto-reinvencion-digital"
+      link: "/el-futuro-de-la-gestion-empresarial"
     }, 
     {
       title1: "Como La IA esta",
