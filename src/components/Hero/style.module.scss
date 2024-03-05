@@ -1,10 +1,10 @@
 /* Hero.module.css */
 
 .hero {
-    background-image: url('../../../public/images/bannerHero.png');
-    background-size: cover;
+    background-image: url('../../../public/images/bannerHeroGrid.png');
+    background-size:cover;
     background-position: center;
-    height: 90vh;
+    height: 60vh;
     margin: 30px;
     justify-content: center;
     align-items: center;
@@ -12,14 +12,19 @@
     border-radius: 20px; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; 
     min-height: 100vh; /* Ajusta según sea necesario */
-    margin-top: 300px;
+    margin-top: 200px;
+    background-attachment: fixed;
+
 
 
     @media (max-width: 768px) {
         margin-top: 50px;
+        margin: 0px;
+        border-radius: 0px; 
+
+
+
 
       }
 
@@ -29,24 +34,44 @@
   
   .text {
     text-align: center;
-    color:aliceblue;
-    font-size: 9vh ;
-    font-weight: 700;
-    padding: 30px;
-    margin-bottom: 20px; 
+    color:rgb(29, 29, 29);
+    font-size: 13vh ;
+    font-weight: 400;
+    line-height: 25px;
 
 
     @media (max-width: 768px) {
             font-size: 5vh;
-            padding: 0%;  
+            padding: 10%;  
+            font-weight: 500;
+
     }
+  }
+
+
+  .subtext {
+    padding-left: 180px;
+    padding-right: 180px;
+
+    margin-bottom: 90px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(63, 63, 63);
+
+    @media (max-width: 768px) {
+      padding: 4%;  
+      margin-bottom: 20px;
+
+}
+
   }
 
   .roundedButton {
     display: flex;
     justify-content: center;
   
-    color: aliceblue;
+    color: rgb(23, 23, 23);
 
     @media (max-width: 768px) {
       width: 100%;

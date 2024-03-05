@@ -6,6 +6,8 @@ import { TypeAnimation } from 'react-type-animation';
 import { useInView } from 'react-intersection-observer';
 import Rounded from '../../common/RoundedButton';
 import { motion } from 'framer-motion'; 
+import Image from 'next/image';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -32,7 +34,7 @@ export default function Hero() {
             {inView && (
               <TypeAnimation
                 sequence={[
-                  'Listo para acelerar tu viaje hacia la reinvencion digital?',
+                  'Integra la IA a tu negocio',
                   1000,
                 ]}
                 speed={60}
@@ -41,7 +43,11 @@ export default function Hero() {
               />
             )}
           </p>
+          <p className={styles.subtext}>Reinventa la experiencia de tus  usuarios, tus procesos empresariales y estrategias de venta a traves de aplicaciones potenciadas por la IA </p>
+
         </div>
+
+      
 
         <motion.div
           className={styles.roundedButton}
@@ -50,7 +56,17 @@ export default function Hero() {
           animate={buttonInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 1.5 }}
         >
-          <Rounded onClick={handleWhatsappClick}>Listo para comenzar?</Rounded>
+          <Rounded onClick={handleWhatsappClick}>
+
+          <Image 
+                            src="/images/logo.png"
+                            alt="background"
+                            height={40} // Specify the numeric height value in pixels
+                            width={60} // Specify the numeric width value in pixels
+                            style={{ display: 'block' }} // Add inline styles as needed
+                        /> 
+            
+            </Rounded>
         </motion.div>
 
       </div>

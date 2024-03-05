@@ -12,9 +12,15 @@ const clientLogos = [
   '/images/aserraderogris.png',
   '/images/tecxio.png',
   '/images/delsur.png',
+  '/images/landsBroker.png',
+  '/images/sinai.png',
+  '/images/bj.png',
+
+
+
   // Agrega más logos según sea necesario
 ];
-
+  
 const ClientCarousel = () => {
   const settings = {
     dots: true,
