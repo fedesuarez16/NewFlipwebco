@@ -25,16 +25,16 @@ const ClientCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true, // Hacer que el carrusel se desplace automáticamente
-    autoplaySpeed: 1000, // Velocidad de desplazamiento automático en milisegundos
+    autoplaySpeed: 500, // Velocidad de desplazamiento automático en milisegundos
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3, // Mostrar tres logos a la vez en dispositivos móviles
+          slidesToShow: 5, // Mostrar tres logos a la vez en dispositivos móviles
         },
       },
     ],
