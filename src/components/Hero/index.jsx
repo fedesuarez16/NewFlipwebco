@@ -7,6 +7,8 @@ import { useInView } from 'react-intersection-observer';
 import Rounded from '../../common/RoundedButton';
 import { motion } from 'framer-motion'; 
 import Image from 'next/image';
+import Clients from '@/components/Clients';
+
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -70,6 +72,9 @@ export default function Hero() {
         </motion.div>
 
       </div>
+
+      <Clients/>
+
     </section>
   );
 }
