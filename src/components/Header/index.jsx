@@ -38,7 +38,7 @@ export default function index() {
 
     return (
         <>
-        <div ref={header} className={styles.header}>
+        <div id='inicio' ref={header} className={styles.header}>
             <div className={styles.logo}>
                 <p className={styles.copyright}>
                 <Image 
