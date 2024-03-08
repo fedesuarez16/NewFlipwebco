@@ -9,20 +9,20 @@ import Footer from './Footer';
 
 const navItems = [
   {
-    title: "Home",
-    href: "/",
+    title: "Inicio",
+    href: "Inicio",
   },
   {
-    title: "Work",
-    href: "/work",
+    title: "Servicios",
+    href: "work",
   },
   {
-    title: "About",
-    href: "/about",
+    title: "Blog",
+    href: "blog",
   },
   {
-    title: "Contact",
-    href: "/contact",
+    title: "Contacto",
+    href: "#contact",
   },
 ]
 
@@ -55,7 +55,6 @@ export default function index() {
                       })
                     }
             </div>
-            <Footer />
         </div>
         <Curve />
     </motion.div>
