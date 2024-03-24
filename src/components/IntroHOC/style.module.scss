@@ -1,0 +1,271 @@
+// Importa tus estilos y fuentes necesarios
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+// Define tus variables si es necesario
+$main-color: #ffe747;
+
+// Estilos del componente Header
+.section {
+  font-family: 'Inter', sans-serif;  // Usa la fuente Inter
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 100px;  // Ajusta el tamaño del logo según tus necesidades
+  height: auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;  // Ajusta la separación entre el logo y el título
+  background-color: rgb(12, 12, 12);
+
+}
+
+.sliderContainer {
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.slider p {
+  color:rgb(190, 190, 190);
+  font-size: 90px;  // Ajusta el tamaño del título según tus necesidades
+  font-weight: 500;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+      // Ajusta el tamaño del título para pantallas pequeñas
+  }
+}
+
+/* TuComponente.module.css (o .scss) */
+
+.wrapper {
+  display: flex;
+  height: auto; /* Change height to auto to allow for dynamic content */
+}
+
+.introText {
+  text-align: center;
+  font-size: 9vh;
+  padding: 40px 50px; /* Adjust padding for better spacing */
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    font-size: 3vh;
+  }
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden; /* Hide any content that exceeds the container's dimensions */
+  }
+  
+  .image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  
+
+.fixedColumn {
+  width: 100px;
+  background-color: black;
+}
+
+
+/* ThreeColumnsComponent.module.scss */
+.threeColumns {
+  display: flex;
+  flex-direction: row; /* Asegura que las columnas se muestren horizontalmente */
+  justify-content: space-between;
+  margin-top: 300px;
+  margin-left: 90px;
+  margin-right: 90px;
+
+  @media (max-width: 768px) {
+      
+        flex-direction: column; /* Cambia la dirección a vertical en dispositivos móviles */
+        align-items: center; /* Centra las tarjetas verticalmente */
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+}
+
+.column {
+  // flex-basis: 30%; /* Cambia el ancho de las columnas según sea necesario */
+  min-width: 20vw;
+  max-width: 25vw;
+  padding: 20px;
+  background-color: #fffefe;
+  text-align: center;
+  border-radius: 10px; /* Agrega bordes redondeados para que parezca una tarjeta */
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+ margin: 15px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    min-width: none;
+    max-width: none;
+  }
+
+}
+
+.column:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+}
+
+.column h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.column p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #6d6d6d;
+  font-weight: 300;
+}
+
+
+.button{
+  display: flex;
+  border: 0.1px solid #ddd; /* Agrega un borde delgado */
+  border-radius: 20px; /* Agrega bordes redondeados para que parezca una tarjeta */
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+  padding: 10px;
+  margin-top: 50px;
+  justify-content: center;
+
+}
+
+@media (max-width: 768px) {
+      
+  .column h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .column p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #6d6d6d;
+      font-weight: 300;
+    }
+}
+
+
+.fourColumns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 100px; /* Ajusta según sea necesario */
+  margin-bottom: 100px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff; /* Ajusta el color de fondo gris según sea necesario */
+  color: #2e2e2e;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.roundedButton {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto; /* Ajusta el margen según sea necesario */
+  @media (max-width: 768px) {
+    margin: 20px auto;
+  }
+}
+
+/* style.module.scss */
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px; /* Adjust margin as needed */
+  margin-bottom: 600px;
+}
+
+.banner img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  object-fit: cover;
+}
+
+
+.fourColumns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px; /* Ajusta según sea necesario */
+  margin-bottom: 100px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff; /* Ajusta el color de fondo gris según sea necesario */
+  color: #2e2e2e;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.roundedButton {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto; /* Ajusta el margen según sea necesario */
+  @media (max-width: 768px) {
+    margin: 20px auto;
+  }
+}
+
+/* style.module.scss */
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px; /* Adjust margin as needed */
+  margin-bottom: 600px;
+}
+
+.banner img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  object-fit: cover;
+}
