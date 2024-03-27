@@ -50,7 +50,7 @@ const IntroPageHOC = (Children, pageData) => () => {
             <div className={styles.fourColumns} >
               {
                 pageData.columns.map((column, index) => (
-                  <Column
+                  <Column key={index}
                     title={column.title}
                     icon={column.icon}
                     description={column.description}
