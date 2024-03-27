@@ -52,13 +52,3 @@
   background-color: black;
   /* Otros estilos según tus necesidades */
 }
-.roundedButton {
-  margin:90px 400px;
-  overflow: hidden;
-  
-  @media (max-width: 768px) {
-   align-items: center; 
-   justify-content: center;
-   text-align: center;
-  }
-  }
