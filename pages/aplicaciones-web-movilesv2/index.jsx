@@ -1,5 +1,5 @@
 import React from 'react'
-import IntroPageHOC from '@/components/IntroHOC/'
+import IntroPageHOC from '@/components/IntroPageHOC'
 import { FaMobileAlt, FaCogs, FaEye, FaToolbox } from 'react-icons/fa';
 import Image from 'next/image';
 import styles from './style.module.scss';

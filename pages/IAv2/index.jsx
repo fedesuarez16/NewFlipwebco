@@ -1,5 +1,5 @@
 import React from 'react'
-import IntroPageHOC from '@/components/IntroHOC/'
+import IntroPageHOC from '@/components/IntroPageHOC'
 import { MdPhoneAndroid, MdSettings, MdAccessTime, MdPerson } from 'react-icons/md';
 
     const pageData = {

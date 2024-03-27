@@ -1,5 +1,5 @@
 import React from 'react'
-import IntroPageHOC from '@/components/IntroHOC/'
+import IntroPageHOC from '@/components/IntroPageHOC'
 import { FaEye, FaThumbsUp, FaUserFriends, FaMoneyCheck } from 'react-icons/fa';
 
     const pageData = {
