@@ -6,7 +6,8 @@ import Rounded from '../../common/RoundedButton';
 import Image from 'next/image';
 import Contact from '../Contact'
 
-const IntroPageHOC = (Children, pageData) =>  {
+
+  export default function IntroPageHOC(Children, pageData) {
 
   const handleWhatsappClick = () => {
     window.open('https://api.whatsapp.com/send?phone=5491133370937', '_blank');
@@ -85,4 +86,3 @@ const IntroPageHOC = (Children, pageData) =>  {
   )
 }
 
-export default IntroPageHOC
