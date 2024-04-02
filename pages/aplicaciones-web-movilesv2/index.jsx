@@ -4,7 +4,8 @@ import { FaMobileAlt, FaCogs, FaEye, FaToolbox } from 'react-icons/fa';
 import Image from 'next/image';
 import styles from './style.module.scss';
 
-    const pageData = {
+export default function IntroPageHOC(Component, pageData) {
+const pageData = {
         title: <>Aplicaciones web <br /> y móviles  </>,
         description: <>"Un producto digital que impulse el crecimiento de tu negocio más allá de los límites."</>,
         columns: [
@@ -53,9 +54,8 @@ import styles from './style.module.scss';
             </>
         )
     }
-
+}
 // SI HAY UN COMPONENTE HIJO, SE LLAMA A LA FUNCION CON LOS 2 PARAMETROS
-export default IntroPageHOC(Component, pageData);
 
 // SI NO HAY COMPONENTE HIJO, EL PRIMER PARAMETRO SE DEFINE COMO NULL
 // export default IntroPageHOC(null, pageData)
