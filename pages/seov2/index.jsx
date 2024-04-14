@@ -24,7 +24,7 @@ import { FaEye, FaThumbsUp, FaUserFriends, FaMoneyCheck } from 'react-icons/fa';
             {
                 icon: <FaMoneyCheck size={30} color="#ffe747" />,
                 title: "Rentabilidad a largo plazo",
-                description: "El SEO ofrece resultados duraderos y sostenibles, atrayendo tráfico orgánico y generando leads sin costos adicionales significativos."
+                description: "El SEO ofrece resultados duraderos y sostenibles atrayendo tráfico orgánico y generando leads sin costos adicionales significativos."
             }
         ]
 
