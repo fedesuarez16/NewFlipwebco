@@ -45,4 +45,4 @@ import { MdPhoneAndroid, MdSettings, MdAccessTime, MdPerson } from 'react-icons/
 // export default IntroPageHOC(Component, pageData);
 
 // SI NO HAY COMPONENTE HIJO, EL PRIMER PARAMETRO SE DEFINE COMO NULL
-export default IntroPageHOC(null, pageData)
+export default IntroPageHOC( Component, pageData)

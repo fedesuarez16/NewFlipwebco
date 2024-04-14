@@ -62,7 +62,7 @@ export default function Home() {
   ];
 
   return (
-    <main id='blog' className={styles.main}>
+    <main className={styles.main}>
       <div className={styles.gallery}>
         <p>Lee acerca de las ultimas novedades en Tech</p>
         {projects.map((project, index) => (
