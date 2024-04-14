@@ -20,7 +20,7 @@
     flex-basis: 30%; /* Cambia el ancho de las columnas según sea necesario */
     padding: 20px;
     background-color: #fffefe;
-    text-align: center;
+    text-align: start;
     border-radius: 10px; /* Agrega bordes redondeados para que parezca una tarjeta */
     transition: transform 0.3s ease; /* Agrega una transición suave */
    margin: 15px;
@@ -41,7 +41,7 @@
   }
   
   .column p {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 20px;
     color: #6d6d6d;
     font-weight: 300;

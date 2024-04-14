@@ -1,54 +1,32 @@
-/* TuComponente.module.css (o .scss) */
-
 .wrapper {
   display: flex;
-  height: 50vh;
-}
-.introText {
-  text-align: center; /* Centra el texto */
-  font-size: 9vh; 
-  padding-right: 50px;
-  padding-left: 50px;
-  padding-top: 40px;
-  overflow: hidden;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 90px;
+  text-align: center; 
 
-  @media (max-width: 768px) {
-
-    font-size: 3vh; 
-
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 }
-.scrollableColumn {
-  flex: 1; /* Esto hará que la columna ocupe todo el espacio restante */
-  overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
-  padding-right: 17px; /* Ancho aproximado de la barra de desplazamiento para evitar que se superponga */
-  /* Otros estilos según tus necesidades */
-
-  p {
-    color: black;
-    font-size: 80px; /* Ajusta el tamaño del texto según tus necesidades */
-  }
-}
-
-/* style.module.scss */
 
 .imageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 }
 
-.image {
-  max-width: 100%; /* Ensure the image doesn't exceed its container width */
-  max-height: 100%; /* Ensure the image doesn't exceed its container height */
-}
-
-
-.fixedColumn {
-  /* Estilos para la columna que no tendrá scroll */
-  /* Puedes establecer un ancho fijo o ajustar según tus necesidades */
-  width: 100px;
-  background-color: black;
-  /* Otros estilos según tus necesidades */
+.introText {
+  text-align: center;
+  padding: 0 20px;
+font-size: 3rem;
+  @media (min-width: 768px) {
+    text-align: start;
+  }
 }

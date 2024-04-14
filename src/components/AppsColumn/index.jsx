@@ -21,22 +21,22 @@ export default function AppsColumn() {
        {/* Cuatro columnas con títulos, texto y iconos */}
        <div className={styles.fourColumns}>
         <Column
-          icon={<FaMobileAlt size={30} color="#292828" />}
+          icon={<FaMobileAlt size={30} color="#6B6A6A" />}
           title="Mejora la Experiencia del Cliente"
           description="Una aplicación empresarial brinda comodidad y accesibilidad las 24 horas del día, permitiendo a los clientes acceder fácilmente a productos, servicios y soporte, lo que aumenta la satisfacción y fidelidad del cliente."
         />
         <Column
-          icon={<FaCogs size={30} color="#292828" />}
+          icon={<FaCogs size={30} color="#6B6A6A" />}
           title="Optimización de Procesos Internos"
           description="Automatiza tareas repetitivas, mejora la eficiencia operativa y facilita la colaboración entre equipos al integrar sistemas y proporcionar herramientas de gestión centralizadas."
         />
         <Column
-          icon={<FaEye size={30} color="#292828" />}
+          icon={<FaEye size={30} color="#6B6A6A" />}
           title="Mayor Visibilidad y Alcance"
           description="Una app empresarial aumenta la visibilidad de la marca al estar disponible en las tiendas de aplicaciones, lo que amplía el alcance del negocio y atrae a nuevos clientes a través de estrategias de marketing digital."
         />
         <Column
-          icon={<FaToolbox size={30} color="#292828" />}
+          icon={<FaToolbox size={30} color="#6B6A6A" />}
           title="Recopilación de Datos y Análisis"
           description="Permite la recopilación de datos detallados sobre el comportamiento del usuario y las interacciones con la aplicación, lo que proporciona información valiosa para mejorar productos, servicios y estrategias comerciales mediante análisis y toma de decisiones basadas en datos."
         />

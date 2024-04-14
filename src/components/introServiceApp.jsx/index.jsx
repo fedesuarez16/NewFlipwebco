@@ -1,10 +1,10 @@
-// Import the required modules
+// Importa los módulos requeridos
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import Rounded from '../../common/RoundedButton';
 import styles from './style.module.scss';
 
-// Initialize the Inter font
+// Inicializa la fuente Inter
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Index() {
@@ -14,16 +14,15 @@ export default function Index() {
 
   return (
     <section className={inter.className}>
-
-      <div className={styles.imageContainer}>
-        {/* Use Next.js Image component to import the image */}
-        <Image src="/images/vector.png" alt="Description of the image" width={500} height={400} />
+      <div className={styles.wrapper}>
+        <div className={styles.imageContainer}>
+          {/* Utiliza el componente Image de Next.js para importar la imagen */}
+          <Image src="/images/vector.png" alt="Descripción de la imagen" width={500} height={400} />
+        </div>
+        <div className={styles.introText}>
+          <p>"Un producto digital que impulse el crecimiento de tu negocio más allá de los límites."</p>
+        </div>
       </div>
-      <div className={styles.introText}>
-        <p>"Un producto digital que impulse el crecimiento de tu negocio más allá de los límites."</p>
-      </div>
-
-     
     </section>
   );
 }
