@@ -1,37 +1,38 @@
-/* TuComponente.module.css (o .scss) */
-
 .wrapper {
-    display: flex;
-    height: auto; /* Change height to auto to allow for dynamic content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 90px;
+  text-align: center; 
+
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
-  
-  .introText {
-    text-align: center;
-    font-size: 9vh;
-    padding: 40px 50px; /* Adjust padding for better spacing */
-    overflow: hidden;
-  
-    @media (max-width: 768px) {
-      font-size: 3vh;
-    }
+}
+
+.imageContainer {
+  margin-bottom: 20px;
+  border-radius: 200px; /* Agrega bordes redondeados */
+  overflow: hidden; 
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: 768px) {
+    margin-right: 20px;
+    margin-bottom: 0;
+    width: 270%;
+
   }
-  
-  .imageContainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-      overflow: hidden; /* Hide any content that exceeds the container's dimensions */
-    }
-    
-    .image {
-      max-width: 100%; /* Ensure the image doesn't exceed its container width */
-      height: auto; /* Maintain the aspect ratio */
-    }
-    
-  
-  .fixedColumn {
-    width: 100px;
-    background-color: black;
+}
+
+.introText {
+  text-align: center;
+  padding: 0 20px;
+font-size: 2rem;
+  @media (min-width: 768px) {
+    text-align: start;
   }
-  
+}

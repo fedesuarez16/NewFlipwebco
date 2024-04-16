@@ -17,22 +17,22 @@ export default function AppsColumn() {
             {/* Cuatro columnas con títulos, texto y iconos */}
             <div className={styles.fourColumns}>
                 <Column
-                    icon={<MdPhoneAndroid size={30} color="#ffe747" />}
+                    icon={<MdPhoneAndroid size={30} color="#6B6A6A" />}
                     title="Mejora atención al cliente"
                     description="Los chatbots ofrecen respuestas rápidas y precisas a consultas comunes, reduciendo tiempos de espera y mejorando la satisfacción del cliente al brindar una atención inmediata y efectiva."
                 />
                 <Column
-                    icon={<MdSettings size={30} color="#ffe747" />}
+                    icon={<MdSettings size={30} color="#6B6A6A" />}
                     title="Automatización de tareas"
                     description="Permiten automatizar procesos repetitivos como la recopilación de información o la programación de citas, liberando recursos humanos para enfocarse en tareas de mayor valor estratégico."
                 />
                 <Column
-                    icon={<MdAccessTime size={30} color="#ffe747" />}
+                    icon={<MdAccessTime size={30} color="#6B6A6A" />}
                     title="Disponibilidad 24/7"
                     description="Al estar siempre activos, los chatbots pueden atender consultas en cualquier momento del día, incluso fuera del horario laboral, lo que garantiza una atención continua y mejora la experiencia del cliente."
                 />
                 <Column
-                    icon={<MdPerson size={30} color="#ffe747" />}
+                    icon={<MdPerson size={30} color="#6B6A6A" />}
                     title="Personalización"
                     description="Gracias a la inteligencia artificial, los chatbots pueden analizar datos del usuario y adaptar sus respuestas y recomendaciones según las necesidades individuales, creando interacciones más relevantes y significativas para cada usuario."
                 />
@@ -44,7 +44,6 @@ export default function AppsColumn() {
 
             {/* Banner Image */}
             <div className={styles.banner}>
-                <Image src="/images/bannerIA.png" alt="Banner" width={1200} height={400} />
             </div>
         </section>
     );

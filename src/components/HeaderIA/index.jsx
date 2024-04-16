@@ -13,11 +13,7 @@ export default function  index ()  {
     <div className={styles.main}>
     <Logo />
     
-      <div className={styles.sliderContainer}>
-        <div className={styles.slider}>
-          <p>IA <br /> Inteligencia Artificial  </p>
-        </div>
-      </div>
+      
     </div>
     </section>
   )
