@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './style.module.scss';
 import Logo from '../Header/logo';
 import { Inter } from 'next/font/google';
-import { MdPhoneAndroid, MdSettings, MdAccessTime, MdPerson } from 'react-icons/md'; // Import the Material Design icons
+import { MdPhoneAndroid, MdSettings, MdAccessTime, MdPerson, MdTimeline, MdTrendingUp, MdFavorite,MdSecurity } from 'react-icons/md'; // Import the Material Design icons
 import Rounded from '../../common/RoundedButton';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -41,6 +41,31 @@ export default function AppsColumn() {
             <div className={styles.roundedButton} onClick={handleWhatsappClick}>
                 <Rounded>Tenes una idea?</Rounded>
             </div>
+
+            <div className={styles.fourColumns}>
+                <Column
+                    icon={<MdTimeline size={30} color="#6B6A6A" />}
+                    title="Optimización de la cadena de suministro"
+                    description="La inteligencia artificial en la gestión de la cadena de suministro permite pronosticar la demanda, optimizar inventarios y agilizar la logística, lo que reduce costos operativos y mejora la eficiencia en la entrega de productos."
+                />
+                <Column
+                    icon={<MdTrendingUp size={30} color="#6B6A6A" />}
+                    title="Mejora de la toma de decisiones"
+                    description="Mediante el análisis de datos en tiempo real y la generación de insights predictivos, la inteligencia artificial ayuda a los líderes empresariales a tomar decisiones más informadas y estratégicas, lo que contribuye a la mejora del rendimiento y la competitividad de la empresa."
+                />
+                <Column
+                    icon={<MdFavorite size={30} color="#6B6A6A" />}
+                    title="Personalización de la experiencia del cliente"
+                    description="La inteligencia artificial permite crear experiencias personalizadas para los clientes, desde recomendaciones de productos hasta contenido y ofertas adaptadas a sus preferencias y comportamientos de compra, lo que aumenta la fidelización y el valor del cliente."
+                />
+                <Column
+                    icon={<MdPerson size={30} color="#6B6A6A" />}
+                    title="Mejora de la seguridad cibernética"
+                    description="La inteligencia artificial puede detectar y prevenir ciberataques de manera proactiva mediante el análisis continuo de patrones de comportamiento y la identificación de anomalías en la red, lo que protege los activos digitales de la empresa y garantiza la integridad de los datos sensibles."
+                />
+            </div>
+
+           
 
             {/* Banner Image */}
             <div className={styles.banner}>
