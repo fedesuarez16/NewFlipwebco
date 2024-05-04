@@ -9,13 +9,14 @@ const inter = Inter({ subsets: ['latin'] });
 export default function  index ()  {
   return (
 
-    <section className={inter.className}>
-    <div className={styles.main}>
-    <Logo />
-    
-      
+    <header className={inter.className}>
+      <div  className={styles.header}>
+      <div className={styles.logo}>
+        <img src="/images/logo.png" alt="Logo" />
+      </div>
+    <h1 className={styles.title}>Inteligencia Artificial</h1>
     </div>
-    </section>
+  </header>
   )
 }
 

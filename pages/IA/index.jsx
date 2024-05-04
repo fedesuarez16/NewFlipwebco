@@ -9,10 +9,8 @@ import Hero from '@/components/Hero';
 
 export default function Sistemas () {
   return (
-    <div className={styles.mainn}>
-        <Header/>
-        <Hero/>
-
+    <>
+    <Header/>
         <Intro/>
         <Columns/>
         <Contact/>
@@ -20,6 +18,6 @@ export default function Sistemas () {
 
     
 
-    </div>
+    </>
   )
 }

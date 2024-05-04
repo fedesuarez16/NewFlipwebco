@@ -32,20 +32,19 @@ export default function Hero() {
     <section className={inter.className}>
       <div className={styles.hero} ref={inViewRef}>
         <div className={styles.text}>
-          <p>
+          <p> Reinventa la experiencia de tus usuarios, procesos empresariales y estrategias de venta a traves de   
             {inView && (
               <TypeAnimation
                 sequence={[
-                  'Integra la IA a tu negocio',
+                  ' aplicaciones potenciadas por la IA',
                   1000,
                 ]}
                 speed={60}
-                wrapper='p'
+                wrapper='b'
                 repeat={Infinity}
-              />
+              /> 
             )}
           </p>
-          <p className={styles.subtext}>Reinventa la experiencia de tus  usuarios, tus procesos empresariales y estrategias de venta a traves de aplicaciones potenciadas por la IA </p>
 
         </div>
 
@@ -56,7 +55,7 @@ export default function Hero() {
           ref={buttonInViewRef}
           initial={{ opacity: 0, y: 20 }}
           animate={buttonInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ delay: 1.5 }}
+          transition={{ delay: .1 }}
         >
           <Rounded onClick={handleWhatsappClick}>
 
