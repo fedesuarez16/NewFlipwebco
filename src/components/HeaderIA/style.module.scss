@@ -1,35 +1,80 @@
-// Header.module.scss
-
 .header {
+  position: relative; /* Asegura que el elemento ::before sea relativo a este contenedor */
   padding: 20px;
   text-align: center;
-  background-color: rgb(33, 33, 33);
-
+  background-image: url('/images/background5.jpg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Para cubrir todo el área del header */
+  background-position: center; /* Centra la imagen de fondo */
+  height: 100vh;
   @media (max-width: 768px) {
     padding: 10px;
   }
-}
 
-.title {
-  color: rgb(38, 37, 37);
-  font-size: 20vh;
-  font-weight: bold;
-  color: aliceblue; 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    z-index: 0; /* Coloca el pseudo-elemento detrás de los elementos principales */
 
-  @media (max-width: 768px) {
-    font-size: 50px;
   }
 }
+
+
+.titleContainer {
+  align-items: center;
+  margin-left: 90px; 
+  position: relative;
+  top: 90px;
+  left: 70px;
+  @media (max-width: 768px) {
+    font-size: 0px;
+    left: 0px;
+    top: 210px;
+    align-items: center;
+    margin-left: 40px;
+  }
+}
+
+.svgIcon {
+  width: 70px; /* Ajusta este valor según sea necesario */
+  margin-left: 10px; /* Ajusta este valor según sea necesario */
+  @media (max-width: 768px) {
+    margin-left: 0;
+    align-items: center;
+    width: 70px; /* Ajusta este valor según sea necesario */
+
+
+  }
+} 
+
+.title {
+  font-size: 7vh;
+  font-weight: 100;
+  color: aliceblue; 
+  position: relative;
+  white-space: nowrap;
+
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+}
+
 .logo img {
   width: 100px; /* Tamaño del logo */
   height: auto;
   display: flex;
   align-items: start;
+  z-index: 100;
+  position: relative;
 
   @media (max-width: 768px) {
     width: 60px;
     display: flex;
-
     align-items: center;
 
   }

@@ -15,7 +15,7 @@
 
 .imageContainer {
   margin-bottom: 20px;
-  border-radius: 200px; /* Agrega bordes redondeados */
+  border-radius: 60px; /* Agrega bordes redondeados */
   overflow: hidden; 
   width: 100%;
   height: 100%;
@@ -31,7 +31,7 @@
 .introText {
   text-align: center;
   padding: 0 20px;
-font-size: 2rem;
+font-size: 1.9rem;
   @media (min-width: 768px) {
     text-align: start;
   }
