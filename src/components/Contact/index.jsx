@@ -105,7 +105,7 @@ export default function Index() {
                                 <h3>socials</h3>
                             </span>
                             <Magnetic>
-                                <p>Instagram</p>
+                                <a className='' href='https://www.instagram.com/flipwebco/?hl=es-la'>Instagram</a>
                             </Magnetic>
                         </div>
                     </div>

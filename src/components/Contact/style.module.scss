@@ -97,34 +97,39 @@
 
 .footer {
   display: flex;
-  flex-direction: column; /* Display footer items vertically */
+  flex-direction: row; /* Display footer items horizontally */
   justify-content: space-between;
   width: 100%;
   margin-top: 50px;
   padding: 20px;
   overflow: hidden;
 
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack footer items vertically on small screens */
+    align-items: center;
+  }
+
   .nav {
     display: flex;
     flex-direction: row; /* Display the first three buttons horizontally */
-    justify-content: center;
     gap: 20px;
 
     @media (max-width: 768px) {
-      flex-wrap: wrap; /* Wrap the buttons in smaller screens */
+      width: 100%;
       justify-content: space-evenly;
     }
   }
 
   .info {
     display: flex;
-    flex-direction: column; /* Display the information items vertically */
-    align-items: center;
+    flex-direction: row; /* Display info items horizontally */
     gap: 20px;
-    padding-top: 20px;
+    align-items: center;
 
     @media (max-width: 768px) {
-      gap: 10px;
+      flex-direction: column; /* Stack info items vertically on small screens */
+      width: 100%;
+      align-items: center;
     }
 
     span {
