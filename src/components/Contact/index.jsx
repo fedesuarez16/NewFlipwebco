@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import styles from './style.module.scss';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
-import { useRef } from 'react';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 import Magnetic from '../../common/Magnetic';
@@ -38,13 +37,11 @@ export default function Index() {
           await axios.post('/api/submitForm', formData); // Make a POST request to the API route
           alert('Form submitted successfully!');
           // Reset form after successful submission
-        
         } catch (error) {
           console.error('Error submitting form:', error);
           alert('Error submitting form. Please try again later.');
         }
       };
-
 
     const handleWhatsappClick = () => {
         window.open('https://api.whatsapp.com/send?phone=5491133370937', '_blank');
@@ -66,42 +63,36 @@ export default function Index() {
                         </div>
                         <h6>Listo para comenzar? <br /> Hablemos!</h6>
                     </div>
-
-                            <div className={styles.form}>
-                                <form onSubmit={handleSubmit}>
-                                    <input type="text" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
-                                    <input type="email" name="email" placeholder="Correo electrónico" value={formData.email} onChange={handleChange} />
-                                    <input type="text" name="number" placeholder="Numero" value={formData.number} onChange={handleChange} />
-                                    <input type="text" name="company" placeholder="Empresa" value={formData.company} onChange={handleChange} />
-                                    <textarea name="query" placeholder="Tu consulta" value={formData.query} onChange={handleChange}></textarea>
-                                    <button type="submit">
-                                        <Rounded  >
-                                            Enviar
-                                        </Rounded>
-                                    </button>
-                                </form>
-                            </div>
+                        <div className={styles.form}>
+                            <form onSubmit={handleSubmit}>
+                                <input type="text" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
+                                <input type="email" name="email" placeholder="Correo electrónico" value={formData.email} onChange={handleChange} />
+                                <input type="text" name="number" placeholder="Numero" value={formData.number} onChange={handleChange} />
+                                <input type="text" name="company" placeholder="Empresa" value={formData.company} onChange={handleChange} />
+                                <textarea name="query" placeholder="Tu consulta" value={formData.query} onChange={handleChange}></textarea>
+                                <button type="submit">
+                                    <Rounded>
+                                        Enviar
+                                    </Rounded>
+                                </button>
+                            </form>
                         </div>
                     </div>
-
-                    <div className={styles.footer}>
-
+                </div>
+                <div className={styles.footer}>
                     <div className={styles.nav}>
                         <Rounded>
                             <p>hello@flipwebco.com</p>
                         </Rounded>
-                        <Rounded onClick={handleWhatsappClick} >
+                        <Rounded onClick={handleWhatsappClick}>
                             <p>+54 9 11 3337 0937</p>
                         </Rounded>
-                       
-                            <Rounded backgroundColor={"#30302d"}  onClick={handleWhatsappClick}>
-                                <p>
-                                    <FaWhatsapp size={30} color="white" />
-                                </p>
-                            </Rounded>
-                       
+                        <Rounded backgroundColor={"#30302d"} onClick={handleWhatsappClick}>
+                            <p>
+                                <FaWhatsapp size={30} color="white" />
+                            </p>
+                        </Rounded>
                     </div>
-
                     <div className={styles.info}>
                         <div>
                             <span>
@@ -118,7 +109,7 @@ export default function Index() {
                             </Magnetic>
                         </div>
                     </div>
-                    </div>
+                </div>
             </motion.div>
         </section>
     )

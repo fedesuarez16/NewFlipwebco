@@ -10,127 +10,129 @@
   width: 100%;
 
   .body {
-      padding-top: 200px;
-      width: 100%;
-      max-width: 1800px;
-      background-color: #141516;
+    padding-top: 200px;
+    width: 100%;
+    max-width: 1800px;
+    background-color: #141516;
+    display: flex;
+    flex-direction: column;
+
+    .title {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgb(134, 134, 134);
+      padding: 80px;
 
-      .title {
+      @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 40px;
+      }
+
+      .titleContent {
         display: flex;
-        justify-content: space-between; /* Distribute content horizontally */
         align-items: center;
-        border-bottom: 1px solid rgb(134, 134, 134);
-        padding-bottom: 100px;
-        padding: 80px;
+        gap: 10px;
+        padding: 50px;          
 
+        @media (min-width: 768px) {
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+
+      h6 {
+        font-size: 5vw;
+        margin: 0px;
+        font-weight: 300;
 
         @media (max-width: 768px) {
-              flex-direction: column;
-              padding: 40px;
-            }
-            
-      
-      
-    
-        .titleContent {
-            display: flex;
-            align-items: center;
-            gap: 10px; /* Adjust gap for spacing between logo and title */
-            padding: 50px;          
-          
-    
-            @media (min-width: 768px) {
-                flex-direction: row;
-                justify-content: center;
-            }
+          font-size: 6vw;
+          font-weight: 500;
+          margin-bottom: 6vh;
         }
-    
-        h6 {
-            font-size: 5vw;
-            margin: 0px;
-            font-weight: 300;
+      }
 
-            @media (max-width: 768px) {
-              font-size: 6vw;
-              font-weight: 500;
-              margin-bottom: 6vh;
+      .form {
+        width: 100%;
+        max-width: 400px;
+        padding: 50px;
+        background-color: #272727;
+        border: none;
+        border-radius: 10px;
 
+        @media (max-width: 768px) {
+          padding: 30px;
+        }
+
+        form {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;                 
+
+          input,
+          textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+          }
+
+          input[type="text"],
+          input[type="email"],
+          textarea {
+            height: 40px;
+          }
+
+          textarea {
+            height: 100px;
           }
         }
-    
-        .form {
-            width: 100%;
-            max-width: 400px;
-            padding: 50px;
-            background-color: #272727;
-            border: none;
-                    border-radius: 10px;
-
-    
-            @media (max-width: 768px) {
-                padding: 30px;
-
-            }
-
-           
-    
-            form {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                align-items: center;                 
-               
-                
-                input,
-                textarea {
-                    width: 100%;
-                    padding: 10px;
-                    border: none;
-                    border-radius: 5px;
-                }
-
-                
-    
-                input[type="text"],
-                input[type="email"],
-                textarea {
-                    height: 40px;
-                }
-    
-                textarea {
-                    height: 100px;
-                }
-    
-               
-            }
-        }
+      }
     }
-    
-  
-      
   }
 }
 
-
 .footer {
-    display: flex;
-    flex-direction: row; /* Ensure the footer items are displayed horizontally */
-    justify-content: space-between; /* Distribute items evenly across the footer */
-    width: 100%;
-    margin-top: 50px;
-    overflow: hidden;
-}
+  display: flex;
+  flex-direction: column; /* Display footer items vertically */
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+  overflow: hidden;
 
-.nav, .info {
+  .nav {
     display: flex;
-    flex-direction: row; /* Display child elements horizontally */
+    flex-direction: row; /* Display the first three buttons horizontally */
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap; /* Wrap the buttons in smaller screens */
+      justify-content: space-evenly;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column; /* Display the information items vertically */
     align-items: center;
     gap: 20px;
-    padding: 20px;
-    overflow: hidden;
+    padding-top: 20px;
+
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
+
+    span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
 .formCard {
@@ -173,9 +175,3 @@
 .form button:hover {
   background-color: #272727;
 }
-
-.button {
-  @media (max-width: 768px) {
-    padding: 300px;
-
-}}
