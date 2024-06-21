@@ -1,0 +1,80 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #0d0d0d;
+    width: 100%;
+  }
+  
+  .heroContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .textContainer {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    font-family: 'Arial', sans-serif;
+    color: #fcfcfc;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #9a9a9a;
+  }
+  
+  .imageContainer {
+    flex: 1;
+  }
+  
+  .image {
+    width: 93%; /* Ajuste para asegurar que la imagen ocupe todo el espacio disponible */
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  .buttonContainer {
+    width: 200px;
+    height: 80px;
+    margin-top: 30px;
+  }
+  
+  .button {
+    color: #d6d07a;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: auto;
+      width: 100%;
+    }
+  
+    .heroContent {
+      flex-direction: column;
+      text-align: start;
+    }
+  
+    .textContainer {
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+  
+    .imageContainer {
+      margin-top: 2rem;
+    }
+  
+    .image {
+      border-radius: 10px;
+    }
+  }
+  

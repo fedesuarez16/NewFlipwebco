@@ -1,0 +1,66 @@
+.serviceCards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    background-color: #0d0d0d;
+    padding: 2rem;
+    width: 100%;
+  }
+  
+  .card {
+    color: #fff;
+    padding: 2rem;
+    border-radius: 28px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: solid 2px #e9e9e9;
+    flex: 1;
+    max-width: 400px;
+    margin-top: 50px;
+  }
+  
+  .card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .card ul li {
+    margin-bottom: 1rem;
+  }
+  
+  .whatsappButton {
+    background-color: #dbe33d;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Añadido para quitar subrayado en el enlace */
+    display: inline-block; /* Añadido para asegurar que el botón sea un bloque en línea */
+  }
+  
+  .whatsappButton:hover {
+    background-color: #128c7e;
+  }
+  
+  @media (max-width: 768px) {
+    .serviceCards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  
