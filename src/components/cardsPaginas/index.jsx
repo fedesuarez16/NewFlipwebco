@@ -42,12 +42,6 @@ const ServiceCards = () => {
         </ul>
         <a href={generateWhatsAppLink('Hola, estoy interesado en el servicio Web Premium')} target="_blank" rel="noopener noreferrer" className={styles.whatsappButton}>Empezar</a>
       </div>
-      <footer className={styles.footer}>
-        <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className={styles.instagramLink}>
-        </a>
-        <a href="https://www.flipwebco.com" target="_blank" rel="noopener noreferrer" className={styles.homeButton}>Ir a la página principal</a>
-        <p className={styles.copyright}>© 2024 Flipwebco. Todos los derechos reservados.</p>
-      </footer>
     </section>
   );
 };

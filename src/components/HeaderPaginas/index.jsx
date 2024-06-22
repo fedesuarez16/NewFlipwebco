@@ -7,7 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 
 const Hero = () => {
   return (
-    <section id='inicio' className={`${styles.hero} ${inter.className}`}>
+    <section >
+        <div id='inicio' className={`${styles.hero} ${inter.className}`}>
+
       <div className={styles.heroContent}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>La Página Web <br /> para tu negocio a solo ARS15.900/mes</h1>
@@ -24,6 +26,8 @@ const Hero = () => {
           <img src="/images/hero.jpg" alt="Hero Image" className={styles.image} />
         </div>
       </div>
+      </div>
+
     </section>
   );
 };

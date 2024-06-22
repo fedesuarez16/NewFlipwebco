@@ -5,6 +5,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 const Navbar = () => {
   return (
+    <section>
     <nav className={`${styles.navbar} ${inter.className}`}>
       <div className={styles.logoContainer}>
         <img src="/images/logo.png" alt="Logo" className={styles.logo} />
@@ -15,6 +16,7 @@ const Navbar = () => {
         <li><a href="#cards">Precios</a></li>
       </ul>
     </nav>
+    </section>
   );
 };
 
