@@ -1,6 +1,7 @@
 .serviceCards {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
     max-width: 1200px;
     background-color: #0d0d0d;
@@ -10,7 +11,7 @@
   
   .card {
     color: #fff;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 28px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -44,11 +45,41 @@
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    text-decoration: none; /* Añadido para quitar subrayado en el enlace */
-    display: inline-block; /* Añadido para asegurar que el botón sea un bloque en línea */
+    text-decoration: none;
+    display: inline-block;
   }
   
   .whatsappButton:hover {
+    background-color: #128c7e;
+  }
+  
+  .footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .instagramLink {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  
+  .instagramLogo {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .homeButton {
+    background-color: #dbe33d;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .homeButton:hover {
     background-color: #128c7e;
   }
   
@@ -61,6 +92,15 @@
     .card {
       width: 100%;
       margin-bottom: 2rem;
+    }
+  
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .instagramLink {
+      margin-bottom: 1rem;
     }
   }
   

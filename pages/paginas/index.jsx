@@ -4,6 +4,8 @@ import Info from '@/components/InfoPaginas'
 import Why from '@/components/whyPaginas'
 import Cards from '@/components/cardsPaginas'
 import Contact from '@/components/Contact'
+import styles from './style.module.scss';
+
 
 
 
@@ -13,7 +15,7 @@ import React from 'react'
 
 export default function paginas () {
   return (
-    <div>
+    <div className={styles.bg}>
         <Navbar/>
       <Header/>
       <Info/>
