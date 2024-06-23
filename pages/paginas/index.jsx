@@ -8,6 +8,9 @@ import Footer from '@/components/footerPaginas'
 import Contact from '@/components/Contact'
 import styles from './style.module.scss';
 
+import '../../src/app/globals.css';
+
+
 
 
 
@@ -23,6 +26,7 @@ export default function paginas () {
       <Info/>
       <Why/>
       <Cards/>
+      <Footer/>
 
 
 

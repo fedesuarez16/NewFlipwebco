@@ -2,10 +2,9 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
-    max-width: 1200px;
     background-color: #0d0d0d;
     padding: 2rem;
-    width: 100%;
+    width: 102%;
   }
   
   .card {
@@ -52,10 +51,17 @@
     background-color: #128c7e;
   }
   
+  .price {
+    font-size: 25px;
+    margin:10px;
+    color: #f6fd6f;
+  }
   @media (max-width: 768px) {
     .serviceCards {
       flex-direction: column;
       align-items: center;
+      width: 102%;
+
     }
   
     .card {

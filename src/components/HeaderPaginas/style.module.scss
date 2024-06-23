@@ -44,20 +44,28 @@
   }
   
   .buttonContainer {
-    width: 200px;
     height: 80px;
+    max-width: 300px;
     margin-top: 30px;
   }
   
   .button {
     color: #d6d07a;
+    margin:20px
   }
   
   @media (max-width: 768px) {
     .hero {
       height: auto;
-      width: 100%;
+      width: 102%;
     }
+
+    .buttonContainer {
+        height: 80px;
+        max-width: 500px;
+        margin-top: 30px;
+      }
+      
   
     .heroContent {
       flex-direction: column;
