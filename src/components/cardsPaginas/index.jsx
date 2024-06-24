@@ -15,7 +15,7 @@ const ServiceCards = () => {
     <section id='cards' className={`${styles.serviceCards} ${inter.className}`}>
       <div className={styles.card}>
         <h2>Web Standard</h2>
-        <p className={styles.price}>ARS 15,900/mes</p>
+        <p className={styles.price}>ARS 14,900/mes</p>
         <ul>
           <li><span role="img" aria-label="check">✔️</span> Diseño personalizado</li>
           <li><span role="img" aria-label="check">✔️</span> Desarrollo responsivo</li>
