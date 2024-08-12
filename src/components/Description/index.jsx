@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export default function index() {
 
-    const phrase = "Impulsando el crecimiento de negocios & marcas a traves del desarrollo de productos digitales exepcionales. ";
+    const phrase = "Impulsando crecimiento de negocios & marcas a traves del desarrollo de productos digitales exepcionales. ";
     const description = useRef(null);
     const isInView = useInView(description)
     return (
@@ -23,7 +23,7 @@ export default function index() {
                 }
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Somos la convergencia entre la eficiencia, la tecnología y la innovación.</motion.p>
-                <div data-scroll data-scroll-speed={0.1}>
+                <a href='#contact'data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
                         <p> 
                         <Image 
@@ -35,7 +35,7 @@ export default function index() {
                         />  
                         </p>
                     </Rounded>
-                </div>
+                </a>
             </div>
         </div>
     )
