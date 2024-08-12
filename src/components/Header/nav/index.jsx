@@ -10,7 +10,7 @@ import Footer from './Footer';
 const navItems = [
   {
     title: "Inicio",
-    href: "Inicio",
+    href: "/",
   },
   {
     title: "Servicios",

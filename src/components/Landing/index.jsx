@@ -44,7 +44,7 @@ export default function Home() {
   }
 
   return (
-    <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
+    <motion.main id='Inicio' variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       {/* <Image 
         src="/images/bannerHeroGrid.png"
         fill={true}

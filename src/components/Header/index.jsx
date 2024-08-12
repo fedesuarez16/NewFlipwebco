@@ -39,7 +39,7 @@ export default function index() {
     return (
         <>
         <div ref={header} className={styles.header}>
-            <div className={styles.logo}>
+            <a href='#Inicio' className={styles.logo}>
                 <p className={styles.copyright}>
                     <Image 
                         src="/images/logo.png"
@@ -49,7 +49,7 @@ export default function index() {
                         style={{ display: 'block' }}
                     />  
                 </p>
-            </div>
+            </a>
             <div className={styles.nav}>
               
                 <Magnetic>
