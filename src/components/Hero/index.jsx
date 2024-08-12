@@ -48,27 +48,13 @@ export default function Hero() {
 
         </div>
 
+        <button className={styles.roundedButton}>
+          Descubri el poder de la IA
+        </button>
+
       
 
-        <motion.div
-          className={styles.roundedButton}
-          ref={buttonInViewRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={buttonInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ delay: .1 }}
-        >
-          <Rounded onClick={handleWhatsappClick}>
-
-          <Image 
-                            src="/images/logo.png"
-                            alt="background"
-                            height={40} // Specify the numeric height value in pixels
-                            width={60} // Specify the numeric width value in pixels
-                            style={{ display: 'block' }} // Add inline styles as needed
-                        /> 
-            
-            </Rounded>
-        </motion.div>
+       
 
       </div>
 
