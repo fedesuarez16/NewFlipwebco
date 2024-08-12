@@ -79,9 +79,10 @@
             flex-direction: column;
             position: relative;
             z-index: 1;
-            padding: 15px;
+            font-size: 12px;
+            padding: 12px;
             border: 1px solid;
-            border-radius: 26px;
+            border-radius: 22px;
             color: #a6a6a6;
             cursor: pointer;
             &:hover{

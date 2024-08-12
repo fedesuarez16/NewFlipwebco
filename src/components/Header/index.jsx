@@ -54,7 +54,7 @@ export default function index() {
               
                 <Magnetic>
                     <div className={styles.el}>
-                        <a>Contacto</a>
+                        <a>Hablemos!</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
