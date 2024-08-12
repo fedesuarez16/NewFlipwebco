@@ -44,25 +44,14 @@ export default function index() {
                     <Image 
                         src="/images/logo.png"
                         alt="background"
-                        height={50}
-                        width={70}
+                        height={40}
+                        width={50}
                         style={{ display: 'block' }}
                     />  
                 </p>
             </div>
             <div className={styles.nav}>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a>Nosotros</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
-                <Magnetic>
-                    <div className={styles.el}>
-                        <a>Servicios</a>
-                        <div className={styles.indicator}></div>
-                    </div>
-                </Magnetic>
+              
                 <Magnetic>
                     <div className={styles.el}>
                         <a>Contacto</a>

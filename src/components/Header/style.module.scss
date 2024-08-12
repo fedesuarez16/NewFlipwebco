@@ -80,6 +80,8 @@
             position: relative;
             z-index: 1;
             padding: 15px;
+            border: 1px solid;
+            border-radius: 26px;
             cursor: pointer;
             &:hover{
                 .indicator{
