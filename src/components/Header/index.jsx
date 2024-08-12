@@ -41,37 +41,37 @@ export default function index() {
         <div ref={header} className={styles.header}>
             <div className={styles.logo}>
                 <p className={styles.copyright}>
-                <Image 
-                    src="/images/logo.png"
-                    alt="background"
-                    height={80} // Specify the numeric height value in pixels
-                    width={100} // Specify the numeric width value in pixels
-                    style={{ display: 'block' }} // Add inline styles as needed
-                />  
-  
+                    <Image 
+                        src="/images/logo.png"
+                        alt="background"
+                        height={50}
+                        width={70}
+                        style={{ display: 'block' }}
+                    />  
                 </p>
-                       
             </div>
-            {/* <div className={styles.nav}>
+            <div className={styles.nav}>
                 <Magnetic>
                     <div className={styles.el}>
-                        <a>Work</a>
+                        <a>Nosotros</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
                 <Magnetic>
                     <div className={styles.el}>
-                        <a>About</a>
+                        <a>Servicios</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
                 <Magnetic>
                     <div className={styles.el}>
-                        <a>Contact</a>
+                        <a>Contacto</a>
                         <div className={styles.indicator}></div>
                     </div>
                 </Magnetic>
-            </div> */}
+            </div> 
+            <div className={styles.divider}></div> {/* Línea divisora */}
+
         </div>
         <div ref={button} className={styles.headerButtonContainer}>
             <Rounded onClick={() => {setIsActive(!isActive)}} className={`${styles.button}`}>
@@ -81,6 +81,6 @@ export default function index() {
         <AnimatePresence mode="wait">
             {isActive && <Nav />}
         </AnimatePresence>
-        </>
-    )
+    </>
+)
 }

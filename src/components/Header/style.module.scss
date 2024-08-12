@@ -10,7 +10,20 @@
     font-weight: 300;
     box-sizing: border-box;
     align-items: center;
-    
+
+
+    .divider {
+        width: 95%;
+        height: 1.5px;
+        background-color: #2c2c2c;
+        margin: 0 auto;  /* Centra la línea divisora */
+        position: absolute;
+        bottom: 0;  /* Posiciona la línea divisora en la parte inferior */
+        left: 0%;   /* Centra horizontalmente dentro del header */
+        right: 0; /* Asegura que esté centrada */
+    }
+
+
     .logo{
         display: flex;
         cursor: pointer;
@@ -90,6 +103,15 @@
         }
     } 
 }
+
+.divider {
+    border-top: 10;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0;  /* Ajusta según el espaciado deseado */
+}
+
+
 .headerButtonContainer{
     transform: scale(0);
     position: fixed;
@@ -154,5 +176,7 @@
       
       }
     }
+
+   
 }
 
