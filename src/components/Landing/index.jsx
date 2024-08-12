@@ -45,11 +45,7 @@ export default function Home() {
 
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
-      <Image 
-        src="/images/background5.jpg"
-        fill={true}
-        alt="background"
-      />
+    
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>FlipWebco - </p>
