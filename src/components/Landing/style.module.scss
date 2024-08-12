@@ -49,8 +49,17 @@
       font-weight: 300;
       p{
         margin: 0px;
-        margin-bottom: 10px;
+        margin-top: 20px;
+        font-size: 15px;
+        color: rgb(118, 118, 118);
+
+        b{
+          font-weight: 400;
+          color: rgb(163, 163, 163);
+        }
       }
+
+
       svg{
         transform: scale(2);
         margin-bottom: 40px;
