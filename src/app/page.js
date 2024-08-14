@@ -50,8 +50,8 @@ export default function Page() {
       </AnimatePresence>
       <Landing />
       <Description />
-      <ThreeColumnsComponent/>
       <Projects />
+      <ThreeColumnsComponent/>
       <Hero/>
       <Blog/>
       <SlidingImages />

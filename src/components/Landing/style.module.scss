@@ -1,111 +1,149 @@
-.landing{
-    position: relative;
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-    background-color: rgb(7, 7, 7) ;
+.landing {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(7, 7, 7);
 
-
-    img{
-      object-fit: cover;
-      filter: brightness(18%);
-
-    }
-    
-    .sliderContainer{
-      position: absolute;
-      top: calc(100vh - 350px);
-    }
-    
-    .slider{
-      position: relative;
-      white-space: nowrap;
-      top: 150px;
-      z-index: 100;
-      color: rgb(9, 9, 9);
-    }
-    
-    .slider p{
-      position: relative;
-      margin: 0px;
-      color: rgb(23, 23, 23);
-      font-size: 180px;
-      font-weight: 500;
-      padding-right: 50px;
-    }
-    
-    .slider p:nth-of-type(2){
-      position: absolute;
-      left: 100%;
-      top: 0;
-    }
-  
-    .description{
-      position: absolute;
-      top: 30%;
-      left: 65%;
-      color: white;
-      font-size: 24px;
-      font-weight: 300;
-      p{
-        margin: 0px;
-        margin-top: 20px;
-        font-size: 15px;
-        color: rgb(118, 118, 118);
-
-        b{
-          font-weight: 400;
-          color: rgb(163, 163, 163);
-        }
-      }
-
-
-      svg{
-        transform: scale(2);
-        margin-bottom: 40px;
-      }
-       h1 {
-        font-weight: 200;
-        font-size: 5vh;
-        margin-bottom: 10px;
-        margin: 0px;
-
-
-       }
-    }
-
-    @media (max-width: 768px) {
-      .description{
-        left: 5%;
-        
-        h1{
-          font-size: 3.5vh;
-
-
-        }
-      }
-
-
-       
-    .slider p{
-      
-      font-size: 140px;
-      top: 10px;
-      width: 100%;
-
-    
-    }
-
-    .slider p:nth-of-type(2){
-    
-      top: 10px;
-    }
-    
-
-            
-    
-    }
+  img {
+    object-fit: cover;
+    filter: brightness(18%);
+    z-index: 100;
   }
 
-  
-  
+  .sliderContainer {
+    position: absolute;
+    top: calc(100vh - 350px);
+  }
+
+  .slider {
+    position: relative;
+    white-space: nowrap;
+    top: 150px;
+    z-index: 1;
+    color: rgb(9, 9, 9);
+  }
+
+  .slider p {
+    position: relative;
+    margin: 0px;
+    color: rgb(23, 23, 23);
+    font-size: 180px;
+    font-weight: 500;
+    padding-right: 50px;
+  }
+
+  .slider p:nth-of-type(2) {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+
+  .descriptionContainer {
+    position: absolute;
+    top: 23%;
+    left: 10%;
+    width: 80%;
+    color: white;
+  }
+
+  .textWithImage {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el texto y la imagen */
+  }
+
+  .text {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .text p {
+    margin: 0px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgb(118, 118, 118);
+  }
+
+  .text b {
+    font-weight: 400;
+    color: rgb(163, 163, 163);
+  }
+
+  .text h1 {
+    font-weight: 200;
+    font-size: 5vh;
+    margin-bottom: 10px;
+    margin: 0px;
+  }
+
+  .customImage {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    /* Otros estilos para la imagen */
+  }
+
+  .cta{
+    visibility: hidden;
+  }
+
+  @media (max-width: 768px) {
+
+    .descriptionContainer{
+      width: 90%;
+
+    }
+
+    .customImage {
+      width: 100%;
+      background-size: cover;
+      height: 5%;
+      z-index: 100;
+
+    }
+
+    .cta{
+      display: flex;
+      background-color: rgb(226, 226, 226);
+      color: black;
+      padding: 7px;
+      visibility: visible;
+    }
+
+    .cta svg {
+      margin-left: 10px;
+      margin-top: 5px;
+    }
+
+
+
+    .descriptionContainer {
+      left: 5%;
+      top: 15%;
+    }
+
+    .textWithImage {
+      flex-direction: column; /* Cambia la dirección del contenido a columna */
+      align-items: flex-start; /* Alinea el contenido al inicio */
+    }
+
+    .text h1 {
+      font-size: 3vh;
+    }
+
+    .text p{
+      margin-bottom: 10px;
+    }
+
+    .slider p {
+      font-size: 180px;
+      top: 0px;
+      width: 100%;
+    }
+
+    .slider p:nth-of-type(2) {
+      top: 10px;
+    }
+  }
+}

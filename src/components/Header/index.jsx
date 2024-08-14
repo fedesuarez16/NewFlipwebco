@@ -39,7 +39,7 @@ export default function index() {
     return (
         <>
         <div ref={header} className={styles.header}>
-            <a href='#Inicio' className={styles.logo}>
+            <a href='Inicio' className={styles.logo}>
                 <p className={styles.copyright}>
                     <Image 
                         src="/images/logo.png"
