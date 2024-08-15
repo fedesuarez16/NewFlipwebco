@@ -59,12 +59,9 @@ export default function Index() {
 
     return (
         <section className={styles.container}>
-        <h2 className={styles.title}>
-            Algunos de nuestros trabajos <br />
-            <span className={styles.arrowIcon}>↓</span>
-        </h2>
+      
         <div ref={container} className={styles.slidingImages}>
-            <motion.div style={{ x: x1 }} className={styles.slider}>
+            {/* <motion.div style={{ x: x1 }} className={styles.slider}>
                 {slider1.map((project, index) => (
                     <Link legacyBehavior key={index} href={project.link}>
                         <div className={styles.project} style={{ backgroundColor: project.color }}>
@@ -85,7 +82,7 @@ export default function Index() {
                         </div>
                     </Link>
                 ))}
-            </motion.div>
+            </motion.div> */}
             <motion.div style={{ height }} className={styles.circleContainer}>
                 <div className={styles.circle}></div>
             </motion.div>

@@ -51,7 +51,6 @@ export default function Page() {
       <Landing />
       <Description />
       <Projects />
-      <ThreeColumnsComponent/>
       <Hero/>
       <Blog/>
       <SlidingImages />

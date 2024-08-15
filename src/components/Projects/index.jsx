@@ -11,33 +11,38 @@ const projects = [
  
   {
     title: "Apps Web & Moviles",
+    subtitle: "Desarrollamos aplicaciones móviles y web a medida, enfocadas en ofrecer una experiencia de usuario intuitiva y optimizada, asegurando funcionalidad, rendimiento y diseño de vanguardia para impulsar tu negocio",
     src: "officestudio.png",
     color: "#8C8C8C",
     route: "/aplicaciones-web-moviles",
   },
   {
-    title: "Inteligencia Artificial",
-    src: "silencio.png",
-    color: "#706D63",
-    route: "/IA",
-  },
-  {
     title: "Sistemas de Gestión",
+    subtitle: "Desarrollamos e implementamos sistemas de gestión CRM y ERP a medida, diseñados para mejorar la eficiencia operativa y la toma de decisiones estratégicas.",
     src: "locomotive.png",
     color: "#EFE8D3",
     route: "/sistemas-de-gestion",
   },
   {
-    title: "Páginas Web",
-    src: "c2montreal.png",
-    color: "#000000",
-    route: "/paginas-web", // Add the route property
-  },
-  {
-    title: "SEO",
+    title: "Consultoria e Innovación",
+    subtitle: "Brindamos consultoría especializada y soluciones innovadoras para que tu empresa esté siempre a la vanguardia en tecnología y procesos digitales",
     src: "silencio.png",
     color: "#706D63",
     route: "/seo",
+  },
+  {
+    title: "Inteligencia Artificial",
+    subtitle: "Integramos inteligencia artificial en tus procesos para automatizar tareas, mejorar la analítica y potenciar la innovación en tu negocio",
+    src: "silencio.png",
+    color: "#706D63",
+    route: "/IA",
+  },
+  {
+    title: "Páginas Web",
+    subtitle: "Desarrollamos aplicaciones móviles y web a medida, enfocadas en ofrecer una experiencia de usuario intuitiva y optimizada, asegurando funcionalidad, rendimiento y diseño de vanguardia para impulsar tu negocio",
+    src: "c2montreal.png",
+    color: "#000000",
+    route: "/paginas-web", // Add the route property
   },
  
 ];
@@ -94,7 +99,7 @@ export default function Home() {
     <div className={styles.body}>
       {
         projects.map( (project, index) => {
-          return <Project  index={index} title={project.title} manageModal={manageModal} key={index}   route={project.route} />
+          return <Project  index={index} title={project.title} subtitle={project.subtitle} manageModal={manageModal} key={index}   route={project.route} />
         })
       }
     </div>

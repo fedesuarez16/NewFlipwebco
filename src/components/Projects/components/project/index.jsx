@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Project({ index, title, manageModal, route }) {
+export default function Project({ index, title, subtitle, manageModal, route }) {
   return (
     <div
       onMouseEnter={(e) => {
@@ -17,6 +17,7 @@ export default function Project({ index, title, manageModal, route }) {
     >
         <div  className={styles.linkContainer}>
           <h2 >{title}</h2>
+          <p>{subtitle}</p>
         </div>
 
       <Link className={styles.icon} href={route} passHref > 
