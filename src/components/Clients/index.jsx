@@ -8,7 +8,6 @@ import styles from './style.module.scss';
 const clientLogos = [
   '/images/yecyoc.png',
   '/images/lionseglogogris.png',
-  '/images/dromex.png',
   '/images/aserraderogris.png',
   '/images/tecxio.png',
   '/images/delsur.png',
@@ -23,13 +22,13 @@ const clientLogos = [
   
 const ClientCarousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1900,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true, // Hacer que el carrusel se desplace automáticamente
-    autoplaySpeed: 100, // Velocidad de desplazamiento automático en milisegundos
+    autoplaySpeed: 400, // Velocidad de desplazamiento automático en milisegundos
     responsive: [
       {
         breakpoint: 768,
