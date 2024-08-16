@@ -56,9 +56,9 @@ export default function Hero() {
 
        
 
-      <Clients/>
       </div>
 
+      <Clients/>
 
     </section>
   );
