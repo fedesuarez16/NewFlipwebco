@@ -1,60 +1,63 @@
-import Image from 'next/image';
-import styles from './styles.module.scss';
-import Logo from '../Header/logo';
-import { Inter } from 'next/font/google';
-import { useInView } from 'react';
-import { FaMobileAlt, FaCogs, FaEye, FaToolbox } from 'react-icons/fa'; // Importa los iconos que necesites
-import Rounded from '../../common/RoundedButton';
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/w3g3iUDCwo4
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
 
-const inter = Inter({ subsets: ['latin'] });
+import Image from "next/image"
+import Img from "./bannerHeroold.png"
 
-export default function AppsColumn() {
-
-   
-        const handleWhatsappClick = () => {
-          window.open('https://api.whatsapp.com/send?phone=5491133370937', '_blank');
-        };
+export default function Component() {
   return (
-    <section className={inter.className}>
-
-      {/* Cuatro columnas con títulos, texto y iconos */}
-       {/* Cuatro columnas con títulos, texto y iconos */}
-       <div className={styles.fourColumns}>
-        <Column
-          icon={<FaMobileAlt size={30} color="#6B6A6A" />}
-          title="Mejora la Experiencia del Cliente"
-          description="Una aplicación empresarial brinda comodidad y accesibilidad las 24 horas del día, permitiendo a los clientes acceder fácilmente a productos, servicios y soporte, lo que aumenta la satisfacción y fidelidad del cliente."
-        />
-        <Column
-          icon={<FaCogs size={30} color="#6B6A6A" />}
-          title="Optimización de Procesos Internos"
-          description="Automatiza tareas repetitivas, mejora la eficiencia operativa y facilita la colaboración entre equipos al integrar sistemas y proporcionar herramientas de gestión centralizadas."
-        />
-        <Column
-          icon={<FaEye size={30} color="#6B6A6A" />}
-          title="Mayor Visibilidad y Alcance"
-          description="Una app empresarial aumenta la visibilidad de la marca al estar disponible en las tiendas de aplicaciones, lo que amplía el alcance del negocio y atrae a nuevos clientes a través de estrategias de marketing digital."
-        />
-        <Column
-          icon={<FaToolbox size={30} color="#6B6A6A" />}
-          title="Recopilación de Datos y Análisis"
-          description="Permite la recopilación de datos detallados sobre el comportamiento del usuario y las interacciones con la aplicación, lo que proporciona información valiosa para mejorar productos, servicios y estrategias comerciales mediante análisis y toma de decisiones basadas en datos."
-        />
+    <section className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Key Information</div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Important Facts at a Glance</h2>
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Get a quick overview of the most crucial details and highlights.
+            </p>
+          </div>
+        </div>
+        <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+          <div className="flex flex-col justify-center space-y-4">
+            <ul className="grid gap-6">
+              <li>
+                <div className="grid gap-1">
+                  <h3 className="text-xl font-bold">Key Fact 1</h3>
+                  <p className="text-muted-foreground">This is an important detail that you should know.</p>
+                </div>
+              </li>
+              <li>
+                <div className="grid gap-1">
+                  <h3 className="text-xl font-bold">Key Fact 2</h3>
+                  <p className="text-muted-foreground">This is another crucial piece of information.</p>
+                </div>
+              </li>
+              <li>
+                <div className="grid gap-1">
+                  <h3 className="text-xl font-bold">Key Fact 3</h3>
+                  <p className="text-muted-foreground">This is a third important fact to be aware of.</p>
+                </div>
+              </li>
+              <li>
+                <div className="grid gap-1">
+                  <h3 className="text-xl font-bold">Key Fact 4</h3>
+                  <p className="text-muted-foreground">This is a fourth key detail that you should know.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <Image
+            src={Img}
+            width="550"
+            height="510"
+            alt="Image"
+            className="mx-auto aspect-video overflow-hidden rounded-xl object-fit object-center sm:w-full lg:order-last"
+          />
+        </div>
       </div>
-
-      <div className={styles.roundedButton} onClick={handleWhatsappClick}>
-        <Rounded>Tenes una idea?</Rounded>
-      </div>
-    
     </section>
-  );
+  )
 }
-
-// Column Component
-const Column = ({ icon, title, description }) => (
-  <div className={styles.column}>
-    {icon}
-    <h3>{title}</h3>
-    <p>{description}</p>
-  </div>
-);
