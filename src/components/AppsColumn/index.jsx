@@ -5,7 +5,7 @@
  */
 
 import Image from "next/image"
-import Img from "./bannerHeroold.png"
+import Img from "./bannerheroold.png"
 
 export default function Component() {
   return (
