@@ -1,82 +1,71 @@
 export default function Component() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black">
-    <div className="container mx-auto px-4 md:px-6">
-      <div className="grid gap-6 items-center ">
-        <div className="flex flex-col justify-center space-y-8 text-center">
-          <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-              Desarrollo de Apps Web y Móviles
-            </h1>
-            <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-zinc-100 mx-auto">
-              Impulsa tu negocio con soluciones innovadoras y personalizadas para cualquier plataforma.
-            </p>
-          </div>
-          <div className="w-full max-w-full space-y-4 mx-auto">
-            <div className="grid grid-cols-3 gap-8">
-              <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <div className="p-2 bg-black bg-opacity-50 rounded-full">
-                  <InboxIcon className="text-white h-6 w-6 mb-2 opacity-75" />
-                </div>
-                <h2 className="text-xl font-bold text-white">Desarrollo Full-Stack</h2>
-                <p className="text-gray-500 dark:text-zinc-100">
-                  Desde el backend hasta el frontend, desarrollamos soluciones completas que garantizan rendimiento y escalabilidad.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <div className="p-2 bg-black bg-opacity-50 rounded-full">
-                  <MergeIcon className="text-white h-6 w-6 mb-2 opacity-75" />
-                </div>
-                <h2 className="text-xl font-bold text-white">Integración Continua</h2>
-                <p className="text-gray-500 dark:text-zinc-100">
-                  Integramos APIs, bases de datos y servicios de terceros para una experiencia sin fisuras.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <div className="p-2 bg-black bg-opacity-50 rounded-full">
-                  <SettingsIcon className="text-white h-6 w-6 mb-2 opacity-75" />
-                </div>
-                <h2 className="text-xl font-bold text-white">Personalización Completa</h2>
-                <p className="text-gray-500 dark:text-zinc-100">
-                  Adaptamos cada aplicación a las necesidades específicas de tu negocio para lograr un impacto máximo.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <div className="p-2 bg-black bg-opacity-50 rounded-full">
-                  <SearchIcon className="text-white h-6 w-6 mb-2 opacity-75" />
-                </div>
-                <h2 className="text-xl font-bold text-white">Optimización SEO</h2>
-                <p className="text-gray-500 dark:text-zinc-100">
-                  Aseguramos que tu aplicación web esté optimizada para los motores de búsqueda, aumentando su visibilidad online.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <div className="p-2 bg-black bg-opacity-50 rounded-full">
-                  <LockIcon className="text-white h-6 w-6 mb-2 opacity-75" />
-                </div>
-                <h2 className="text-xl font-bold text-white">Seguridad Robusta</h2>
-                <p className="text-gray-500 dark:text-zinc-100">
-                  Implementamos medidas de seguridad avanzadas para proteger tus datos y los de tus usuarios.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <div className="p-2 bg-black bg-opacity-50 rounded-full">
-                  <CombineIcon className="text-white h-6 w-6 mb-2 opacity-75" />
-                </div>
-                <h2 className="text-xl font-bold text-white">Despliegue Multiplataforma</h2>
-                <p className="text-gray-500 dark:text-zinc-100">
-                  Llevamos tu aplicación a múltiples plataformas, asegurando una experiencia coherente en web y móvil.
-                </p>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid gap-6 items-center">
+          <div className="flex flex-col justify-center space-y-8 text-center">
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+                Desarrollo de Apps Web y Móviles
+              </h1>
+              <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-zinc-100 mx-auto">
+                Impulsa tu negocio con soluciones innovadoras y personalizadas para cualquier plataforma.
+              </p>
+            </div>
+            <div className="w-full space-y-4 mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <FeatureCard
+                  icon={<InboxIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  title="Desarrollo Full-Stack"
+                  description="Desde el backend hasta el frontend, desarrollamos soluciones completas que garantizan rendimiento y escalabilidad."
+                />
+                <FeatureCard
+                  icon={<MergeIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  title="Integración Continua"
+                  description="Integramos APIs, bases de datos y servicios de terceros para una experiencia sin fisuras."
+                />
+                <FeatureCard
+                  icon={<SettingsIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  title="Personalización Completa"
+                  description="Adaptamos cada aplicación a las necesidades específicas de tu negocio para lograr un impacto máximo."
+                />
+                <FeatureCard
+                  icon={<SearchIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  title="Optimización SEO"
+                  description="Aseguramos que tu aplicación web esté optimizada para los motores de búsqueda, aumentando su visibilidad online."
+                />
+                <FeatureCard
+                  icon={<LockIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  title="Seguridad Robusta"
+                  description="Implementamos medidas de seguridad avanzadas para proteger tus datos y los de tus usuarios."
+                />
+                <FeatureCard
+                  icon={<CombineIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  title="Despliegue Multiplataforma"
+                  description="Llevamos tu aplicación a múltiples plataformas, asegurando una experiencia coherente en web y móvil."
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 }
 
+function FeatureCard({ icon, title, description }) {
+  return (
+    <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
+      <div className="p-2 bg-black bg-opacity-50 rounded-full">
+        {icon}
+      </div>
+      <h2 className="text-xl font-bold text-white">{title}</h2>
+      <p className="text-gray-500 dark:text-zinc-100">
+        {description}
+      </p>
+    </div>
+  );
+}
 
 function CombineIcon(props) {
   return (
@@ -131,7 +120,7 @@ function SearchIcon(props) {
 function SettingsIcon(props) {
   return (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12.22 2h-.44a2 2 0 0 0-1.94 1.5l-.3 1.1a1 1 0 0 1-.95.75h-.28a2 2 0 0 0-1.57.77l-.2.26a2 2 0 0 0 .12 2.56l.75.65a1 1 0 0 1 0 1.53l-.75.65a2 2 0 0 0-.12 2.56l.2.26a2 2 0 0 0 1.57.77h.28a1 1 0 0 1 .95.75l.3 1.1a2 2 0 0 0 1.94 1.5h.44a2 2 0 0 0 1.94-1.5l.3-1.1a1 1 0 0 1 .95-.75h.28a2 2 0 0 0 1.57-.77l.2-.26a2 2 0 0 0-.12-2.56l-.75-.65a1 1 0 0 1 0-1.53l.75-.65a2 2 0 0 0 .12-2.56l-.2-.26a2 2 0 0 0-1.57-.77h-.28a1 1 0 0 1-.95-.75l-.3-1.1A2 2 0 0 0 12.22 2z" />
+      <path d="M12.22 2h-.44a2 2 0 0 0-1.94 1.5l-.3 1.1a1 1 0 0 1-.95.75h-.28a2 2 0 0 0-1.57.77l-.2.26a2 2 0 0 0 .12 2.56l.75.65a1 1 0 0 1 0 1.53l-.75.65a2 2 0 0 0-.12 2.56l.2.26a2 2 0 0 0 1.57.77h.28a1 1 0 0 1 .95.75l.3 1.1a2 2 0 0 0 1.94 1.5h.44a2 2 0 0 0 1.94-1.5l.3-1.1a1 1 0 0 1 .95-.75h.28a2 2 0 0 0 1.57-.77l.2-.26a2 2 0 0 0-.12-2.56l-.75-.65a1 1 0 0 1 0-1.53l.75-.65a2 2 0 0 0 .12-2.56l-.2-.26a2 2 0 0 0-1.57-.77h-.28a1 1 0 0 1-.95-.75l-.3-1.1a2 2 0 0 0-1.94-1.5z" />
       <circle cx="12" cy="12" r="3" />
     </svg>
   );
