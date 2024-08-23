@@ -1,11 +1,17 @@
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+
+
 export default function Component() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black">
+    <section className={inter.className}>
+    <div className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-6 items-center">
           <div className="flex flex-col justify-center space-y-8 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+              <h1 className="text-3xl font-regular tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
                 Desarrollo de Apps Web y Móviles
               </h1>
               <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-zinc-100 mx-auto">
@@ -49,6 +55,7 @@ export default function Component() {
           </div>
         </div>
       </div>
+      </div>
     </section>
   );
 }
@@ -59,7 +66,7 @@ function FeatureCard({ icon, title, description }) {
       <div className="p-2 bg-black bg-opacity-50 rounded-full">
         {icon}
       </div>
-      <h2 className="text-xl font-bold text-white">{title}</h2>
+      <h2 className="text-xl font-regular text-white">{title}</h2>
       <p className="text-gray-500 dark:text-zinc-100">
         {description}
       </p>
