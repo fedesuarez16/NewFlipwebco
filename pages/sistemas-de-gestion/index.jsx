@@ -27,7 +27,7 @@ export default function Component() {
     <div className="flex flex-col min-h-[100dvh]">
       
       <main className="flex-1">
-        <section className="w-full mx-20 py-12 md:py-24 lg:py-32">
+        <section className="w-full lg:mx-20 py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 grid gap-6 lg:grid-cols-2 lg:gap-24">
             <div className="space-y-4">
               <h1 className="text-3xl font-regular tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl">
