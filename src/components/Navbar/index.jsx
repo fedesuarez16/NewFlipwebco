@@ -10,7 +10,7 @@ import Image from 'next/image';
 export default function Component() {
   return (
     <header className="flex items-center justify-between bg-background px-4 py-3 shadow-sm">
-      <Link href="#" className="flex items-center gap-2" prefetch={false}>
+      <Link href="./" className="flex items-center gap-2" prefetch={false}>
         <Image
         src="/images/logo.png"                 
         width="550"
