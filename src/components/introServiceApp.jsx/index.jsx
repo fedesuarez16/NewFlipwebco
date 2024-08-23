@@ -1,4 +1,6 @@
 import { Inter } from 'next/font/google';
+import styles from './style.module.scss';
+
 
 const inter = Inter({ subsets: ['latin'] });
 
