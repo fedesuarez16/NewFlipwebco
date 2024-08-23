@@ -31,7 +31,7 @@ const projects = [
     route: "/consultoria-innovacion",
   },
   {
-    title: "Inteligencia Artificial",
+    title: "Integraciones IA",
     subtitle: "Integramos inteligencia artificial en tus procesos para automatizar tareas, mejorar la analítica y potenciar la innovación en tu negocio",
     src: "silencio.png",
     color: "#706D63",

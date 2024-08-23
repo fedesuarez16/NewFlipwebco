@@ -49,8 +49,8 @@ export default function Component() {
             />
           </div>
         </section>
-        <section id="beneficios" className="w-full py-12 md:py-24 lg:py-10 bg-muted">
-          <div className="container mx-auto px-4 md:px-6">
+        <section id="beneficios" className="w-full bg-gray-100 py-12 md:py-24 lg:py-10 bg-muted">
+          <div className="container p-20 mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-regular tracking-tighter sm:text-5xl">Beneficios de Nuestras Soluciones IT</h2>
@@ -111,11 +111,11 @@ export default function Component() {
                 Únete a nuestros clientes satisfechos y lleva tu empresa al siguiente nivel con nuestras soluciones IT personalizadas.
               </p>
               <Link
-                href="#"
+                href="https://calendar.app.google/uPTo3tZAMWrRbW3Z9"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >
-                Contacta con Nosotros
+                Agenda una llamada
               </Link>
             </div>
           </div>
