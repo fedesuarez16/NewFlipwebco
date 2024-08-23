@@ -28,7 +28,7 @@ const projects = [
     subtitle: "Brindamos consultoría especializada y soluciones innovadoras para que tu empresa esté siempre a la vanguardia en tecnología y procesos digitales",
     src: "silencio.png",
     color: "#706D63",
-    route: "/seo",
+    route: "/consultoria-innovacion",
   },
   {
     title: "Inteligencia Artificial",
