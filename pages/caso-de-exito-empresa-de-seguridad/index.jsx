@@ -2,12 +2,21 @@
  * v0 by Vercel.
  * @see https://v0.dev/t/PGeVvg0gclq
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ * 
  */
 import Link from "next/link"
+import Head from 'next/head';
+
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background">
+          <Head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+          rel="stylesheet"
+        />
+      </Head>
       <header className="px-4 lg:px-6 h-14 flex items-center border-b">
         <Link href="#" className="flex items-center justify-center" prefetch={false}>
           <MountainIcon className="h-6 w-6" />
@@ -16,13 +25,13 @@ export default function Component() {
       </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6 flex flex-col items-center text-center space-y-6">
+          <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center space-y-6">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Acme Inc Achieves 200% Growth
+                Como esta empresa de seguridad y monitoreo reinvento su gestion y redujo gastos en comisiones de sus usuarios
               </h1>
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                Learn how Acme Inc leveraged our platform to drive unprecedented growth and success.
+              En el competitivo mundo de la seguridad, donde la eficiencia y la precisión son fundamentales, una empresa de cámaras y monitoreo de seguridad se enfrentaba a un desafío significativo: las comisiones elevadas que su sistema anterior cobraba a los clientes por realizar pagos. Estas comisiones no solo afectaban la rentabilidad, sino que también generaban insatisfacción entre los clientes. Ante esta problemática, nuestra empresa de soluciones software fue contratada para liderar un proyecto de transformación digital que no solo mejoraría su eficiencia operativa, sino que también reduciría costos innecesarios.
               </p>
             </div>
             <img

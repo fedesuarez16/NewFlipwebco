@@ -15,7 +15,8 @@ import Clients from '@/components/Clients';
 import Blog from '@/components/Blog';
 import { NextSeo } from 'next-seo';
 import Hero from '@/components/Hero';
-import ThreeColumnsComponent from '@/components/Columns';
+import Works from '@/components/Works';
+
 
 
 export default function Page() {
@@ -44,6 +45,7 @@ export default function Page() {
     
         <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+       
       </Head>
       <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
@@ -51,6 +53,7 @@ export default function Page() {
       <Landing />
       <Description />
       <Projects />
+      <Works/>
       <Hero/>
       <Blog/>
       <SlidingImages />

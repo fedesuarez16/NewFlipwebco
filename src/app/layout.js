@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <link rel="canonical" href="https://www.flipwebco.com/" />
+      
       </Head>
 
    
