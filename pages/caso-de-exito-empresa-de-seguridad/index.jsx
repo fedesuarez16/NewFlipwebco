@@ -8,7 +8,7 @@ import Link from "next/link"
 import Head from 'next/head';
 import Image from "next/image";
 import banner from "../../public/images/works.png"
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 
 
 export default function Component() {
