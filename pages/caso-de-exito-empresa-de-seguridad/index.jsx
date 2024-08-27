@@ -6,6 +6,9 @@
  */
 import Link from "next/link"
 import Head from 'next/head';
+import Image from "next/image";
+import banner from "../../public/images/works.png"
+import Navbar from "@/components/navbar";
 
 
 export default function Component() {
@@ -17,29 +20,24 @@ export default function Component() {
           rel="stylesheet"
         />
       </Head>
-      <header className="px-4 lg:px-6 h-14 flex items-center border-b">
-        <Link href="#" className="flex items-center justify-center" prefetch={false}>
-          <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
-        </Link>
-      </header>
+    <Navbar/>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center space-y-6">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              <h1 className="text-3xl mb-8 font-regular tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 Como esta empresa de seguridad y monitoreo reinvento su gestion y redujo gastos en comisiones de sus usuarios
               </h1>
-              <p className="max-w-[700px] text-muted-foreground md:text-xl">
+              <p className="max-w-[700px] font-regular text-gray-500 text-muted-foreground md:text-xl">
               En el competitivo mundo de la seguridad, donde la eficiencia y la precisión son fundamentales, una empresa de cámaras y monitoreo de seguridad se enfrentaba a un desafío significativo: las comisiones elevadas que su sistema anterior cobraba a los clientes por realizar pagos. Estas comisiones no solo afectaban la rentabilidad, sino que también generaban insatisfacción entre los clientes. Ante esta problemática, nuestra empresa de soluciones software fue contratada para liderar un proyecto de transformación digital que no solo mejoraría su eficiencia operativa, sino que también reduciría costos innecesarios.
               </p>
             </div>
-            <img
-              src="/placeholder.svg"
-              width="800"
-              height="400"
+            <Image
+              src={banner}
+              width="700"
+              height="500"
               alt="Success Case"
-              className="rounded-xl w-full max-w-[800px] aspect-[2/1] object-cover"
+              className="rounded-xl max-w-[400px] aspect-[4/2] object-cover"
             />
           </div>
         </section>
