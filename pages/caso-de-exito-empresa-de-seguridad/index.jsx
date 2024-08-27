@@ -43,7 +43,7 @@ export default function Component() {
           </div>
         </section>
 
-        <div className=" mx-auto container py-4 ">
+        <div className=" lg:mx-auto px-4  container py-4 ">
         <div className=" space-y-4">
           <div className="flex items-center gap-4">
             <Image
@@ -54,37 +54,37 @@ export default function Component() {
               height="40"
               style={{ aspectRatio: "40/40", objectFit: "contain" }}
             />
-            <div>
+            <div className="py-2">
               <p className="font-medium">Lionseg</p>
               <a href="https://lionseg.com/" className="text-sm text-muted-foreground">lionseg.com</a>
             </div>
           </div>
-          <h1 className="font-regular text-3xl">El Desafío</h1>
+          <h1 className="font-regular text-3xl tracking-tighter lg:text-3xl">El Desafío</h1>
         </div>
         <p className="mt-10 lg:text-xl text-gray-600">
         El principal problema que enfrentaba la empresa de seguridad era la pérdida de ingresos debido a las comisiones que su sistema de pagos cobraba a los clientes. Cada transacción realizada a través de su plataforma antigua implicaba un costo adicional que se transfería a sus clientes, lo que afectaba tanto la satisfacción del cliente como las finanzas de la empresa.
         </p>
        
-        <h2 className="text-3xl font-regular py-8">La solucion</h2>
-        <p className="pb-4 text-xl text-gray-600">
+        <h2 className="text-3xl font-regular tracking-tighter py-8">La solución</h2>
+        <p className="pb-4 lg:text-xl text-gray-600">
         Para abordar estos desafíos, implementamos una serie de soluciones integradas:
         </p>
-        <p className="py-4 text-xl text-gray-600">
+        <p className="py-4 lg:text-xl text-gray-600">
          <b> 1. Desarrollo de un Sistema de Facturación Personalizado: </b> Diseñamos e implementamos un sistema de facturación a medida que eliminaba las comisiones de transacción. En lugar de utilizar plataformas de pago con tarifas elevadas, nuestro sistema instruía a los usuarios a realizar pagos mediante transferencias bancarias directas. Este enfoque no solo eliminó las comisiones, sino que también simplificó el proceso de pago para los clientes.
         </p>
-        <p className="py-4 text-xl text-gray-600">
+        <p className="py-4 lg:text-xl text-gray-600">
        <b> 2. Sistema de Gestión de Ingresos y Datos: </b> Desarrollamos una plataforma robusta para la gestión de ingresos y datos, permitiendo a la empresa tener una visión clara y en tiempo real de sus operaciones financieras. Esta herramienta facilitó la toma de decisiones basadas en datos, optimizando la asignación de recursos y mejorando la eficiencia operativa. 
         </p>
-        <p className="py-4 text-xl text-gray-600">
+        <p className="py-4 lg:text-xl text-gray-600">
        <b>3. Rediseño de la Imagen Corporativa y Página Web: </b>  Además de los sistemas de backend, rediseñamos la imagen corporativa de la empresa y actualizamos su página web, dándole un aspecto moderno y profesional que reflejara su compromiso con la innovación y la seguridad. La nueva página web no solo mejoró la experiencia del usuario, sino que también integró las nuevas funcionalidades de pago y gestión de datos.        </p>
-        <p className="py-4 text-xl text-gray-600">
+        <p className="py-4 lg:text-xl text-gray-600">
       <b>  4. Automatización de Recordatorios de Pago:</b>  Implementamos un sistema de recordatorios de pago automatizados que envía facturas mensuales y avisos de vencimiento a través de email y WhatsApp. Esta funcionalidad mejoró la tasa de cobranza, redujo el retraso en los pagos, y mejoró la satisfacción del cliente al ofrecer una comunicación clara y oportuna.        </p>
         
-        <h2 className="text-3xl font-regular py-8">Los Resultados</h2>
-        <p className="py-4 text-xl text-gray-600" >
+        <h2 className="text-3xl font-regular tracking-tighter py-8">Los Resultados</h2>
+        <p className="py-4 lg:text-xl text-gray-600" >
         Gracias a nuestra intervención, Lionseg, esta empresa de cámaras y monitoreo de seguridad logragra eliminar completamente las comisiones por transacción, aumentando así su margen de beneficios. Además, la eficiencia operativa se incrementó significativamente gracias al nuevo sistema de gestión de ingresos y datos. La nueva imagen corporativa y página web revitalizaron la presencia en línea de la empresas y mejorando su reputación en el mercado.
         </p>
-        <p className="py-4 text-xl text-gray-600 pb-20">
+        <p className="py-4 lg:text-xl text-gray-600 pb-20">
         Este caso de éxito demuestra cómo una estrategia de transformación digital bien ejecutada puede resolver problemas críticos de negocio, optimizar operaciones y generar valor tanto para la empresa como para sus clientes.
         </p>
       </div>
