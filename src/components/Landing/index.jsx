@@ -47,8 +47,9 @@ export default function Home() {
     <motion.main id='Inicio' variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
     <div className={styles.sliderContainer}>
       <div ref={slider} className={styles.slider}>
-        <p ref={firstText}>FlipWebco - </p>
-        <p ref={secondText}>FlipWebco - </p>
+        <p ref={firstText}>Flipwebco - </p>
+        <p ref={secondText}>Flipwebco - </p>
+
       </div>
     </div>
     <div data-scroll data-scroll-speed={0.1} className={styles.descriptionContainer}>

@@ -52,13 +52,9 @@ export default function Hero() {
           Descubri el poder de la IA
         </button>
 
-      
-
        
 
       </div>
-
-      <Clients/>
 
     </section>
   );

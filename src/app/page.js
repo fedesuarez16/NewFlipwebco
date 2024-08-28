@@ -13,7 +13,6 @@ import Head from 'next/head';
 import Proj from '@/components/Proj';
 import Clients from '@/components/Clients';
 import Blog from '@/components/Blog';
-import { NextSeo } from 'next-seo';
 import Hero from '@/components/Hero';
 import Works from '@/components/Works';
 
@@ -53,6 +52,7 @@ export default function Page() {
       <Landing />
       <Description />
       <Projects />
+      <Clients/>
       <Works/>
       <Hero/>
       <Blog/>

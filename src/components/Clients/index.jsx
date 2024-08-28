@@ -14,9 +14,6 @@ const clientLogos = [
   '/images/landsBroker.png',
   '/images/sinai.png',
   '/images/bj.png',
-
-
-
   // Agrega más logos según sea necesario
 ];
   
@@ -33,7 +30,7 @@ const ClientCarousel = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 5, // Mostrar tres logos a la vez en dispositivos móviles
+          slidesToShow: 5, // Mostrar cinco logos a la vez en dispositivos móviles
         },
       },
     ],
@@ -41,6 +38,8 @@ const ClientCarousel = () => {
 
   return (
     <div className={styles.clientCarousel}>
+      <h2 className={styles.title}>Marcas que nos eligen</h2>
+      <p className={styles.description}>Empresas que eligieron reinventarse con nosotros.</p>
       <Slider {...settings}>
         {clientLogos.map((logo, index) => (
           <div key={index} className={styles.logoContainer}>

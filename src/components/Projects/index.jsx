@@ -103,9 +103,9 @@ export default function Home() {
         })
       }
     </div>
-    <Rounded>
-      <p className={styles.button}>Tenes una idea o un proyecto?</p>
-    </Rounded>
+    {/* <Rounded>
+      <p className={styles.button}>Tenes una idea?</p>
+    </Rounded> */}
     <>
         {/* <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
             <div style={{top: index * -100 + "%"}} className={styles.modalSlider}>

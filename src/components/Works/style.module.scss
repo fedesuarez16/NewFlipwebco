@@ -27,16 +27,18 @@
   
   .title {
     font-size: 1.875rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: -0.025em;
     margin-bottom: 20px;
+        letter-spacing: -0.05em;
+
   
     @media (min-width: 640px) {
       font-size: 2.25rem;
     }
   
     @media (min-width: 768px) {
-      font-size: 3rem;
+      font-size: 3.8rem;
     }
   }
   
@@ -44,6 +46,8 @@
     max-width: 700px;
     margin: 0 auto;
     color: #6b7280; // text-muted-foreground color
+    letter-spacing: -0.05em;
+
     @media (min-width: 768px) {
       font-size: 1.25rem;
     }
@@ -54,7 +58,7 @@
     justify-content: center;  /* Centra la card horizontalmente */
     align-items: center;      /* Centra la card verticalmente */
     min-height: 60vh;    
-    margin-top: 30px;     /* Ajusta la altura mínima */
+    margin-top: 10px;     /* Ajusta la altura mínima */
   }
   
   .card {
@@ -96,13 +100,17 @@
   
   .cardTitle {
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 10px;
+    letter-spacing: -0.05em;
+
   }
   
   .cardSubtitle {
     font-size: 0.875rem;
     color: #6b7280; // text-muted-foreground color
+    letter-spacing: -0.05em;
+
   }
 
   .sr-only{
