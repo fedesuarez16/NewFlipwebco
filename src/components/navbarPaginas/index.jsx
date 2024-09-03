@@ -10,7 +10,7 @@ const Navbar = () => {
     <section>
     <nav className={`${styles.navbar} ${inter.className}`}>
       <div className={styles.logoContainer}>
-        <img src="/images/logo.png" alt="Logo" className={styles.logo} />
+        <img src="/images/logonegro.png" alt="Logo" className={styles.logo} />
       </div>
       <ul className={styles.navLinks}>
         <li><a href="#inicio">Inicio</a></li>

@@ -27,9 +27,9 @@ export default function index() {
                     <Rounded className={styles.button}>
                         <p> 
                         <Image 
-                            src="/images/logo.png"
+                            src="/images/logosolo.png"
                             alt="background"
-                            height={50} // Specify the numeric height value in pixels
+                            height={70} // Specify the numeric height value in pixels
                             width={70} // Specify the numeric width value in pixels
                             style={{ display: 'block' }} // Add inline styles as needed
                         />  

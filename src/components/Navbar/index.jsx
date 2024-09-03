@@ -12,10 +12,9 @@ export default function Component() {
     <header className="flex items-center justify-between bg-background px-4 py-3 shadow-sm">
       <Link href="./" className="flex items-center gap-2" prefetch={false}>
         <Image
-        src="/images/logo.png"                 
-        width="550"
-        height="510" className="h-6 w-6 text-primary" />
-        <span className="text-sm font-medium">Flipwebco</span>
+        src="/images/logonegro.png"                 
+        height={40}
+        width={150}  className=" text-primary" />
       </Link>
       <Link
         href="#"

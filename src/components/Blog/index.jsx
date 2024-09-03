@@ -8,54 +8,54 @@ export default function Home() {
     {
       title1: "Como La IA esta",
       title2: "transformando empresas",
-      src: "logo.png",
+      src: "logosolo.png",
       link: "/como-la-ia-esta-transformando-empresas" 
     },
     {
       title1: "La eficiencia liderada",
       title2: "por la Tecnología",
-      src: "logo.png",
+      src: "logosolo.png",
       link: "/eficiencia-por-tecnologia"
     },
     {
       title1: "Software: El futuro de",
       title2: "la gestión empresarial",
-      src: "logo.png",
+      src: "logosolo.png",
       link: "/el-futuro-de-la-gestion-empresarial"
     },
     {
       title1: "Posiciona 1ra ",
       title2: "tu empresa en internet",
-      src: "logo.png",
+      src: "logosolo.png",
       link: "/pocisiona-tu-empresa-seo"
     },
     {
       title1: " Aumenta las Búsquedas de tu Empresa",
-      src: "logo.png",
+      src: "logosolo.png",
       link: "/aumenta-el-trafico-de-tu-web-negocio" 
     },
     {
       title1: "SEO y Redes Sociales",
       title2: " Maximizar el Impacto  ",
-      src: "logo.png",
+      src: "logosolo.png",
       link: "/seo-y-redes-sociales-maximizar-crecimiento"
     },
     {
       title1: "Software: el futuro de",
       title2: "la gestión empresarial",
-      src: "logo.png",
+      src: "logosolo.png",
       link: "/el-futuro-de-la-gestion-empresarial"
     }, 
     {
       title1: "Como La IA esta",
       title2: "transformando empresas",
-      src: "logo.png",
+      src: "logosolo.png",
       link: "/como-la-ia-esta-transformando-empresas" 
     },
     {
       title1: "La eficiencia liderada",
       title2: "por la Tecnología",
-      src: "logo.png",
+      src: "logosolo.png",
       link: "/eficiencia-por-tecnologia"
     }
     
