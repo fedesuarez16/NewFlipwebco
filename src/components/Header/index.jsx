@@ -45,7 +45,7 @@ export default function index() {
                         src="/images/logo.png"
                         alt="background"
                         height={40}
-                        width={50}
+                        width={150}
                         style={{ display: 'block' }}
                     />  
                 </p>

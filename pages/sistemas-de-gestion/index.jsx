@@ -165,11 +165,11 @@ export default function Component() {
                 Da el primer paso hacia la optimización de tu negocio. Regístrate hoy y descubre el poder de nuestros sistemas de gestión.
               </p>
               <Link
-                href="#"
+                href="https://calendar.app.google/uPTo3tZAMWrRbW3Z9"
                 className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 prefetch={false}
               >
-                Regístrate Ahora
+                Agenda una llamada
               </Link>
             </div>
           </div>
