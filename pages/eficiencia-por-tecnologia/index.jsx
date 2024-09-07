@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import { Inter } from 'next/font/google';
-import Header from '@/components/HeaderBlog'
+import Navbar from "@/components/Navbar";
 import Contact from '@/components/Contact'
 
 const inter = Inter({ subsets: ['latin'] });
@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Blog2  () {
   return (
     <section className={inter.className}>
-      <Header />
+      <Navbar />
       <div className={styles.blogPost}>
         <h2 className={styles.title}>La Eficiencia Liderada por la Tecnología</h2>
         <div className={styles.section}>

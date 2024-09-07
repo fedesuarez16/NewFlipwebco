@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import { Inter } from 'next/font/google';
-import Header from '@/components/HeaderBlog'
+import Navbar from "@/components/Navbar";
 import Contact from '@/components/Contact'
 
 
@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ['latin'] });
 const BlogPost = () => {
   return (
     <section className={inter.className}>
-<Header/>
+<Navbar/>
     <div className={styles.blogPost}>
       <h2 className={styles.title}> SEO y Redes Sociales: Cómo Integrar Estrategias para Maximizar el Impacto
 </h2>

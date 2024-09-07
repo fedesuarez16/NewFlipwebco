@@ -5,6 +5,13 @@ import Link from 'next/link'; // Importa el componente Link de Next.js
 
 export default function Home() {
   const projects = [
+
+    {
+      title1: "65% de las organizaciones",
+      title2: "adoptan la IA",
+      src: "logosolo.png",
+      link: "/transformacion-de-la-atencion-al-cliente-con-IA"
+    },
     {
       title1: "Como La IA esta",
       title2: "transformando empresas",
