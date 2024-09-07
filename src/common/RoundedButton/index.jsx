@@ -33,7 +33,7 @@ export default function index({children, backgroundColor="#FFFF00", ...attribute
           {
             children
           }
-        <div ref={circle} style={{backgroundColor}} className={styles.circle}></div>
+        <div ref={circle}  className={styles.circle}></div>
       </div>
     </Magnetic>
   )
