@@ -32,32 +32,19 @@ export default function Component() {
           </p>
         </div>
       </section>
-      <article className="prose prose-gray mx-auto my-12 max-w-3xl dark:prose-invert">
+      <article className="prose prose-gray mx-auto px-6 my-12 max-w-3xl dark:prose-invert">
         <div className="space-y-2 not-prose">
-          <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl lg:leading-[3.5rem]">
-            Cómo las Empresas están Revolucionando el Soporte al Cliente
+          <h1 className="text-4xl mb-8 font-semibold tracking-tight lg:text-5xl lg:leading-[3.5rem]">
+            Cómo el 65% de las corporaciones implementaron la IA generativa a su atencion al cliente 
           </h1>
-          <div className="flex items-center space-x-4">
-            <Image
-              src={Graphic}
-              alt="Autor Avatar"
-              width={48}
-              height={48}
-              className="h-12 w-12 rounded-full"
-              style={{ aspectRatio: "48/48", objectFit: "cover" }}
-            />
-            <div>
-              <p className="text-sm font-medium">Juan Pérez</p>
-              <p className="text-sm text-muted-foreground">Experto en Tecnología</p>
-            </div>
-          </div>
+        
         </div>
-        <p>
+        <p className="my-4">
           La IA está transformando la manera en que las empresas interactúan con sus clientes, permitiendo una atención más eficiente, rápida y personalizada. Hoy en día, el 65% de las organizaciones han adoptado IA generativa para mejorar sus procesos de soporte al cliente.
         </p>
 
-        <h2>La IA Generativa y su Impacto en el Soporte</h2>
-        <p>
+        <h2 className="font-bold">La IA Generativa y su Impacto en el Soporte</h2>
+        <p className="my-4">
           La IA generativa crea respuestas automáticas basadas en datos previos, lo que permite a las empresas automatizar interacciones comunes, mejorar tiempos de respuesta y personalizar la experiencia del cliente.
         </p>
 
@@ -70,31 +57,56 @@ export default function Component() {
           style={{ aspectRatio: "1200/675", objectFit: "cover" }}
         />
 
-        <h2>Casos Reales de Éxito</h2>
-        <p>
+        <h2 className="font-bold my-4">Casos Reales de Éxito</h2>
+        <p className="my-4">
           <strong>Bank of America:</strong> Con su asistente virtual Erica, Bank of America maneja más de un millón de interacciones diarias, resolviendo consultas de clientes de manera automatizada y eficiente.
         </p>
-        <p>
+        <p  className="my-4">
           <strong>Sephora:</strong> A través de su IA, Sephora ofrece recomendaciones de productos personalizadas, basadas en el historial de compras de los usuarios.
         </p>
-        <p>
+        <p  className="my-4">
           <strong>Microsoft:</strong> Microsoft ha implementado IA en su soporte técnico, logrando automatizar la resolución de problemas básicos y reducir tiempos de espera.
         </p>
 
-        <blockquote>
+        <blockquote className="my-4">
           <p>
             "La revolución digital es más significativa que la invención de la escritura o incluso de la imprenta."
           </p>
           <cite>- Douglas Engelbart, Científico Computacional</cite>
         </blockquote>
 
-        <h2>El Futuro de la Atención al Cliente</h2>
-        <p>
-          Con el avance continuo de la IA generativa, las empresas seguirán mejorando sus servicios de soporte, ofreciendo respuestas más rápidas y precisas, mientras optimizan sus recursos internos.
+        <h2 className="font-bold my-4">El Futuro de la Atención al Cliente</h2>
+        <p className="my-4">
+El uso de IA generativa en la atención al cliente sigue evolucionando. Con el tiempo, veremos mejoras en la capacidad de estos sistemas para manejar interacciones más complejas, con un mayor grado de comprensión emocional y una capacidad mejorada para anticipar las necesidades de los clientes antes de que se expresen.
         </p>
+        <p className="my-4">
+        Empresas de todos los sectores, desde las finanzas hasta el retail, están adoptando la IA para reinventar su atención al cliente. Lo que alguna vez fue un servicio básico se está convirtiendo en una experiencia dinámica, impulsada por tecnología de vanguardia, y la IA generativa está en el corazón de esta revolución.
+         </p>
+         <p className="my-4">
+         En conclusión, a medida que más empresas implementan estas tecnologías, los clientes seguirán disfrutando de experiencias de atención más rápidas, eficientes y personalizadas. Sin duda, la IA generativa no es solo una tendencia pasajera, sino un pilar clave del futuro de la atención al cliente.         </p>
+
+                
       </article>
 
-      <section className="mx-auto my-12 max-w-3xl space-y-8">
+      <section className="w-full border-t border-gray-400 py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="mx-auto max-w-2xl space-y-4 text-center">
+              <h2 className="text-3xl font-semibold tracking-tighter sm:text-4xl">Comienza la reinvencion de tu negocio</h2>
+              <p className="text-muted-foreground md:text-xl text-gray-600">
+                Da el primer paso hacia la optimización de tu negocio. Regístrate hoy y descubre el poder de nuestros sistemas de gestión.
+              </p>
+              <Link
+                href="https://calendar.app.google/uPTo3tZAMWrRbW3Z9"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                prefetch={false}
+              >
+                Agenda una llamada
+              </Link>
+            </div>
+          </div>
+        </section>
+
+      <section className="mx-auto px-6 my-12 max-w-3xl space-y-8">
         <h2 className="text-2xl font-bold">Artículos Relacionados</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <Link href="#" className="group" prefetch={false}>
@@ -161,6 +173,18 @@ export default function Component() {
           </Link>
         </div>
       </section>
+
+      <footer className="flex flex-col gap-2  sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+        <p className="text-xs text-muted-foreground">&copy; 2024 Flipwebco. All rights reserved.</p>
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+            Terms of Service
+          </Link>
+          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+            Privacy
+          </Link>
+        </nav>
+      </footer>
     </div>
   );
 }
