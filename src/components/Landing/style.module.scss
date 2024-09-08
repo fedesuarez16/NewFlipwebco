@@ -5,9 +5,22 @@
   overflow: hidden;
   background-color: rgb(7, 7, 7);
 
+  // Elemento con resplandor
+  &::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 400px;
+    height: 170px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    filter: blur(50px); // Para darle el efecto de resplandor
+  }
+
   img {
     object-fit: cover;
-    filter: brightness(30%);
     z-index: 100;
   }
 
@@ -19,20 +32,21 @@
   .slider {
     position: relative;
     white-space: nowrap;
-    top: 200px;
+    top: 300px;
     z-index: 1;
-    color: rgb(9, 9, 9);
+    color: rgb(8, 8, 8);
+    width: 110%;
   }
 
   .slider p {
     position: relative;
     margin: 0px;
-    color: rgb(129, 129, 129);
-    font-size: 130px;
+    color: rgb(18, 18, 18);
+    font-size: 50px;
     font-weight: 300;
     padding-right: 50px;
     letter-spacing: -0.05em;
-
+    background-color: rgb(255, 255, 255);
   }
 
   .slider p:nth-of-type(2) {
@@ -47,6 +61,7 @@
     left: 10%;
     width: 80%;
     color: white;
+    z-index: 10; // Asegúrate de que el contenido esté por encima del resplandor
   }
 
   .textWithImage {
@@ -66,7 +81,7 @@
     font-size: 15px;
     color: rgb(118, 118, 118);
     letter-spacing: -0.05em;
-
+    text-align: center;
   }
 
   .text b {
@@ -80,25 +95,17 @@
     margin-bottom: 10px;
     margin: 0px;
     letter-spacing: -0.05em;
-
-  }
-
-  .customImage {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-
-    /* Otros estilos para la imagen */
-  }
-
-  .cta{
-    visibility: hidden;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
 
-    .descriptionContainer{
-      width: 90%;
 
+    
+    
+    .descriptionContainer {
+      width: 90%;
+      margin-top: 40px;
     }
 
     .customImage {
@@ -106,23 +113,7 @@
       background-size: cover;
       height: 5%;
       z-index: 100;
-
     }
-
-    .cta{
-      display: flex;
-      background-color: rgb(226, 226, 226);
-      color: black;
-      padding: 7px;
-      visibility: visible;
-    }
-
-    .cta svg {
-      margin-left: 10px;
-      margin-top: 5px;
-    }
-
-
 
     .descriptionContainer {
       left: 5%;
@@ -135,11 +126,19 @@
     }
 
     .text h1 {
-      font-size: 4vh;
+      font-size: 3vh;
     }
 
-    .text p{
+    .text p {
       margin-bottom: 10px;
+    }
+
+    .text svg {
+      margin-left: 140px;
+    }
+
+    .slider {
+      top: 200px;
     }
 
     .slider p {
