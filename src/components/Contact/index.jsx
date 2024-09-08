@@ -53,14 +53,14 @@ export default function Index() {
                 <div className={styles.body}>
                     <div className={styles.title}>
                     <div className={styles.titleContent}>
-                        <div className={styles.imageContainer}>
+                        {/* <div className={styles.imageContainer}>
                         <Image
                             alt="image"
-                            src={`/images/logo.png`}
+                            src={`/images/logosolo.png`}
                             width={60}
                             height={50}
                         />
-                        </div>
+                        </div> */}
                         <h6>Listo para comenzar? <br /> Hablemos!</h6>
                     </div>
                         <div className={styles.form}>
