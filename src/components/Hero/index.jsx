@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { TypeAnimation } from 'react-type-animation'; 
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
+import LogoBlanco from "../../../public/images/logosoloblanco.png"
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -60,7 +61,7 @@ export default function Hero() {
             <a href='#contact'>
               <p>
                 <Image
-                  src="/images/logosoloblanco.png"
+                  src={LogoBlanco}
                   alt="background"
                   height={70}
                   width={70}
