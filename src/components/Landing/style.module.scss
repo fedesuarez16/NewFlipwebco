@@ -46,7 +46,6 @@
     font-weight: 300;
     padding-right: 50px;
     letter-spacing: -0.05em;
-    background-color: rgb(255, 255, 255);
   }
 
   .slider p:nth-of-type(2) {
@@ -62,6 +61,11 @@
     width: 80%;
     color: white;
     z-index: 10; // Asegúrate de que el contenido esté por encima del resplandor
+  }
+
+  .customImage {
+    margin-top: 50px;
+
   }
 
   .textWithImage {
@@ -105,7 +109,7 @@
     
     .descriptionContainer {
       width: 90%;
-      margin-top: 50px;
+      margin-top: 70px;
     }
 
     .customImage {
@@ -113,6 +117,8 @@
       background-size: cover;
       height: 5%;
       z-index: 100;
+      margin-top: 0px;
+
     }
 
     .descriptionContainer {
@@ -145,6 +151,8 @@
       font-size: 60px;
       top: 75px;
       width: 100%;
+      background-color: rgb(255, 255, 255);
+
     }
 
     .slider p:nth-of-type(2) {
