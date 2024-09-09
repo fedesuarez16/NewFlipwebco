@@ -106,7 +106,7 @@ El uso de IA generativa en la atención al cliente sigue evolucionando. Con el t
           </div>
         </section>
 
-      <section className="mx-auto px-6 my-12 max-w-3xl space-y-8">
+      {/* <section className="mx-auto px-6 my-12 max-w-3xl space-y-8">
         <h2 className="text-2xl font-bold">Artículos Relacionados</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <Link href="#" className="group" prefetch={false}>
@@ -172,7 +172,7 @@ El uso de IA generativa en la atención al cliente sigue evolucionando. Con el t
             </div>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       <footer className="flex flex-col gap-2  sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground">&copy; 2024 Flipwebco. All rights reserved.</p>
