@@ -34,10 +34,10 @@ export default function Hero() {
     <section className={inter.className}>
       <div className={styles.hero}>
       <div className={styles.text}>
-        <p> Reinventa la experiencia
+        <p> Reinventa la experiencia de tus 
           <TypeAnimation
             sequence={[
-              ' aplicaciones potenciadas por la IA',
+              ' usuarios',
               1000,
             ]}
             speed={60}

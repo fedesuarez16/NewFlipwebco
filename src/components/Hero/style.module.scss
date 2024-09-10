@@ -21,10 +21,13 @@
 .text {
   text-align: center;
   color: rgb(242, 242, 242);
-  font-size: 4vh;
+  font-size: 5vh;
+  letter-spacing: -0.05em;
+
   font-weight: 300;
   line-height: 60px;
   padding-inline: 50px;
+  margin-bottom: 40px;
 
   @media (max-width: 768px) {
     font-size: 2vh;
@@ -68,17 +71,18 @@
 .box {
   color: #000;
   padding: 30px;
-  width: 80%;
+  width: 55%;
   text-align: start;
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 1.2rem;
   position: relative;
   z-index: 2;
   background-color: #000;
-
   border: #e1e1e1 solid 1px;
   color: #e1e1e1;
   opacity: 1;
+  letter-spacing: -0.05em;
+
 
 }
 
@@ -124,11 +128,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 5px 1px 30px 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 10px 15px 60px 25px rgba(255, 255, 255, 0.1);
   cursor: pointer;
   background-color: #000000;
   border: solid 1px #e1e1e1;
-  margin-top: 40px;
 
   p {
       margin: 0px;

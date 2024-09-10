@@ -24,15 +24,30 @@ export default function Component() {
     <Navbar/>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-14 xl:py-48">
-          <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center space-y-6">
+          <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-start space-y-6">
             <div className="space-y-2">
               <h1 className="text-3xl mb-8 font-regular tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Como esta empresa de seguridad y monitoreo reinvento su gestion y redujo gastos en comisiones de sus usuarios
+                Cómo esta empresa de seguridad y monitoreo reinvento su gestión y redujo gastos en comisiones de sus usuarios
               </h1>
+              <div className="flex items-center gap-4">
+            <Image
+              src={Lionseg}
+              alt="Author Avatar"
+              className="h-12 border-[6px] border-gray-300 w-12 p-1 rounded-full"
+              width="40"
+              height="40"
+              style={{ aspectRatio: "40/40", objectFit: "contain" }}
+            />
+            <div className="py-2">
+              <p className="font-medium">Lionseg</p>
+              <a href="https://lionseg.com/" className="text-sm text-muted-foreground">lionseg.com</a>
+            </div>
+          </div>
               <p className="max-w-[700px] py-6 font-regular text-gray-500 text-muted-foreground md:text-xl">
               En el competitivo mundo de la seguridad, donde la eficiencia y la precisión son fundamentales, una empresa de cámaras y monitoreo de seguridad se enfrentaba a un desafío significativo: las comisiones elevadas que su sistema anterior cobraba a los clientes por realizar pagos. Estas comisiones no solo afectaban la rentabilidad, sino que también generaban insatisfacción entre los clientes. Ante esta problemática, nuestra empresa de soluciones software fue contratada para liderar un proyecto de transformación digital que no solo mejoraría su eficiencia operativa, sino que también reduciría costos innecesarios.
               </p>
             </div>
+            
             <Image
               src={banner}
               width="700"
@@ -45,20 +60,7 @@ export default function Component() {
 
         <div className=" lg:mx-auto px-4  container py-4 ">
         <div className=" space-y-4">
-          <div className="flex items-center gap-4">
-            <Image
-              src={Lionseg}
-              alt="Author Avatar"
-              className="h-12 border-2 border-gray-300 w-12 p-1 rounded-full"
-              width="40"
-              height="40"
-              style={{ aspectRatio: "40/40", objectFit: "contain" }}
-            />
-            <div className="py-2">
-              <p className="font-medium">Lionseg</p>
-              <a href="https://lionseg.com/" className="text-sm text-muted-foreground">lionseg.com</a>
-            </div>
-          </div>
+     
           <h1 className="font-regular text-3xl tracking-tighter lg:text-3xl">El Desafío</h1>
         </div>
         <p className="mt-10 lg:text-xl text-gray-600">
