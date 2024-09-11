@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 import { useScroll, motion, useTransform } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaLinkedin, FaEnvelope  } from 'react-icons/fa';
 import Magnetic from '../../common/Magnetic';
 import { Inter } from 'next/font/google';
 
@@ -34,9 +34,8 @@ export default function Index() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          await axios.post('/api/submitForm', formData); // Make a POST request to the API route
+          await axios.post('/api/submitForm', formData);
           alert('Form submitted successfully!');
-          // Reset form after successful submission
         } catch (error) {
           console.error('Error submitting form:', error);
           alert('Error submitting form. Please try again later.');
@@ -52,28 +51,20 @@ export default function Index() {
             <motion.div style={{ y }} ref={container} className={styles.contact}>
                 <div className={styles.body}>
                     <div className={styles.title}>
-                    <div className={styles.titleContent}>
-                        {/* <div className={styles.imageContainer}>
-                        <Image
-                            alt="image"
-                            src={`/images/logosolo.png`}
-                            width={60}
-                            height={50}
-                        />
-                        </div> */}
-                        <h6>Listo para comenzar? <br /> Hablemos!</h6>
-                    </div>
+                        <div className={styles.titleContent}>
+                            <h6>Listo para comenzar? <br /> Hablemos!</h6>
+                        </div>
                         <div className={styles.form}>
                             <form onSubmit={handleSubmit}>
                                 <input type="text" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
                                 <input type="email" name="email" placeholder="Correo electrónico" value={formData.email} onChange={handleChange} />
-                                <input type="text" name="number" placeholder="Numero" value={formData.number} onChange={handleChange} />
+                                <input type="text" name="number" placeholder="Número" value={formData.number} onChange={handleChange} />
                                 <input type="text" name="company" placeholder="Empresa" value={formData.company} onChange={handleChange} />
                                 <textarea name="query" placeholder="Tu consulta" value={formData.query} onChange={handleChange}></textarea>
                                 <button type="submit">
-                                    <Rounded>
+                                    <div>
                                         Enviar
-                                    </Rounded>
+                                    </div>
                                 </button>
                             </form>
                         </div>
@@ -81,32 +72,33 @@ export default function Index() {
                 </div>
                 <div className={styles.footer}>
                     <div className={styles.nav}>
-                        <Rounded>
-                            <p>hello@flipwebco.com</p>
-                        </Rounded>
-                        <Rounded onClick={handleWhatsappClick}>
-                            <p>+54 9 11 3337 0937</p>
-                        </Rounded>
-                        <Rounded backgroundColor={"#30302d"} onClick={handleWhatsappClick}>
-                            <p>
-                                <FaWhatsapp size={30} color="white" />
-                            </p>
-                        </Rounded>
+                       
+                        <div onClick={handleWhatsappClick} className={styles.socialButton}>
+                            <FaWhatsapp size={30} color="white" />
+                        </div>
+                        <div className={styles.socialButton}>
+                            <a href='https://www.instagram.com/flipwebco/?hl=es-la' target="_blank" rel="noopener noreferrer">
+                                <FaInstagram size={30} color="white" />
+                            </a>
+                        </div>
+                        <div className={styles.socialButton}>
+                            <a href='https://www.linkedin.com/company/flipwebco' target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin size={30} color="white" />
+                            </a>
+                        </div>
+                        <div className={styles.socialButton}>
+                            <a href='https://www.linkedin.com/company/flipwebco' target="_blank" rel="noopener noreferrer">
+                                <FaEnvelope  size={30} color="white" />
+                            </a>
+                        </div>
                     </div>
                     <div className={styles.info}>
                         <div>
-                            <span>
-                                <h3>Version</h3>
-                                <p>2024 © All rights reserved</p>
-                            </span>
+                            <h3>Version</h3>
+                            <p>2024 © All rights reserved</p>
                         </div>
                         <div>
-                            <span>
-                                <h3>socials</h3>
-                            </span>
-                            <Magnetic>
-                                <a className='' href='https://www.instagram.com/flipwebco/?hl=es-la'>Instagram</a>
-                            </Magnetic>
+                            
                         </div>
                     </div>
                 </div>
