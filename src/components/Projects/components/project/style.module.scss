@@ -15,27 +15,36 @@
     }
 
     .linkContainer {
+        .textWithIcon {
+            display: flex;
+            align-items: center;
+
+            .textContainer {
+                display: flex;
+                flex-direction: column;
+                margin-right: 10px; // Ajusta la distancia entre el texto y el ícono SVG
+            }
+
+            .iconSvg {
+                flex-shrink: 0; // Evita que el SVG cambie de tamaño
+            }
+        }
 
         h2 {
             font-size: 9vh;
             margin: 0;
             font-weight: 400;
             transition: all 0.4s;
-            text-decoration: none; // Asegura que el h2 no tenga decoración
+            text-decoration: none; 
             color: black;
-
         }
 
         p {
             transition: all 0.4s;
             font-weight: 300;
             margin-top: 5px;
-            text-decoration: none; // Asegura que el párrafo no tenga decoración
+            text-decoration: none;
             color: rgb(112, 112, 112);
-        }
-
-        &:last-of-type {
-            border-bottom: 1px solid rgb(252, 252, 252);
         }
 
         &:hover {
@@ -53,28 +62,23 @@
     }
 
     @media (max-width: 768px) {
-        .icon {
-            padding-right: 30px;
-            text-decoration: none;
-        }
-
         .linkContainer {
             width: 100%;
             padding: 0% 3% 0% 0%;
             margin-left: 0;
             margin-right: 0px;
-            text-decoration: none;
 
             h2 {
                 font-size: 2.4vh;
-                text-decoration: none; // Evita la decoración
+            }
+            p {
+                font-size: 1.9vh;
             }
 
             &:hover {
                 opacity: 1;
 
-                h2,
-                p {
+                h2, p {
                     transform: translateX(0);
                 }
             }

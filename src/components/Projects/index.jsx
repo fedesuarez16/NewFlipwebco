@@ -11,7 +11,7 @@ const projects = [
  
   {
     title: "Apps Web & Moviles",
-    subtitle: "Desarrollamos aplicaciones móviles y web a medida, enfocadas en ofrecer una experiencia de usuario intuitiva y optimizada, asegurando funcionalidad, rendimiento y diseño de vanguardia para impulsar tu negocio",
+    subtitle: "Desarrollamos aplicaciones móviles y web a medida, enfocadas en una experiencia de usuario intuitiva y optimizada, asegurando funcionalidad, rendimiento y diseño de vanguardia ",
     src: "officestudio.png",
     color: "#8C8C8C",
     route: "/aplicaciones-web-moviles",

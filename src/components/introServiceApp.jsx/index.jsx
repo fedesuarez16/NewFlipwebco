@@ -23,7 +23,7 @@ export default function Component() {
             <div className="w-full space-y-4 mx-auto">
               <div className="grid text-black grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <FeatureCard
-                className="text-black"
+                className="text-black "
                   icon={<InboxIcon className="text-black h-6 w-6 mb-2 opacity-75" />}
                   title="Desarrollo Full-Stack"
                   description="Desde el backend hasta el frontend, desarrollamos soluciones completas que garantizan rendimiento y escalabilidad."
@@ -69,7 +69,7 @@ function FeatureCard({ icon, title, description }) {
       <div className="p-2 bg-black bg-opacity-50 rounded-full">
         {icon}
       </div>
-      <h2 className="text-xl font-regular text-white">{title}</h2>
+      <h2 className="text-xl font-regular text-black">{title}</h2>
       <p className="text-gray-500 dark:text-zinc-100">
         {description}
       </p>
