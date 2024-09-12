@@ -10,78 +10,74 @@
     margin-right: 2%;
     margin-left: 1%;
 
-    
     @media (max-width: 768px) {
-
         width: 95%;
     }
 
-
     .linkContainer {
 
-    h2 {
-        font-size: 9vh;
-        margin: 0;
-        font-weight: 400;
-        transition: all 0.4s;
-
-    }
-
-    p {
-        transition: all 0.4s;
-        font-weight: 300;
-        margin-top: 5px;
-        text-decoration: none;
-        color: rgb(112, 112, 112);
-
-
-    }
-
-    &:last-of-type {
-        border-bottom: 1px solid rgb(252, 252, 252);
-    }
-
-    &:hover {
-        opacity: 0.5;
-
         h2 {
-            transform: translateX(-10px);
+            font-size: 9vh;
+            margin: 0;
+            font-weight: 400;
+            transition: all 0.4s;
+            text-decoration: none; // Asegura que el h2 no tenga decoración
             color: black;
+
         }
 
         p {
-            transform: translateX(10px);
-        }
-    }
-    }
-
-    @media (max-width: 768px) {
-
-        
-        .icon {
-            padding-right: 30px;
+            transition: all 0.4s;
+            font-weight: 300;
+            margin-top: 5px;
+            text-decoration: none; // Asegura que el párrafo no tenga decoración
+            color: rgb(112, 112, 112);
         }
 
-        .linkContainer{
-            width: 100%;
-        padding: 0% 3% 0% 0%;
-        margin-left: 0;
-        margin-right: 0px;
-        text-decoration: none;
-
-        h2 {
-            font-size: 2.4vh;
+        &:last-of-type {
+            border-bottom: 1px solid rgb(252, 252, 252);
         }
-
-      
 
         &:hover {
-            opacity: 1;
+            opacity: 0.5;
 
-            h2,
+            h2 {
+                transform: translateX(-10px);
+                color: black;
+            }
+
             p {
-                transform: translateX(0);
+                transform: translateX(10px);
             }
         }
     }
-}}
+
+    @media (max-width: 768px) {
+        .icon {
+            padding-right: 30px;
+            text-decoration: none;
+        }
+
+        .linkContainer {
+            width: 100%;
+            padding: 0% 3% 0% 0%;
+            margin-left: 0;
+            margin-right: 0px;
+            text-decoration: none;
+
+            h2 {
+                font-size: 2.4vh;
+                text-decoration: none; // Evita la decoración
+            }
+
+            &:hover {
+                opacity: 1;
+
+                h2,
+                p {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}

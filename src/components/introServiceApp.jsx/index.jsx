@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Component() {
   return (
     <section className={inter.className}>
-    <div className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-black">
+    <div className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-neutral-300">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-6 items-center">
           <div className="flex flex-col justify-center space-y-8 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-regular tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+              <h1 className="text-3xl font-regular tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl bg-clip-text ">
                 Desarrollo de Apps Web y Móviles
               </h1>
               <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-zinc-100 mx-auto">
@@ -21,34 +21,35 @@ export default function Component() {
               </p>
             </div>
             <div className="w-full space-y-4 mx-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid text-black grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <FeatureCard
-                  icon={<InboxIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                className="text-black"
+                  icon={<InboxIcon className="text-black h-6 w-6 mb-2 opacity-75" />}
                   title="Desarrollo Full-Stack"
                   description="Desde el backend hasta el frontend, desarrollamos soluciones completas que garantizan rendimiento y escalabilidad."
                 />
                 <FeatureCard
-                  icon={<MergeIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  icon={<MergeIcon className="text-black h-6 w-6 mb-2 opacity-75" />}
                   title="Integración Continua"
                   description="Integramos APIs, bases de datos y servicios de terceros para una experiencia sin fisuras."
                 />
                 <FeatureCard
-                  icon={<SettingsIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  icon={<SettingsIcon className="text-black h-6 w-6 mb-2 opacity-75" />}
                   title="Personalización Completa"
                   description="Adaptamos cada aplicación a las necesidades específicas de tu negocio para lograr un impacto máximo."
                 />
                 <FeatureCard
-                  icon={<SearchIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  icon={<SearchIcon className="text-black h-6 w-6 mb-2 opacity-75" />}
                   title="Optimización SEO"
                   description="Aseguramos que tu aplicación web esté optimizada para los motores de búsqueda, aumentando su visibilidad online."
                 />
                 <FeatureCard
-                  icon={<LockIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  icon={<LockIcon className="text-black h-6 w-6 mb-2 opacity-75" />}
                   title="Seguridad Robusta"
                   description="Implementamos medidas de seguridad avanzadas para proteger tus datos y los de tus usuarios."
                 />
                 <FeatureCard
-                  icon={<CombineIcon className="text-white h-6 w-6 mb-2 opacity-75" />}
+                  icon={<CombineIcon className="text-black h-6 w-6 mb-2 opacity-75" />}
                   title="Despliegue Multiplataforma"
                   description="Llevamos tu aplicación a múltiples plataformas, asegurando una experiencia coherente en web y móvil."
                 />
