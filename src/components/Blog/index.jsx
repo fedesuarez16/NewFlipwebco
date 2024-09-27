@@ -54,10 +54,10 @@ export default function Home() {
       link: "/el-futuro-de-la-gestion-empresarial"
     }, 
     {
-      title1: "Como La IA esta",
-      title2: "transformando empresas",
+      title1: "Guia para gestionar",
+      title2: "empresas exitosamente",
       src: "logosolo.png",
-      link: "/como-la-ia-esta-transformando-empresas" 
+      link: "/gestion-empresarial" 
     },
     {
       title1: "La eficiencia liderada",
