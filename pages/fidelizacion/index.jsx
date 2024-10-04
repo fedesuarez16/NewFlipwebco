@@ -54,7 +54,7 @@ export default function Component() {
                   en <span className="font-semibold">clientes de por vida</span>.
                 </h1>
 
-                <p className="max-w-[600px] font-extralight text-sm text-gray-500 md:text-md dark:text-zinc-100 mx-auto lg:mx-40">
+                <p className="max-w-[600px] font-extralight lg:font-regular  text-sm text-gray-500 md:text-md dark:text-zinc-100 mx-auto lg:mx-40">
                   La herramienta definitiva para marcas de comercio electrónico y proveedores de servicios 
                 </p>
               </div>
@@ -71,7 +71,7 @@ export default function Component() {
                     Unirse
                   </button>
                 </form>
-                <p className="text-xs text-gray-500 dark:text-zinc-100">
+                <p className="text-xs text-gray-500 dark:text-gray-500">
                   Únete para recibir actualizaciones del lanzamiento
                   <Link className="underline underline-offset-2 ml-2 text-black" href="#" prefetch={false}>
                     Terms & Conditions
