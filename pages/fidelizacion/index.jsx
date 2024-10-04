@@ -48,17 +48,17 @@ export default function Component() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-6 items-center">
             <div className="flex flex-col justify-center space-y-4 text-center">
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <h1 className="text-xl mx-auto font-regular tracking-tighter sm:text-5xl xl:text-6xl text-black">
                   Convierte tus compradores ocasionales <br />
                   en <span className="font-semibold">clientes de por vida</span>.
                 </h1>
 
-                <p className="max-w-[600px] text-sm text-gray-500 md:text-md dark:text-zinc-100 mx-auto lg:mx-40">
-                  La herramienta definitiva para marcas de comercio electrónico y proveedores de servicios que buscan aumentar sus ventas recurrentes.
+                <p className="max-w-[600px] font-light text-sm text-gray-500 md:text-md dark:text-zinc-100 mx-auto lg:mx-40">
+                  La herramienta definitiva para marcas de comercio electrónico y proveedores de servicios 
                 </p>
               </div>
-              <div className="w-full max-w-md space-y-2 mx-auto">
+              <div className="w-full max-w-lg space-y-2 mx-auto">
                 <form className="flex space-x-2" onSubmit={handleSubmit}>
                   <input
                     className="max-w-lg text-sm flex-1 h-14 w-52 p-4 bg-gray-500 bg-opacity-30 backdrop-blur-md rounded-lg text-white border-gray-900"
