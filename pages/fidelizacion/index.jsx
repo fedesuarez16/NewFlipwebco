@@ -54,7 +54,7 @@ export default function Component() {
                   en <span className="font-semibold">clientes de por vida</span>.
                 </h1>
 
-                <p className="max-w-[600px] font-light text-sm text-gray-500 md:text-md dark:text-zinc-100 mx-auto lg:mx-40">
+                <p className="max-w-[600px] font-extralight text-sm text-gray-500 md:text-md dark:text-zinc-100 mx-auto lg:mx-40">
                   La herramienta definitiva para marcas de comercio electrónico y proveedores de servicios 
                 </p>
               </div>
