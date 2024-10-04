@@ -84,7 +84,7 @@ export default function Component() {
 
         {/* Notificación */}
         {showNotification && (
-          <div className="fixed top-20 w-44 left-1/2 transform -translate-x-1/2 bg-white-500 text-black p-4 rounded-lg shadow-lg">
+          <div className="fixed top-20 w-48 left-1/2 transform -translate-x-1/2 bg-white-500 text-black p-4 rounded-lg shadow-lg">
             {notificationMessage}
           </div>
         )}
