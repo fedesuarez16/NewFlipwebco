@@ -8,12 +8,17 @@ import styles from './style.module.scss';
 const clientLogos = [
   '/images/yecyoc.png',
   '/images/lionseglogogris.png',
+  '/images/DANNA.png',
+  '/images/jmotors.png',
+  '/images/praset.png',
   '/images/aserraderogris.png',
   '/images/tecxio.png',
-  '/images/delsur.png',
   '/images/landsBroker.png',
   '/images/sinai.png',
+  '/images/delsur.png',
   '/images/bj.png',
+
+
   // Agrega más logos según sea necesario
 ];
   
