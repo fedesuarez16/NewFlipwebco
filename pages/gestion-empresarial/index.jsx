@@ -18,8 +18,8 @@ export default function Component() {
           <meta property="og:description" content="Como el software y la IA son clave para una gestión empresarial eficiente. Descubre las mejores estrategias para tu negocio." />
           <meta property="og:image" content="https://flipwebco.com/gestion-empresarial/idk.jpg" />
           <meta property="og:url" content="https://flipwebco.com/gestion-empresarial" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Gestión Empresarial Eficiente | Flipwebco" />
+          <meta name="twitter:card" content="https://flipwebco.com/gestion-empresarial/idk.jpg" />
+          <meta name="twitter:title" content="Software aplicado a la Gestión Empresarial | Flipwebco" />
           <meta name="twitter:description" content="Optimiza la gestión de tu empresa con software e inteligencia artificial. Conoce las mejores estrategias." />
           <meta name="twitter:image" content="https://flipwebco.com/gestion-empresarial/idk.jpg" />
           <link rel="canonical" href="https://flipwebco.com/gestion-empresarial" />
