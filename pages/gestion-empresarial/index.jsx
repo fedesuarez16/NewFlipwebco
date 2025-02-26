@@ -14,7 +14,7 @@ export default function Component() {
           <meta name="description" content="Descubre cómo el software y la inteligencia artificial pueden optimizar la gestión empresarial, mejorar la eficiencia y hacer crecer tu negocio." />
           <meta name="keywords" content="gestión empresarial, software para empresas, inteligencia artificial, eficiencia empresarial" />
           <meta name="author" content="Flipwebco" />
-          <meta property="og:title" content="Gestión Empresarial Eficiente | Flipwebco" />
+          <meta property="og:title" content="Software aplicado a la Gestión Empresarial | Flipwebco" />
           <meta property="og:description" content="Como el software y la IA son clave para una gestión empresarial eficiente. Descubre las mejores estrategias para tu negocio." />
           <meta property="og:image" content="https://flipwebco.com/gestion-empresarial/idk.jpg" />
           <meta property="og:url" content="https://flipwebco.com/gestion-empresarial" />
