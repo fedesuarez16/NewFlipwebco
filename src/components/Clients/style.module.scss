@@ -1,11 +1,13 @@
-.clientCarousel {
-  max-width: 1100px; /* Ajusta según tus necesidades */
+.clientsSection {
+  max-width: 1100px;
   margin: 0 auto;
   margin-top: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
+  padding: 0 20px;
 
   @media (max-width: 768px) {
     margin-top: 70px;
+    margin-bottom: 40px;
   }
 
   .title {
@@ -20,20 +22,58 @@
   .description {
     text-align: center;
     font-size: 1.15rem;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     color: #666; 
     letter-spacing: -0.05em;
-    padding: 20px;
+  }
+}
 
+.logosGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
+  row-gap: 10px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 }
 
 .logoContainer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   img {
     max-width: 100%;
     height: auto;
+    max-height: 120px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
   }
 }
