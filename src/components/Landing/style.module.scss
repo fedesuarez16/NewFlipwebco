@@ -297,8 +297,9 @@
       max-height: 30vh;
       
       .blurEffect {
-        width: 350px;
-        height: 180px;
+        width: 250px;
+        height: 120px;
+        filter: blur(50px);
       }
     }
 
