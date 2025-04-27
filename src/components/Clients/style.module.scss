@@ -46,8 +46,8 @@
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
   }
 }
 
@@ -65,7 +65,7 @@
   img {
     max-width: 100%;
     height: auto;
-    max-height: 120px;
+    max-height: 130px;
     object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.7;
@@ -74,6 +74,14 @@
     &:hover {
       filter: grayscale(0);
       opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      max-height: 100px;
+    }
+
+    @media (max-width: 480px) {
+      max-height: 75px;
     }
   }
 }

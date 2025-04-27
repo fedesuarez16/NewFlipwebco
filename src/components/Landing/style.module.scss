@@ -6,7 +6,7 @@
   background-color: rgb(7, 7, 7);
 
   img {
-    object-fit: cover;
+    object-fit: contain;
     z-index: 100;
   }
 
@@ -42,11 +42,15 @@
 
   .descriptionContainer {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 10%;
     width: 80%;
     color: white;
     z-index: 10;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
   .content {
@@ -54,12 +58,17 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: 100%;
   }
 
   .imageContainer {
     position: relative;
-    margin-top: 60px;
+    margin-top: 40px;
     transition: transform 0.3s ease;
+    max-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     &:hover {
       transform: translateY(-5px);
@@ -78,12 +87,46 @@
     }
   }
 
+  .ideaButtonWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    text-decoration: none;
+  }
+
+  .ideaButton {
+    background: linear-gradient(90deg, #ff6b6b, #a36bff);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    
+    &:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
+    }
+    
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
   .customImage {
     position: relative;
     z-index: 1;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 40vh;
+    width: auto;
     
     &:hover {
       transform: scale(1.01);
@@ -153,45 +196,153 @@
     transform: scale(1.2);
   }
 
+  .buttonContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .contactButton, .continueButton {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .contactButton {
+    background-color: white;
+    color: #111;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+    }
+    
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  .continueButton {
+    background: linear-gradient(90deg, #ff9966, #ff5e62, #6666ff, #33ccff);
+    background-size: 300% 100%;
+    color: white;
+    animation: gradientShift 8s ease infinite;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(255, 99, 102, 0.3);
+      background-size: 400% 100%;
+    }
+    
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   @media (max-width: 768px) {
     .descriptionContainer {
       width: 90%;
-      margin-top: 40px;
+      margin-top: 0;
       left: 5%;
-      top: 11%;
+      top: 15%;
+      height: 85vh;
     }
 
     .content {
-      align-items: flex-start;
+      align-items: center;
+      height: 100%;
     }
 
     .text {
-      align-items: flex-start;
+      align-items: center;
+      width: 100%;
     }
 
     .customImage {
-      width: 100%;
-      background-size: cover;
-      height: 5%;
+      max-width: 100%;
+      max-height: 25vh;
+      object-fit: contain;
       z-index: 100;
       margin-top: 15px;
       border-radius: 8px;
     }
 
+    .imageContainer {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      max-height: 30vh;
+      
+      .blurEffect {
+        width: 350px;
+        height: 180px;
+      }
+    }
+
+    .ideaButton {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
     .text h1 {
       font-size: 3.5vh;
-      text-align: left;
+      text-align: center;
       margin-top: 15px;
     }
 
     .text p {
       margin-bottom: 10px;
-      text-align: left;
+      text-align: center;
       font-size: 14px;
     }
 
     .text svg {
-      margin-left: 140px;
+      margin-left: 0;
+      align-self: center;
+    }
+    
+    .buttonContainer {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      width: 100%;
+      justify-content: center;
+      
+      a {
+        text-decoration: none;
+        flex: 1;
+        max-width: 110px;
+      }
+      
+      button {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 25px;
+      }
     }
 
     .slider {
@@ -207,15 +358,6 @@
 
     .slider p:nth-of-type(2) {
       top: 75px;
-    }
-
-    .imageContainer {
-      margin-top: 30px;
-      
-      .blurEffect {
-        width: 350px;
-        height: 180px;
-      }
     }
   }
 }

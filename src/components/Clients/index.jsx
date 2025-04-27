@@ -6,16 +6,16 @@ const clientLogos = [
   '/images/yecyoc.png',
   '/images/lionseglogogris.png',
   '/images/DANNA.png',
-  '/images/jmotors.png',
+  '/images/opting.png',
   '/images/praset.png',
+  '/images/nunez.png',
+  '/images/jmotors.png',
   '/images/aserraderogris.png',
   '/images/tecxio.png',
   '/images/landsBroker.png',
   '/images/sinai.png',
   '/images/delsur.png',
   '/images/bj.png',
-  '/images/nunez.png',
-  '/images/opting.png',
 
   // Agrega más logos según sea necesario
 ];
