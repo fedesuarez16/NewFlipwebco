@@ -1,17 +1,33 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-body{
-    cursor: wait;
-    margin: 0;
-    padding: 0;
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+@keyframes carousel-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.carousel-track {
+  animation: carousel-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
 }

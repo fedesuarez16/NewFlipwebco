@@ -1,50 +1,29 @@
-// RootLayout.js
-
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { NextSeo } from 'next-seo'; // Import NextSeo
-import Header from '../components/Header';
-import Head from 'next/head'; // Import Head from next/head
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
-
-
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Flipwebco - Software | Haciendo la reinvención empresarial tecnológica',
-  description: 'Impulsando la transición de las empresas hacia la reinvención digital. Estamos enfocados en la facilitación de procesos empresariales a través de productos digitales exepcionales ',
-  type: 'website', // Specify the type of content (website, article, etc.)
-  locale: 'es_ES', // Specify the locale (language and country)
-  url: 'https://www.flipwebco.com/', // Specify the canonical URL of the page
-  site_name: 'Flipwebco', // Specify the name of the website
-  images: [
-    {
-      url: 'https://ibb.co/cQ4hnKD', 
-      width: 1200, // Width of the image
-      height: 630, // Height of the image
-      alt: 'Flipwebco', // Alt text for the image
-    },
-  ],
-};
+  metadataBase: new URL('https://www.flipwebco.com'),
+  title: 'Flipwebco — Consultoría de Software & IA',
+  description: 'Resolvemos los problemas más complejos de tu empresa con inteligencia artificial. Consultoría de software, apps, sistemas de gestión, SEO e integraciones IA.',
+  openGraph: {
+    type: 'website',
+    locale: 'es_ES',
+    url: 'https://www.flipwebco.com/',
+    siteName: 'Flipwebco',
+  },
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <Head>
-        <link rel="canonical" href="https://www.flipwebco.com/" />
-      
-      </Head>
-
-   
-      
+    <html lang="es">
       <body className={inter.className}>
-        <Header />
         {children}
         <Analytics />
-        <SpeedInsights/>
-
+        <SpeedInsights />
       </body>
     </html>
   )

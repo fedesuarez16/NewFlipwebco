@@ -1,64 +1,22 @@
-'use client';
-
-import styles from './page.module.scss'
-import { useEffect, useState } from 'react'
-import { AnimatePresence } from 'framer-motion';
-import Preloader from '../components/Preloader';
-import Landing from '../components/Landing';
-import Projects from '../components/Projects';
-import Description from '../components/Description';
-import SlidingImages from '../components/SlidingImages';
-import Contact from '../components/Contact';
-import Head from 'next/head';
-import Proj from '@/components/Proj';
-import Clients from '@/components/Clients';
-import Blog from '@/components/Blog';
-import Hero from '@/components/Hero';
-import Works from '@/components/Works';
-
-
+'use client'
+import Navbar from '@/components/Navbar'
+import HeroSection from '@/components/HeroSection'
+import ServicesGrid from '@/components/ServicesGrid'
+import HowWeWork from '@/components/HowWeWork'
+import ContactSection from '@/components/ContactSection'
+import FooterSection from '@/components/FooterSection'
 
 export default function Page() {
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
-
-          setTimeout( () => {
-            setIsLoading(false);
-            document.body.style.cursor = 'default'
-            window.scrollTo(0,0);
-          }, 2000)
-      }
-    )()
-  }, [])
-
   return (
-
-    
-    <main className={styles.main}>
-    
-        <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-       
-      </Head>
-      <AnimatePresence mode='wait'>
-        {isLoading && <Preloader />}
-      </AnimatePresence>
-      <Landing />
-      <Description />
-      <Projects />
-      <Clients/>
-      <Works/>
-      <Hero/>
-      <Blog/>
-      <SlidingImages />
-      <Proj/>
-      <Contact />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <HeroSection />
+        <ServicesGrid />
+        <HowWeWork />
+        <ContactSection />
+      </main>
+      <FooterSection />
+    </>
   )
 }
