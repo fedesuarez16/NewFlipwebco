@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -10,8 +11,15 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A] border-b border-[#1E1E1E]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="font-bold text-xl text-white tracking-tight">
-            Flipwebco
+          <Link href="/" className="flex items-center gap-2.5">
+            <Image
+              src="/icon.png"
+              alt="Flipwebco"
+              width={48}
+              height={48}
+              className="object-contain"
+            />
+            <span className="font-bold text-lg text-white tracking-tight">Flipwebco</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
