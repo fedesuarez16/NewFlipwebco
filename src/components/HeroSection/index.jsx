@@ -61,7 +61,7 @@ export default function HeroSection() {
           className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight max-w-3xl"
         >
           Opera al doble con IA.
-          <br className="hidden md:block" /> Escala sin limites
+          <br className="hidden md:block" /> Escala sin limites.
         </motion.h1>
 
         <motion.p
