@@ -21,6 +21,22 @@ export const metadata = {
     locale: 'es_ES',
     url: 'https://www.flipwebco.com/',
     siteName: 'Flipwebco',
+    title: 'Flipwebco — Consultoría de Software & IA',
+    description: 'Resolvemos los problemas más complejos de tu empresa con inteligencia artificial. Consultoría de software, apps, sistemas de gestión, SEO e integraciones IA.',
+    images: [
+      {
+        url: '/logo.png',
+        width: 1672,
+        height: 580,
+        alt: 'Flipwebco — Consultoría de Software & IA',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Flipwebco — Consultoría de Software & IA',
+    description: 'Resolvemos los problemas más complejos de tu empresa con inteligencia artificial.',
+    images: ['/logo.png'],
   },
 }
 
