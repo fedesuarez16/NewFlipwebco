@@ -57,7 +57,7 @@ export default function Navbar() {
           <a href="#como-trabajamos" onClick={close} className="text-[#888] hover:text-white font-medium py-1 transition-colors">Proceso</a>
           <a href="#contacto" onClick={close} className="text-[#888] hover:text-white font-medium py-1 transition-colors">Contacto</a>
           <a href="#contacto" onClick={close} className="bg-white text-[#0A0A0A] text-center py-3 rounded-lg font-semibold mt-1">
-            Hablemos →
+            Hablemos 
           </a>
         </div>
       )}
