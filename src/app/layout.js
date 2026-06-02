@@ -25,10 +25,10 @@ export const metadata = {
     description: 'Resolvemos los problemas más complejos de tu empresa con inteligencia artificial. Consultoría de software, apps, sistemas de gestión, SEO e integraciones IA.',
     images: [
       {
-        url: '/logo.png',
-        width: 1672,
-        height: 580,
-        alt: 'Flipwebco — Consultoría de Software & IA',
+        url: '/og-image.jpg',
+        width: 2236,
+        height: 958,
+        alt: 'Flipwebco — Tu socio en transformación tecnológica de principio a fin.',
       },
     ],
   },
@@ -36,7 +36,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Flipwebco — Consultoría de Software & IA',
     description: 'Resolvemos los problemas más complejos de tu empresa con inteligencia artificial.',
-    images: ['/logo.png'],
+    images: ['/og-image.jpg'],
   },
 }
 
