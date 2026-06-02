@@ -33,12 +33,11 @@ export default function ClientsSection() {
           style={{ background: 'linear-gradient(to left, #ffffff, transparent)' }}
         />
 
-        <div className="flex carousel-track gap-10 items-center px-10">
+        <div className="flex carousel-track gap-2 md:gap-10 items-center px-4 md:px-10">
           {allLogos.map((logo, i) => (
             <div
               key={i}
-              className="flex-shrink-0 flex items-center justify-center"
-              style={{ width: '160px', height: '80px' }}
+              className="flex-shrink-0 flex items-center justify-center w-20 h-12 md:w-40 md:h-20"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

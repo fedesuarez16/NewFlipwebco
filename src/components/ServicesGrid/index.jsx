@@ -50,8 +50,8 @@ export default function ServicesGrid() {
           <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#9A8E83' }}>
             Servicios Enterprise
           </span>
-          <h2 className="mt-3 text-4xl lg:text-5xl font-bold text-[#0A0A0A] leading-tight">
-            Los servicios de IA más solicitados por empresas
+          <h2 className="mt-3 text-4xl lg:text-3xl font-bold text-[#0A0A0A] leading-tight">
+            Impulsamos organizaciones a través de la <span className="font-display italic font-normal">inteligencia artificial</span> y el software
           </h2>
           <p className="mt-4 text-lg leading-relaxed" style={{ color: '#6B6055' }}>
             Especializados en las tecnologías que las organizaciones líderes adoptan hoy para escalar su operación.

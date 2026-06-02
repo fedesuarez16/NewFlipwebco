@@ -39,11 +39,26 @@ const allImages = [...images, ...images]
 export default function HeroSection() {
   return (
     <section
-      className="flex flex-col pt-20 overflow-hidden"
+      className="relative flex flex-col pt-20 overflow-hidden"
       style={{ height: '100vh', background: '#0A0A0A' }}
     >
+      {/* ── Beige ambient glow ── */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '5%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '640px',
+          height: '480px',
+          background: 'radial-gradient(ellipse at center, rgba(230,210,180,0.13) 0%, rgba(210,185,145,0.06) 45%, transparent 70%)',
+          filter: 'blur(40px)',
+          zIndex: 0,
+        }}
+      />
+
       {/* ── Text block ── */}
-      <div className="flex flex-col items-center justify-center text-center px-6 py-10 lg:py-12 flex-shrink-0">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-10 lg:py-12 flex-shrink-0">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,10 +73,9 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.08 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight max-w-3xl"
+          className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight max-w-3xl"
         >
-          Opera al doble con IA.
-          <br className="hidden md:block" /> Escala sin limites
+         <span className="font-display font-normal">Re-inventamos</span>  procesos y operaciones con Inteligencia Artificial.
         </motion.h1>
 
         <motion.p

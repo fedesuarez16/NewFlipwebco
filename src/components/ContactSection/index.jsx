@@ -42,7 +42,7 @@ export default function ContactSection() {
               Contacto
             </span>
             <h2 className="mt-3 text-4xl lg:text-5xl font-bold text-[#0A0A0A] leading-tight">
-              Contanos tu<br />desafío
+              Contanos tu<br /><span className="font-display italic font-normal">desafío</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed" style={{ color: '#6B6055' }}>
               Sin compromisos. En menos de 48 horas te respondemos con un diagnóstico técnico inicial gratuito.

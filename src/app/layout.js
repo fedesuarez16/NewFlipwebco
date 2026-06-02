@@ -1,9 +1,16 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  style: ['italic'],
+  weight: ['400', '500', '700'],
+  variable: '--font-display',
+})
 
 export const metadata = {
   metadataBase: new URL('https://www.flipwebco.com'),
@@ -20,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${playfair.variable}`}>
         {children}
         <Analytics />
         <SpeedInsights />
