@@ -3,7 +3,7 @@ import { readFileSync } from 'fs'
 import { join } from 'path'
 
 export const runtime = 'nodejs'
-export const alt = 'Futbolink × Flipwebco — Caso de éxito'
+export const alt = 'Futbolink × Flip — Caso de éxito'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -155,7 +155,7 @@ export default function Image() {
             letterSpacing: '-0.02em',
           }}
         >
-          La plataforma que conecta el talento del fútbol global
+          Desarrollamos la plataforma que conecta el talento del fútbol global
         </div>
 
         {/* Subtitle */}
@@ -170,7 +170,7 @@ export default function Image() {
             lineHeight: '1.5',
           }}
         >
-          +8.000 usuarios · Europa & Latinoamérica · Desarrollado por Flipwebco
+          +8.000 usuarios · Europa & Latinoamérica · Desarrollado por Flip
         </div>
 
         {/* Bottom accent line */}
