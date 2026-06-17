@@ -14,7 +14,7 @@ const fadeUp = {
 }
 
 const stats = [
-  { value: '+10K', label: 'Jugadores registrados' },
+  { value: '+8K', label: 'Usuarios registrados' },
   { value: '3', label: 'Continentes activos' },
   { value: '100%', label: 'Desarrollo a medida' },
 ]
@@ -516,8 +516,8 @@ export default function FutbolinkCasePage() {
             <div className="grid md:grid-cols-3 gap-6 mb-14">
               {[
                 {
-                  metric: '+10,000',
-                  label: 'jugadores registrados',
+                  metric: '+8,000',
+                  label: 'usuarios registrados',
                   sub: 'con perfiles activos buscando oportunidades',
                 },
                 {
