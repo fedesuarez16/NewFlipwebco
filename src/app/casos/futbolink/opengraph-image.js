@@ -8,7 +8,7 @@ export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
 export default function Image() {
-  const flipLogoBuffer = readFileSync(join(process.cwd(), 'public/images/logosoloblanco.png'))
+  const flipLogoBuffer = readFileSync(join(process.cwd(), 'public/logo.png'))
   const futbolinkLogoBuffer = readFileSync(join(process.cwd(), 'public/images/futbolink-logo.png'))
 
   const flipLogo = `data:image/png;base64,${flipLogoBuffer.toString('base64')}`
