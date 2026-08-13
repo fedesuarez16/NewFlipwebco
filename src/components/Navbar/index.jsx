@@ -16,7 +16,8 @@ export default function Navbar() {
               src="/logo.png"
               alt="Flip"
               width={100}
-              height={20}
+              height={35}
+              priority
               className="object-contain"
             />
           </Link>
