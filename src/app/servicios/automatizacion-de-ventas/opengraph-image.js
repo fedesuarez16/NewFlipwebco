@@ -3,7 +3,7 @@ import { readFileSync } from 'fs'
 import { join } from 'path'
 
 export const runtime = 'nodejs'
-export const alt = 'Diseñamos tu embudo de ventas y lo automatizamos entero — Flip'
+export const alt = 'Automatizá tu proceso de ventas de punta a punta — Flip'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -106,15 +106,15 @@ export default function Image() {
               display: 'flex',
               flexDirection: 'column',
               color: '#FFFFFF',
-              fontSize: '44px',
+              fontSize: '42px',
               fontWeight: 700,
               lineHeight: 1.1,
               letterSpacing: '-0.025em',
               marginBottom: '22px',
             }}
           >
-            <span>Diseñamos tu embudo.</span>
-            <span>Lo automatizamos entero.</span>
+            <span>Automatizá tu proceso</span>
+            <span>de ventas de punta a punta.</span>
           </div>
 
           {/* Bajada */}
