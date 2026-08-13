@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import ClientsSection from '@/components/ClientsSection'
 import ServicesGrid from '@/components/ServicesGrid'
+import CaseStudiesSection from '@/components/CaseStudiesSection'
 import ServiceShowcase from '@/components/ServiceShowcase'
 import HowWeWork from '@/components/HowWeWork'
 import ContactSection from '@/components/ContactSection'
@@ -16,6 +17,7 @@ export default function Page() {
         <HeroSection />
         <ClientsSection />
         <ServicesGrid />
+        <CaseStudiesSection />
         <ServiceShowcase />
         <HowWeWork />
         <ContactSection />

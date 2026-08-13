@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { serviceList } from '@/data/services'
 
 const featured = {
   href: '/servicios/automatizacion-de-ventas',
@@ -11,45 +12,6 @@ const featured = {
   tags: ['Embudo de ventas', 'Agentes de IA', 'CRM', 'WhatsApp'],
   stages: ['Captación', 'Calificación', 'Contacto', 'Reunión', 'Propuesta', 'Cierre'],
 }
-
-const services = [
-  {
-    number: '01',
-    title: 'Agentes de IA Empresarial',
-    description: 'Desarrollamos agentes autónomos con LLMs (GPT-4, Claude) que operan sobre tus datos y sistemas internos: ventas, operaciones, soporte. Automatización real de procesos complejos.',
-    tags: ['LLM', 'Copilots', 'Automatización'],
-  },
-  {
-    number: '02',
-    title: 'IA Generativa para el Negocio',
-    description: 'Integramos modelos de IA generativa en tus flujos de trabajo: procesamiento de documentos, generación de reportes, asistentes internos y análisis de contratos con NLP avanzado.',
-    tags: ['GPT-4', 'RAG', 'NLP'],
-  },
-  {
-    number: '03',
-    title: 'Plataformas de Datos & Analytics',
-    description: 'Construimos data warehouses, dashboards BI en tiempo real y modelos predictivos que convierten tus datos en decisiones estratégicas. MLOps incluido para despliegue y monitoreo.',
-    tags: ['BI', 'Predictivo', 'MLOps'],
-  },
-  {
-    number: '04',
-    title: 'Software Empresarial a Medida',
-    description: 'ERP y CRM personalizados, modernización de sistemas legacy y plataformas enterprise escalables. Arquitectura robusta diseñada para crecer con tu operación.',
-    tags: ['ERP', 'CRM', 'APIs'],
-  },
-  {
-    number: '05',
-    title: 'Automatización Inteligente (RPA + IA)',
-    description: 'Combinamos RPA con inteligencia artificial para automatizar procesos de alta complejidad: extracción de datos, aprobaciones, validaciones y flujos multi-sistema sin intervención humana.',
-    tags: ['RPA', 'OCR', 'Workflows'],
-  },
-  {
-    number: '06',
-    title: 'Arquitectura Cloud & DevSecOps',
-    description: 'Migraciones cloud, diseño de microservicios, pipelines CI/CD y seguridad integrada desde el día uno. Infraestructura escalable en AWS, Azure o GCP lista para producción.',
-    tags: ['Cloud', 'Microservicios', 'CI/CD'],
-  },
-]
 
 export default function ServicesGrid() {
   return (
@@ -158,48 +120,52 @@ export default function ServicesGrid() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E2D9CC]">
-          {services.map((service, i) => (
+          {serviceList.map((service, i) => (
             <motion.div
-              key={service.number}
+              key={service.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.45, delay: i * 0.06 }}
-              className="group p-8 lg:p-10 bg-white hover:bg-[#F5EFE6] transition-colors duration-300 cursor-default"
             >
-              <div className="flex items-start justify-between mb-6">
-                <span className="text-xs font-bold tracking-widest" style={{ color: '#C4B9AA' }}>
-                  {service.number}
-                </span>
-                <svg
-                  className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-1 group-hover:translate-x-0 transition-transform"
-                  style={{ color: '#0A0A0A' }}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 7l-10 10M17 7H7m10 0v10" />
-                </svg>
-              </div>
-
-              <h3 className="text-xl font-semibold text-[#0A0A0A] mb-3 leading-snug">
-                {service.title}
-              </h3>
-              <p className="text-sm leading-relaxed mb-6" style={{ color: '#6B6055' }}>
-                {service.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {service.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs font-medium px-2.5 py-1 rounded-full border border-[#D4C9BB] text-[#6B6055] group-hover:border-[#0A0A0A] group-hover:text-[#0A0A0A] transition-colors duration-300"
-                  >
-                    {tag}
+              <Link
+                href={`/servicios/${service.slug}`}
+                className="group flex flex-col h-full p-8 lg:p-10 bg-white hover:bg-[#F5EFE6] transition-colors duration-300"
+              >
+                <div className="flex items-start justify-between mb-6">
+                  <span className="text-xs font-bold tracking-widest" style={{ color: '#C4B9AA' }}>
+                    {service.number}
                   </span>
-                ))}
-              </div>
+                  <svg
+                    className="w-4 h-4 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                    style={{ color: '#0A0A0A' }}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 7l-10 10M17 7H7m10 0v10" />
+                  </svg>
+                </div>
+
+                <h3 className="text-xl font-semibold text-[#0A0A0A] mb-3 leading-snug">
+                  {service.card.title}
+                </h3>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: '#6B6055' }}>
+                  {service.card.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {service.card.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs font-medium px-2.5 py-1 rounded-full border border-[#D4C9BB] text-[#6B6055] group-hover:border-[#0A0A0A] group-hover:text-[#0A0A0A] transition-colors duration-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
