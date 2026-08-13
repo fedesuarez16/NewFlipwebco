@@ -1,158 +1,137 @@
 'use client'
 import { motion } from 'framer-motion'
+import LiveOpsPanel from '@/components/LiveOpsPanel'
 
-const images = [
-  {
-    // Person using AI chat/agent interface on laptop
-    url: 'https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=960&h=640&fit=crop&q=85',
-    label: 'Agentes de IA empresarial',
-  },
-  {
-    // Code / LLM prompt on dark screen
-    url: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=960&h=640&fit=crop&q=85',
-    label: 'IA generativa para el negocio',
-  },
-  {
-    // BI dashboard with charts on monitor
-    url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=960&h=640&fit=crop&q=85',
-    label: 'Plataformas de datos & analytics',
-  },
-  {
-    // Developer building custom software
-    url: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=960&h=640&fit=crop&q=85',
-    label: 'Software empresarial a medida',
-  },
-  {
-    // Automated robotic process / industrial automation
-    url: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=960&h=640&fit=crop&q=85',
-    label: 'Automatización inteligente RPA + IA',
-  },
-  {
-    // Server room / cloud data center
-    url: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=960&h=640&fit=crop&q=85',
-    label: 'Arquitectura cloud & DevSecOps',
-  },
-]
-
-const allImages = [...images, ...images]
+const capabilities = ['Agentes de IA', 'Plataformas de datos', 'Software a medida', 'Cloud & DevSecOps']
 
 export default function HeroSection() {
   return (
     <section
-      className="relative flex flex-col pt-20 overflow-hidden"
-      style={{ height: '100vh', background: '#0A0A0A' }}
+      className="relative flex items-center overflow-hidden pt-32 pb-20 lg:pt-36 lg:pb-24 px-6"
+      style={{ minHeight: '100vh', background: '#0A0A0A' }}
     >
-      {/* ── Beige ambient glow ── */}
+      {/* ── Textura de grilla ── */}
       <div
-        className="absolute pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          top: '5%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '640px',
-          height: '480px',
-          background: 'radial-gradient(ellipse at center, rgba(230,210,180,0.13) 0%, rgba(210,185,145,0.06) 45%, transparent 70%)',
-          filter: 'blur(40px)',
+          backgroundImage:
+            'linear-gradient(rgba(234,224,213,0.030) 1px, transparent 1px), linear-gradient(90deg, rgba(234,224,213,0.030) 1px, transparent 1px)',
+          backgroundSize: '64px 64px',
+          maskImage: 'radial-gradient(ellipse 80% 60% at 50% 40%, #000 0%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 60% at 50% 40%, #000 0%, transparent 100%)',
           zIndex: 0,
         }}
       />
 
-      {/* ── Text block ── */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-10 lg:py-12 flex-shrink-0">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="text-xs font-semibold uppercase tracking-widest mb-5"
-          style={{ color: '#555' }}
-        >
-          Consultoría Enterprise &nbsp;·&nbsp; IA &amp; Software
-        </motion.p>
+      {/* ── Glow beige ── */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '-5%',
+          left: '20%',
+          transform: 'translateX(-50%)',
+          width: '760px',
+          height: '620px',
+          background:
+            'radial-gradient(ellipse at center, rgba(230,210,180,0.14) 0%, rgba(210,185,145,0.06) 45%, transparent 70%)',
+          filter: 'blur(50px)',
+          zIndex: 0,
+        }}
+      />
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.08 }}
-          className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight max-w-3xl"
-        >
-         <span className="font-display font-normal">Re-inventamos</span>  procesos y operaciones con Inteligencia Artificial.
-        </motion.h1>
+      <div className="relative z-10 max-w-7xl mx-auto w-full">
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-14 lg:gap-16 items-center">
 
-        <motion.p
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.16 }}
-          className="mt-5 text-base lg:text-lg leading-relaxed max-w-xl"
-          style={{ color: '#777' }}
-        >
-          Construimos agentes de IA, plataformas de datos y software enterprise
-          para que tu equipo haga más, decida mejor y crezca sin fricción.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.24 }}
-          className="mt-7 flex flex-col sm:flex-row gap-3 justify-center"
-        >
-          <a
-            href="#contacto"
-            className="bg-white text-[#0A0A0A] font-semibold px-7 py-3.5 rounded-xl hover:bg-[#F5EFE6] transition-colors text-sm"
-          >
-            Agendar diagnóstico →
-          </a>
-          <a
-            href="#servicios"
-            className="border border-[#2A2A2A] text-[#AAA] font-semibold px-7 py-3.5 rounded-xl hover:border-[#555] hover:text-white transition-colors text-sm"
-          >
-            Ver servicios
-          </a>
-        </motion.div>
-      </div>
-
-      {/* ── Image carousel — fills remaining height, images clipped ── */}
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.35 }}
-        className="relative flex-1 overflow-hidden min-h-0"
-      >
-        {/* Edge fades */}
-        <div
-          className="absolute left-0 top-0 h-full w-16 z-10 pointer-events-none"
-          style={{ background: 'linear-gradient(to right, #0A0A0A, transparent)' }}
-        />
-        <div
-          className="absolute right-0 top-0 h-full w-16 z-10 pointer-events-none"
-          style={{ background: 'linear-gradient(to left, #0A0A0A, transparent)' }}
-        />
-
-        <div className="flex carousel-track gap-3 px-3 h-full">
-          {allImages.map((img, i) => (
-            <div
-              key={i}
-              className="flex-shrink-0 relative overflow-hidden rounded-2xl"
-              style={{ width: '36vw', minWidth: '280px', height: '100%' }}
+          {/* ── Columna de texto ── */}
+          <div>
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45 }}
+              className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full border"
+              style={{ color: '#9A8E83', borderColor: '#2A2A2A', background: 'rgba(234,224,213,0.03)' }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={img.url}
-                alt={img.label}
-                className="w-full h-full object-cover"
-                loading={i < 4 ? 'eager' : 'lazy'}
+              <motion.span
+                className="w-1.5 h-1.5 rounded-full inline-block"
+                style={{ background: '#EAE0D5' }}
+                animate={{ opacity: [1, 0.3, 1] }}
+                transition={{ duration: 1.8, repeat: Infinity }}
               />
-              <div
-                className="absolute bottom-0 left-0 right-0 px-4 py-3 rounded-b-2xl"
-                style={{
-                  background: 'linear-gradient(to top, rgba(10,10,10,0.5) 0%, transparent 100%)',
-                }}
+              Consultoría Enterprise · IA &amp; Software
+            </motion.span>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.1 }}
+              className="mt-7 text-4xl md:text-5xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight"
+            >
+              <span className="font-display font-normal">Re-inventamos</span> procesos y operaciones con Inteligencia Artificial.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-6 text-base lg:text-lg leading-relaxed max-w-lg"
+              style={{ color: '#7A6E64' }}
+            >
+              No entregamos pruebas de concepto. Diseñamos el proceso, construimos el
+              sistema que lo ejecuta y lo dejamos corriendo en producción.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.28 }}
+              className="mt-8 flex flex-col sm:flex-row gap-3"
+            >
+              <a
+                href="#contacto"
+                className="bg-white text-[#0A0A0A] font-semibold px-7 py-3.5 rounded-xl hover:bg-[#F5EFE6] transition-colors text-sm text-center"
               >
-                <span className="text-white text-xs font-medium">{img.label}</span>
-              </div>
-            </div>
-          ))}
+                Agendar diagnóstico →
+              </a>
+              <a
+                href="#servicios"
+                className="border border-[#2A2A2A] text-[#AAA] font-semibold px-7 py-3.5 rounded-xl hover:border-[#555] hover:text-white transition-colors text-sm text-center"
+              >
+                Ver servicios
+              </a>
+            </motion.div>
+
+            {/* Capacidades */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.36 }}
+              className="mt-10 pt-7 border-t flex flex-wrap items-center gap-x-3 gap-y-2"
+              style={{ borderColor: '#1A1A1A' }}
+            >
+              {capabilities.map((cap, i) => (
+                <span key={cap} className="flex items-center gap-3">
+                  <span className="text-xs font-medium" style={{ color: '#5A5A5A' }}>
+                    {cap}
+                  </span>
+                  {i < capabilities.length - 1 && (
+                    <span className="w-1 h-1 rounded-full inline-block" style={{ background: '#2A2A2A' }} />
+                  )}
+                </span>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* ── Panel de operación en vivo ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35, ease: [0.4, 0, 0.2, 1] }}
+          >
+            <LiveOpsPanel />
+          </motion.div>
+
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
