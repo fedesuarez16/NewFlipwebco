@@ -14,14 +14,14 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   metadataBase: new URL('https://www.flipwebco.com'),
-  title: 'Flipwebco — Consultoría de Software & IA',
+  title: 'Flipwebco — Automatizá tu proceso de ventas de punta a punta',
   description: 'Resolvemos los problemas más complejos de tu empresa con inteligencia artificial. Consultoría de software, apps, sistemas de gestión, SEO e integraciones IA.',
   openGraph: {
     type: 'website',
     locale: 'es_ES',
     url: 'https://www.flipwebco.com/',
     siteName: 'Flipwebco',
-    title: 'Flipwebco — Consultoría de Software & IA',
+    title: 'Flipwebco — Automatizá tu proceso de ventas de punta a punta',
     description: 'Resolvemos los problemas más complejos de tu empresa con inteligencia artificial. Consultoría de software, apps, sistemas de gestión, SEO e integraciones IA.',
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Flipwebco — Consultoría de Software & IA',
+    title: 'Flipwebco — Automatizá tu proceso de ventas de punta a punta',
     description: 'Resolvemos los problemas más complejos de tu empresa con inteligencia artificial.',
     images: ['/og-image.jpg'],
   },
