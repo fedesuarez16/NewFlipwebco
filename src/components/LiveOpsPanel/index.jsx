@@ -68,7 +68,7 @@ export default function LiveOpsPanel() {
       </div>
 
       {/* Feed de eventos */}
-      <div className="px-3 py-3" style={{ minHeight: '272px' }}>
+      <div className="px-2.5 sm:px-3 py-2.5 sm:py-3 min-h-[244px] sm:min-h-[272px]">
         <AnimatePresence initial={false} mode="popLayout">
           {feed.map((event, i) => (
             <motion.div
@@ -78,7 +78,7 @@ export default function LiveOpsPanel() {
               animate={{ opacity: 1 - i * 0.16, y: 0, scale: 1 }}
               exit={{ opacity: 0, scale: 0.97, transition: { duration: 0.25 } }}
               transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-              className="flex items-center gap-3 rounded-xl px-3.5 py-3 border mb-2"
+              className="flex items-center gap-2.5 sm:gap-3 rounded-xl px-3 sm:px-3.5 py-2.5 sm:py-3 border mb-2"
               style={{ background: '#111111', borderColor: '#1C1C1C' }}
             >
               <div
@@ -94,13 +94,23 @@ export default function LiveOpsPanel() {
                 <div className="text-[11px] font-semibold text-white truncate leading-tight">
                   {event.title}
                 </div>
-                <div className="text-[9px] truncate leading-tight mt-0.5" style={{ color: '#4A4A4A' }}>
-                  {event.sub}
+                <div className="flex items-center gap-1.5 mt-0.5 min-w-0">
+                  {/* En mobile el tag baja acá como texto plano: la pill no entra sin comerse el título */}
+                  <span
+                    className="sm:hidden flex-shrink-0 text-[9px] font-medium leading-tight"
+                    style={{ color: event.color }}
+                  >
+                    {event.tag}
+                  </span>
+                  <span className="sm:hidden flex-shrink-0 w-0.5 h-0.5 rounded-full" style={{ background: '#3A3A3A' }} />
+                  <span className="text-[9px] truncate leading-tight" style={{ color: '#4A4A4A' }}>
+                    {event.sub}
+                  </span>
                 </div>
               </div>
 
               <span
-                className="flex-shrink-0 text-[9px] font-medium px-2 py-0.5 rounded-full"
+                className="hidden sm:inline-block flex-shrink-0 text-[9px] font-medium px-2 py-0.5 rounded-full"
                 style={{ color: event.color, background: `${event.color}12` }}
               >
                 {event.tag}
@@ -112,13 +122,13 @@ export default function LiveOpsPanel() {
 
       {/* Footer */}
       <div
-        className="px-4 py-3 border-t flex items-center justify-between"
+        className="px-3.5 sm:px-4 py-2.5 sm:py-3 border-t flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3"
         style={{ borderColor: '#1A1A1A', background: '#0B0B0B' }}
       >
-        <span className="text-[10px]" style={{ color: '#4A4A4A' }}>
+        <span className="text-[10px] leading-tight" style={{ color: '#4A4A4A' }}>
           Ejecutado sin intervención humana
         </span>
-        <span className="text-[10px] font-semibold tabular-nums" style={{ color: '#EAE0D5' }}>
+        <span className="text-[10px] font-semibold tabular-nums leading-tight" style={{ color: '#EAE0D5' }}>
           {(BASE_COUNT + ticks).toLocaleString('es')} procesos hoy
         </span>
       </div>

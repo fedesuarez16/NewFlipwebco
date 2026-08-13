@@ -7,8 +7,8 @@ const capabilities = ['Agentes de IA', 'Plataformas de datos', 'Software a medid
 export default function HeroSection() {
   return (
     <section
-      className="relative flex items-center overflow-hidden pt-32 pb-20 lg:pt-36 lg:pb-24 px-6"
-      style={{ minHeight: '100vh', background: '#0A0A0A' }}
+      className="relative flex items-center overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24 px-5 sm:px-6 min-h-[100svh]"
+      style={{ background: '#0A0A0A' }}
     >
       {/* ── Textura de grilla ── */}
       <div
@@ -40,7 +40,7 @@ export default function HeroSection() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-14 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1.15fr_1fr] gap-10 sm:gap-14 lg:gap-16 items-center">
 
           {/* ── Columna de texto ── */}
           <div>
@@ -64,7 +64,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.1 }}
-              className="mt-7 text-4xl md:text-5xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight"
+              className="mt-6 sm:mt-7 text-[2rem] sm:text-4xl md:text-5xl lg:text-5xl font-semibold text-white leading-[1.12] sm:leading-[1.1] tracking-tight"
             >
               <span className="font-display font-normal">Re-inventamos</span> procesos y operaciones con Inteligencia Artificial.
             </motion.h1>
@@ -73,7 +73,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-6 text-base lg:text-lg leading-relaxed max-w-lg"
+              className="mt-5 sm:mt-6 text-[15px] sm:text-base lg:text-lg leading-relaxed max-w-lg"
               style={{ color: '#7A6E64' }}
             >
               No entregamos pruebas de concepto. Diseñamos el proceso, construimos el
@@ -84,7 +84,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.28 }}
-              className="mt-8 flex flex-col sm:flex-row gap-3"
+              className="mt-7 sm:mt-8 flex flex-col sm:flex-row gap-3"
             >
               <a
                 href="#contacto"
@@ -105,7 +105,7 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.36 }}
-              className="mt-10 pt-7 border-t flex flex-wrap items-center gap-x-3 gap-y-2"
+              className="mt-8 pt-6 sm:mt-10 sm:pt-7 border-t flex flex-wrap items-center gap-x-3 gap-y-2"
               style={{ borderColor: '#1A1A1A' }}
             >
               {capabilities.map((cap, i) => (
