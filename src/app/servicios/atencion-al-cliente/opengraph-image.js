@@ -7,14 +7,22 @@ export const alt = 'Automatizá la atención al cliente de tu empresa — Flip'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-const ACCENT = '#06B6D4'
-const MUTED = '#9A8E83'
+/* Tema claro, igual que la página. `ACCENT` es el cian legible sobre claro;
+   `ACCENT_BRIGHT` solo para elementos gráficos. */
+const ACCENT = '#0E7490'
+const ACCENT_BRIGHT = '#06B6D4'
+const INK = '#0A0A0A'
+const BODY = '#6B6055'
+const SOFT = '#9A8E83'
+const LINE = '#E2D9CC'
+const CREAM = '#F5EFE6'
 
+/* Colores de canal oscurecidos para que se lean sobre fondo claro. */
 const CHANNELS = [
-  { label: 'WhatsApp', color: '#25D366' },
-  { label: 'Instagram', color: '#E1306C' },
-  { label: 'Chat web', color: '#06B6D4' },
-  { label: 'Email', color: '#9A8E83' },
+  { label: 'WhatsApp', color: '#0D7A3E' },
+  { label: 'Instagram', color: '#C71E5E' },
+  { label: 'Chat web', color: '#0E7490' },
+  { label: 'Email', color: '#7A6E64' },
 ]
 
 /* Tres consultas lado a lado en vez del panel vertical del hero: mismo relato,
@@ -23,21 +31,21 @@ const TICKETS = [
   {
     initials: 'MG',
     name: 'Martín G.',
-    channel: { label: 'WhatsApp', color: '#25D366' },
+    channel: { label: 'WhatsApp', color: '#0D7A3E' },
     text: '¿Dónde está mi pedido #4821?',
     status: 'Resuelto en 12s',
   },
   {
     initials: 'CP',
     name: 'Carla P.',
-    channel: { label: 'Instagram', color: '#E1306C' },
+    channel: { label: 'Instagram', color: '#C71E5E' },
     text: '¿Hacen envíos a Córdoba?',
     status: 'Resuelto en 8s',
   },
   {
     initials: 'DA',
     name: 'Diego A.',
-    channel: { label: 'Chat web', color: '#06B6D4' },
+    channel: { label: 'Chat web', color: '#0E7490' },
     text: 'Llegó roto, quiero reclamar',
     status: 'Derivado a Valeria',
     escalated: true,
@@ -58,21 +66,21 @@ export default function Image() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#0A0A0A',
+          background: '#FFFFFF',
           fontFamily: 'Inter, system-ui, sans-serif',
           position: 'relative',
           overflow: 'hidden',
         }}
       >
-        {/* Glow centrado — refuerza la simetría del layout */}
+        {/* Halo cian centrado — refuerza la simetría del layout */}
         <div
           style={{
             position: 'absolute',
-            top: '-220px',
+            top: '-230px',
             left: '190px',
             width: '820px',
-            height: '620px',
-            background: 'radial-gradient(ellipse at center, rgba(6,182,212,0.16) 0%, transparent 66%)',
+            height: '640px',
+            background: 'radial-gradient(ellipse at center, rgba(6,182,212,0.20) 0%, transparent 68%)',
             filter: 'blur(70px)',
             display: 'flex',
           }}
@@ -88,8 +96,22 @@ export default function Image() {
             padding: '0 70px',
           }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logo} style={{ height: '28px', objectFit: 'contain', marginBottom: '24px' }} alt="Flip" />
+          {/* `public/logo.png` es blanco: sobre fondo claro va dentro de una
+              píldora oscura, que además ancla la marca en el diseño light. */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '11px 20px',
+              borderRadius: '12px',
+              background: INK,
+              marginBottom: '24px',
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={logo} style={{ height: '26px', objectFit: 'contain' }} alt="Flip" />
+          </div>
 
           <div
             style={{
@@ -97,13 +119,13 @@ export default function Image() {
               alignItems: 'center',
               gap: '8px',
               padding: '6px 16px',
-              border: '1px solid rgba(6,182,212,0.3)',
+              border: '1px solid rgba(6,182,212,0.4)',
               borderRadius: '999px',
-              background: 'rgba(6,182,212,0.07)',
+              background: 'rgba(6,182,212,0.09)',
               marginBottom: '22px',
             }}
           >
-            <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: ACCENT, display: 'flex' }} />
+            <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: ACCENT_BRIGHT, display: 'flex' }} />
             <span
               style={{
                 color: ACCENT,
@@ -122,7 +144,7 @@ export default function Image() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              color: '#FFFFFF',
+              color: INK,
               fontSize: '48px',
               fontWeight: 700,
               lineHeight: 1.12,
@@ -138,7 +160,7 @@ export default function Image() {
           <div
             style={{
               display: 'flex',
-              color: '#8A7E74',
+              color: BODY,
               fontSize: '20px',
               lineHeight: 1.45,
               textAlign: 'center',
@@ -161,10 +183,10 @@ export default function Image() {
                 width: '336px',
                 padding: '18px',
                 borderRadius: '14px',
-                border: `1px solid ${t.escalated ? '#1E1E1E' : 'rgba(6,182,212,0.22)'}`,
+                border: `1px solid ${t.escalated ? LINE : 'rgba(6,182,212,0.38)'}`,
                 background: t.escalated
-                  ? '#0C0C0C'
-                  : 'linear-gradient(160deg, rgba(6,182,212,0.07) 0%, #0C0C0C 62%)',
+                  ? '#FFFFFF'
+                  : 'linear-gradient(160deg, rgba(6,182,212,0.10) 0%, #FFFFFF 62%)',
               }}
             >
               {/* Cliente y canal */}
@@ -177,15 +199,15 @@ export default function Image() {
                     width: '30px',
                     height: '30px',
                     borderRadius: '50%',
-                    background: '#1E1E1E',
-                    color: MUTED,
+                    background: CREAM,
+                    color: SOFT,
                     fontSize: '11px',
                     fontWeight: 700,
                   }}
                 >
                   {t.initials}
                 </div>
-                <span style={{ color: '#FFFFFF', fontSize: '14px', fontWeight: 600 }}>{t.name}</span>
+                <span style={{ color: INK, fontSize: '14px', fontWeight: 600 }}>{t.name}</span>
                 <div
                   style={{
                     display: 'flex',
@@ -197,12 +219,12 @@ export default function Image() {
                   }}
                 >
                   <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: t.channel.color, display: 'flex' }} />
-                  <span style={{ color: t.channel.color, fontSize: '11px', fontWeight: 500 }}>{t.channel.label}</span>
+                  <span style={{ color: t.channel.color, fontSize: '11px', fontWeight: 600 }}>{t.channel.label}</span>
                 </div>
               </div>
 
               {/* Consulta */}
-              <div style={{ display: 'flex', color: '#8A8A8A', fontSize: '14px', marginTop: '14px' }}>
+              <div style={{ display: 'flex', color: BODY, fontSize: '14px', marginTop: '14px' }}>
                 {t.text}
               </div>
 
@@ -214,7 +236,7 @@ export default function Image() {
                   gap: '7px',
                   marginTop: '16px',
                   paddingTop: '14px',
-                  borderTop: '1px solid #1A1A1A',
+                  borderTop: `1px solid ${LINE}`,
                 }}
               >
                 {/* Los glifos ✓ y → no existen en la fuente de Satori: van como SVG. */}
@@ -226,7 +248,7 @@ export default function Image() {
                     width: '17px',
                     height: '17px',
                     borderRadius: '50%',
-                    background: t.escalated ? 'rgba(154,142,131,0.18)' : ACCENT,
+                    background: t.escalated ? CREAM : ACCENT_BRIGHT,
                   }}
                 >
                   <svg
@@ -234,7 +256,7 @@ export default function Image() {
                     height="10"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke={t.escalated ? MUTED : '#0A0A0A'}
+                    stroke={t.escalated ? '#7A6E5F' : '#FFFFFF'}
                     strokeWidth={t.escalated ? 2.6 : 3.4}
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -244,7 +266,7 @@ export default function Image() {
                 </div>
                 <span
                   style={{
-                    color: t.escalated ? MUTED : ACCENT,
+                    color: t.escalated ? '#7A6E5F' : ACCENT,
                     fontSize: '13px',
                     fontWeight: 600,
                   }}
@@ -261,7 +283,7 @@ export default function Image() {
           {CHANNELS.map((c) => (
             <div key={c.label} style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
               <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: c.color, display: 'flex' }} />
-              <span style={{ color: '#5F564F', fontSize: '14px', fontWeight: 500 }}>{c.label}</span>
+              <span style={{ color: SOFT, fontSize: '14px', fontWeight: 500 }}>{c.label}</span>
             </div>
           ))}
         </div>
@@ -273,9 +295,9 @@ export default function Image() {
             bottom: 0,
             left: 0,
             right: 0,
-            height: '2px',
+            height: '3px',
             display: 'flex',
-            background: `linear-gradient(to right, transparent 8%, ${ACCENT} 50%, transparent 92%)`,
+            background: `linear-gradient(to right, transparent 8%, ${ACCENT_BRIGHT} 50%, transparent 92%)`,
           }}
         />
       </div>

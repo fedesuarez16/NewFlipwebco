@@ -1,6 +1,11 @@
+/* Next 14 ignora `themeColor` dentro de `metadata` — va en el export `viewport`.
+   Blanco porque esta página es la única del sitio con tema claro. */
+export const viewport = {
+  themeColor: '#FFFFFF',
+}
+
 export const metadata = {
   title: 'Automatizá la atención al cliente de tu empresa — Flip',
-  themeColor: '#06B6D4',
   description: 'Mapeamos qué preguntan tus clientes y después automatizamos la atención entera con agentes de IA: responden en segundos, consultan tus sistemas, resuelven gestiones y derivan al equipo cuando hace falta. Diagnóstico inicial gratuito.',
   openGraph: {
     title: 'Automatizá la atención al cliente de tu empresa',

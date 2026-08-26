@@ -2,7 +2,13 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const ACCENT = '#06B6D4'
+const ACCENT = '#0E7490'
+const ACCENT_BRIGHT = '#06B6D4'
+const INK = '#0A0A0A'
+const BODY = '#6B6055'
+const SOFT = '#9A8E83'
+const LINE = '#E2D9CC'
+const CREAM = '#F5EFE6'
 
 /* Los pasos `context` no van al chat: alimentan el panel derecho.
    Mientras uno está pendiente, el chat muestra el typing — el agente
@@ -30,8 +36,8 @@ function Bubble({ kind, text }) {
         className="max-w-[82%] px-3 py-2 text-[11px] leading-relaxed"
         style={
           isAgent
-            ? { background: '#1A1A1A', color: '#E4E4E4', borderRadius: '12px 12px 12px 3px' }
-            : { background: 'rgba(6,182,212,0.16)', color: '#CFF3FA', borderRadius: '12px 12px 3px 12px' }
+            ? { background: CREAM, color: INK, borderRadius: '12px 12px 12px 3px' }
+            : { background: 'rgba(6,182,212,0.13)', color: '#0B4F60', borderRadius: '12px 12px 3px 12px' }
         }
       >
         {text}
@@ -43,12 +49,12 @@ function Bubble({ kind, text }) {
 function TypingDots() {
   return (
     <div className="flex justify-start">
-      <div className="px-3 py-2.5 flex items-center gap-1" style={{ background: '#1A1A1A', borderRadius: '12px 12px 12px 3px' }}>
+      <div className="px-3 py-2.5 flex items-center gap-1" style={{ background: CREAM, borderRadius: '12px 12px 12px 3px' }}>
         {[0, 1, 2].map((i) => (
           <motion.span
             key={i}
             className="w-1 h-1 rounded-full"
-            style={{ background: '#666' }}
+            style={{ background: SOFT }}
             animate={{ opacity: [0.25, 1, 0.25] }}
             transition={{ duration: 1, repeat: Infinity, delay: i * 0.18 }}
           />
@@ -70,18 +76,18 @@ function ContextRow({ item, index }) {
       {index > 0 && (
         <span
           className="absolute left-[6px] -top-3 h-3 w-px"
-          style={{ background: 'rgba(6,182,212,0.25)' }}
+          style={{ background: 'rgba(6,182,212,0.4)' }}
         />
       )}
 
       <span
         className="w-3 h-3 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-        style={{ background: item.action ? ACCENT : 'rgba(6,182,212,0.18)' }}
+        style={{ background: item.action ? ACCENT_BRIGHT : 'rgba(6,182,212,0.22)' }}
       >
         <svg
           className="w-2 h-2"
           fill="none"
-          stroke={item.action ? '#0A0A0A' : ACCENT}
+          stroke={item.action ? '#FFFFFF' : ACCENT}
           strokeWidth={3.5}
           viewBox="0 0 24 24"
         >
@@ -90,10 +96,10 @@ function ContextRow({ item, index }) {
       </span>
 
       <div className="min-w-0">
-        <div className="text-[9px] font-semibold leading-tight" style={{ color: item.action ? ACCENT : '#8A8A8A' }}>
+        <div className="text-[9px] font-bold leading-tight" style={{ color: item.action ? ACCENT : '#5F564F' }}>
           {item.label}
         </div>
-        <div className="text-[9px] leading-tight mt-0.5" style={{ color: '#5A5A5A' }}>
+        <div className="text-[9px] leading-tight mt-0.5" style={{ color: SOFT }}>
           {item.value}
         </div>
       </div>
@@ -124,29 +130,32 @@ export default function SupportAgentConsole() {
   return (
     <div
       className="rounded-2xl border overflow-hidden w-full"
-      style={{ background: '#0D0D0D', borderColor: '#1E1E1E' }}
+      style={{ background: '#FFFFFF', borderColor: LINE, boxShadow: '0 12px 40px -18px rgba(10,10,10,0.18)' }}
     >
       <div className="grid md:grid-cols-[1.45fr_1fr]">
 
         {/* ── Panel izquierdo: la conversación ── */}
-        <div className="flex flex-col border-b md:border-b-0 md:border-r" style={{ borderColor: '#1A1A1A' }}>
+        <div className="flex flex-col border-b md:border-b-0 md:border-r" style={{ borderColor: LINE }}>
           <div
             className="flex items-center justify-between px-4 py-3 border-b flex-shrink-0"
-            style={{ background: '#111', borderColor: '#1E1E1E' }}
+            style={{ background: CREAM, borderColor: LINE }}
           >
             <div className="flex items-center gap-2.5">
               <div
                 className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold"
-                style={{ background: 'rgba(6,182,212,0.14)', color: ACCENT }}
+                style={{ background: 'rgba(6,182,212,0.16)', color: ACCENT }}
               >
                 IA
               </div>
               <div>
-                <div className="text-[11px] font-semibold text-white leading-tight">Agente de soporte</div>
-                <div className="text-[9px] leading-tight" style={{ color: ACCENT }}>en línea · responde en 8s</div>
+                <div className="text-[11px] font-semibold leading-tight" style={{ color: INK }}>Agente de soporte</div>
+                <div className="text-[9px] font-medium leading-tight" style={{ color: ACCENT }}>en línea · responde en 8s</div>
               </div>
             </div>
-            <span className="text-[9px] px-2 py-1 rounded-full" style={{ background: '#1A1A1A', color: '#555' }}>
+            <span
+              className="text-[9px] font-medium px-2 py-1 rounded-full"
+              style={{ background: '#FFFFFF', color: SOFT, border: `1px solid ${LINE}` }}
+            >
               WhatsApp
             </span>
           </div>
@@ -175,22 +184,22 @@ export default function SupportAgentConsole() {
         </div>
 
         {/* ── Panel derecho: lo que el agente consulta y ejecuta ── */}
-        <div className="flex flex-col" style={{ background: '#0B0B0B' }}>
+        <div className="flex flex-col" style={{ background: '#FBF9F6' }}>
           <div
             className="px-4 py-3 border-b flex items-center justify-between flex-shrink-0"
-            style={{ background: '#0F0F0F', borderColor: '#1A1A1A' }}
+            style={{ background: '#F7F2EA', borderColor: LINE }}
           >
-            <span className="text-[10px] font-semibold" style={{ color: '#8A8A8A' }}>
+            <span className="text-[10px] font-bold" style={{ color: '#5F564F' }}>
               Lo que hace el agente
             </span>
-            <span className="text-[9px] tabular-nums" style={{ color: '#3E3E3E' }}>
+            <span className="text-[9px] font-medium tabular-nums" style={{ color: SOFT }}>
               {context.length}/4
             </span>
           </div>
 
           <div className="px-4 py-4 flex-1 overflow-hidden">
             {context.length === 0 && (
-              <div className="text-[9px] leading-relaxed" style={{ color: '#333' }}>
+              <div className="text-[9px] leading-relaxed" style={{ color: '#C4B9AA' }}>
                 Esperando la primera consulta…
               </div>
             )}
@@ -199,10 +208,7 @@ export default function SupportAgentConsole() {
             ))}
           </div>
 
-          <div
-            className="px-4 py-3 border-t flex-shrink-0"
-            style={{ borderColor: '#1A1A1A' }}
-          >
+          <div className="px-4 py-3 border-t flex-shrink-0" style={{ borderColor: LINE }}>
             <AnimatePresence mode="wait">
               {finished ? (
                 <motion.div
@@ -212,10 +218,10 @@ export default function SupportAgentConsole() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="text-[10px] font-semibold" style={{ color: ACCENT }}>
+                  <div className="text-[10px] font-bold" style={{ color: ACCENT }}>
                     Resuelto en 1:12 ✓
                   </div>
-                  <div className="text-[9px] mt-0.5" style={{ color: '#4A4A4A' }}>
+                  <div className="text-[9px] mt-0.5" style={{ color: SOFT }}>
                     Sin intervención humana
                   </div>
                 </motion.div>
@@ -227,7 +233,7 @@ export default function SupportAgentConsole() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="text-[10px]"
-                  style={{ color: '#4A4A4A' }}
+                  style={{ color: SOFT }}
                 >
                   Atendiendo…
                 </motion.div>

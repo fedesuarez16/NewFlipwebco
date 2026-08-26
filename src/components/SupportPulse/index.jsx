@@ -1,7 +1,13 @@
 'use client'
 import { motion } from 'framer-motion'
 
-const ACCENT = '#06B6D4'
+const ACCENT = '#0E7490'
+const ACCENT_BRIGHT = '#06B6D4'
+const INK = '#0A0A0A'
+const BODY = '#6B6055'
+const SOFT = '#9A8E83'
+const LINE = '#E2D9CC'
+const CREAM = '#F5EFE6'
 
 /* Volumen por hora. Las horas nocturnas bajan pero nunca llegan a cero:
    ese es el argumento visual del 24/7, no el número grande del KPI. */
@@ -30,27 +36,27 @@ export default function SupportPulse() {
   return (
     <div
       className="rounded-2xl border overflow-hidden w-full"
-      style={{ background: '#0D0D0D', borderColor: '#1E1E1E' }}
+      style={{ background: '#FFFFFF', borderColor: LINE, boxShadow: '0 12px 40px -18px rgba(10,10,10,0.18)' }}
     >
       {/* Header */}
       <div
         className="flex items-center justify-between gap-3 px-5 py-4 border-b"
-        style={{ background: '#111', borderColor: '#1E1E1E' }}
+        style={{ background: CREAM, borderColor: LINE }}
       >
         <div>
-          <div className="text-[11px] font-semibold text-white leading-tight">Pulso de atención</div>
-          <div className="text-[9px] leading-tight mt-0.5" style={{ color: '#4A4A4A' }}>Últimos 30 días</div>
+          <div className="text-[11px] font-semibold leading-tight" style={{ color: INK }}>Pulso de atención</div>
+          <div className="text-[9px] leading-tight mt-0.5" style={{ color: SOFT }}>Últimos 30 días</div>
         </div>
         <span
-          className="text-[9px] font-medium px-2 py-1 rounded-full flex-shrink-0"
-          style={{ background: 'rgba(6,182,212,0.10)', color: ACCENT }}
+          className="text-[9px] font-semibold px-2 py-1 rounded-full flex-shrink-0"
+          style={{ background: '#FFFFFF', color: ACCENT, border: '1px solid rgba(6,182,212,0.3)' }}
         >
           Todos los canales
         </span>
       </div>
 
       {/* KPIs */}
-      <div className="grid grid-cols-3 divide-x" style={{ borderColor: '#1A1A1A' }}>
+      <div className="grid grid-cols-3 divide-x" style={{ borderColor: LINE }}>
         {KPIS.map((k, i) => (
           <motion.div
             key={k.label}
@@ -59,13 +65,13 @@ export default function SupportPulse() {
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: i * 0.1 }}
             className="px-4 py-5"
-            style={{ borderColor: '#1A1A1A' }}
+            style={{ borderColor: LINE }}
           >
-            <div className="text-2xl font-bold text-white leading-none tabular-nums">{k.value}</div>
-            <div className="text-[9px] font-medium mt-2 leading-tight" style={{ color: '#7A6E64' }}>
+            <div className="text-2xl font-bold leading-none tabular-nums" style={{ color: INK }}>{k.value}</div>
+            <div className="text-[9px] font-semibold mt-2 leading-tight" style={{ color: BODY }}>
               {k.label}
             </div>
-            <div className="text-[9px] mt-1 leading-tight" style={{ color: '#3E3E3E' }}>
+            <div className="text-[9px] mt-1 leading-tight" style={{ color: SOFT }}>
               {k.hint}
             </div>
           </motion.div>
@@ -73,13 +79,13 @@ export default function SupportPulse() {
       </div>
 
       {/* Volumen por hora */}
-      <div className="px-5 pt-5 pb-4 border-t" style={{ borderColor: '#1A1A1A' }}>
+      <div className="px-5 pt-5 pb-4 border-t" style={{ borderColor: LINE }}>
         <div className="flex items-center justify-between mb-3">
-          <span className="text-[9px] font-semibold uppercase tracking-widest" style={{ color: '#4A4A4A' }}>
+          <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: SOFT }}>
             Consultas por hora
           </span>
-          <span className="inline-flex items-center gap-1.5 text-[9px]" style={{ color: '#4A4A4A' }}>
-            <span className="w-2 h-2 rounded-sm" style={{ background: 'rgba(6,182,212,0.32)' }} />
+          <span className="inline-flex items-center gap-1.5 text-[9px] font-medium" style={{ color: SOFT }}>
+            <span className="w-2 h-2 rounded-sm" style={{ background: '#A9E0EF' }} />
             madrugada
           </span>
         </div>
@@ -95,14 +101,14 @@ export default function SupportPulse() {
               className="flex-1 rounded-[2px] min-w-0"
               style={{
                 background: isNight(hour.h)
-                  ? 'rgba(6,182,212,0.32)'
-                  : `linear-gradient(180deg, ${ACCENT} 0%, rgba(6,182,212,0.55) 100%)`,
+                  ? '#A9E0EF'
+                  : `linear-gradient(180deg, ${ACCENT_BRIGHT} 0%, #0891B2 100%)`,
               }}
             />
           ))}
         </div>
 
-        <div className="flex justify-between mt-2 text-[9px] tabular-nums" style={{ color: '#3E3E3E' }}>
+        <div className="flex justify-between mt-2 text-[9px] font-medium tabular-nums" style={{ color: SOFT }}>
           {['00', '06', '12', '18', '23'].map((label) => (
             <span key={label}>{label}</span>
           ))}
@@ -112,12 +118,12 @@ export default function SupportPulse() {
       {/* Footer */}
       <div
         className="px-5 py-3 border-t flex items-center justify-between gap-3"
-        style={{ borderColor: '#1A1A1A', background: '#0B0B0B' }}
+        style={{ borderColor: LINE, background: '#FBF9F6' }}
       >
-        <span className="text-[10px]" style={{ color: '#4A4A4A' }}>
+        <span className="text-[10px]" style={{ color: SOFT }}>
           Entre las 22 y las 7 entraron 130 consultas
         </span>
-        <span className="text-[10px] font-semibold flex-shrink-0" style={{ color: ACCENT }}>
+        <span className="text-[10px] font-bold flex-shrink-0" style={{ color: ACCENT }}>
           Todas atendidas
         </span>
       </div>

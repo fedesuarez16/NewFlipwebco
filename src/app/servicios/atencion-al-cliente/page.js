@@ -8,7 +8,16 @@ import SupportInbox from '@/components/SupportInbox'
 import SupportAgentConsole from '@/components/SupportAgentConsole'
 import SupportPulse from '@/components/SupportPulse'
 
-const ACCENT = '#06B6D4'
+/* Tema claro. `ACCENT` es el cian legible sobre fondo claro (contraste AA);
+   `ACCENT_BRIGHT` es el cian pleno y va SOLO en elementos gráficos —como texto
+   sobre blanco da 2,4:1 y es ilegible. */
+const ACCENT = '#0E7490'
+const ACCENT_BRIGHT = '#06B6D4'
+const INK = '#0A0A0A'
+const BODY = '#6B6055'
+const SOFT = '#9A8E83'
+const LINE = '#E2D9CC'
+const CREAM = '#F5EFE6'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -19,12 +28,13 @@ const fadeUp = {
   }),
 }
 
+/* Colores de canal oscurecidos para que se lean sobre fondo claro. */
 const channels = [
-  { name: 'WhatsApp', color: '#25D366' },
-  { name: 'Instagram', color: '#E1306C' },
-  { name: 'Chat web', color: '#06B6D4' },
-  { name: 'Email', color: '#9A8E83' },
-  { name: 'Messenger', color: '#0084FF' },
+  { name: 'WhatsApp', color: '#0D7A3E' },
+  { name: 'Instagram', color: '#C71E5E' },
+  { name: 'Chat web', color: '#0E7490' },
+  { name: 'Email', color: '#7A6E64' },
+  { name: 'Messenger', color: '#0068CC' },
 ]
 
 /* La comparación es el corazón de la sección del problema: misma consulta,
@@ -142,7 +152,7 @@ function Faq({ item, index }) {
       viewport={{ once: true }}
       transition={{ duration: 0.45, delay: index * 0.06 }}
       className="border-b"
-      style={{ borderColor: '#1A1A1A' }}
+      style={{ borderColor: LINE }}
     >
       <button
         type="button"
@@ -150,17 +160,20 @@ function Faq({ item, index }) {
         aria-expanded={open}
         className="w-full flex items-start justify-between gap-6 text-left py-6 group"
       >
-        <span className="text-base lg:text-lg font-semibold text-white leading-snug group-hover:text-[#EAE0D5] transition-colors">
+        <span
+          className="text-base lg:text-lg font-semibold leading-snug transition-colors"
+          style={{ color: open ? ACCENT : INK }}
+        >
           {item.q}
         </span>
         <span
           className="w-6 h-6 rounded-full border flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors"
-          style={{ borderColor: open ? 'rgba(6,182,212,0.4)' : '#2A2A2A' }}
+          style={{ borderColor: open ? 'rgba(6,182,212,0.5)' : LINE }}
         >
           <motion.svg
             className="w-3 h-3"
             fill="none"
-            stroke={open ? ACCENT : '#7A6E64'}
+            stroke={open ? ACCENT : SOFT}
             strokeWidth={2.5}
             viewBox="0 0 24 24"
             animate={{ rotate: open ? 45 : 0 }}
@@ -180,7 +193,7 @@ function Faq({ item, index }) {
             transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-6 pr-12 text-sm lg:text-base leading-relaxed" style={{ color: '#7A6E64' }}>
+            <p className="pb-6 pr-12 text-sm lg:text-base leading-relaxed" style={{ color: BODY }}>
               {item.a}
             </p>
           </motion.div>
@@ -195,10 +208,10 @@ export default function AtencionAlClientePage() {
     <>
       <Navbar />
 
-      <main style={{ background: '#0A0A0A', minHeight: '100vh' }}>
+      <main style={{ background: '#FFFFFF', minHeight: '100vh' }}>
 
         {/* ── HERO — centrado, con la bandeja en vivo debajo a todo el ancho ── */}
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden" style={{ borderBottom: '1px solid #1E1E1E' }}>
+        <section className="relative pt-32 pb-20 px-6 overflow-hidden" style={{ borderBottom: `1px solid ${LINE}` }}>
           <div
             className="absolute pointer-events-none"
             style={{
@@ -207,7 +220,7 @@ export default function AtencionAlClientePage() {
               transform: 'translateX(-50%)',
               width: '900px',
               height: '560px',
-              background: 'radial-gradient(ellipse at center, rgba(6,182,212,0.09) 0%, rgba(8,145,178,0.04) 42%, transparent 70%)',
+              background: 'radial-gradient(ellipse at center, rgba(6,182,212,0.14) 0%, rgba(6,182,212,0.05) 42%, transparent 70%)',
               filter: 'blur(70px)',
               zIndex: 0,
             }}
@@ -221,13 +234,13 @@ export default function AtencionAlClientePage() {
               animate="visible"
               custom={0}
               className="flex items-center gap-2 text-xs mb-12"
-              style={{ color: '#555' }}
+              style={{ color: '#B4A896' }}
             >
-              <Link href="/" className="hover:text-white transition-colors">Flipwebco</Link>
+              <Link href="/" className="transition-colors hover:text-[#0A0A0A]">Flipwebco</Link>
               <span>/</span>
-              <span style={{ color: '#888' }}>Servicios</span>
+              <span style={{ color: SOFT }}>Servicios</span>
               <span>/</span>
-              <span style={{ color: '#EAE0D5' }}>Atención al cliente</span>
+              <span style={{ color: BODY }}>Atención al cliente</span>
             </motion.div>
 
             <div className="text-center max-w-3xl mx-auto">
@@ -237,9 +250,9 @@ export default function AtencionAlClientePage() {
                 animate="visible"
                 custom={0.05}
                 className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full border mb-7"
-                style={{ color: ACCENT, borderColor: 'rgba(6,182,212,0.25)', background: 'rgba(6,182,212,0.06)' }}
+                style={{ color: ACCENT, borderColor: 'rgba(6,182,212,0.35)', background: 'rgba(6,182,212,0.07)' }}
               >
-                <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: ACCENT }} />
+                <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: ACCENT_BRIGHT }} />
                 Atención al cliente y soporte
               </motion.span>
 
@@ -248,10 +261,11 @@ export default function AtencionAlClientePage() {
                 initial="hidden"
                 animate="visible"
                 custom={0.12}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.08] tracking-tight mb-6"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6"
+                style={{ color: INK }}
               >
                 Automatizá la atención al cliente de tu empresa.{' '}
-                <span className="font-display font-normal italic" style={{ color: '#EAE0D5' }}>
+                <span className="font-display font-normal italic" style={{ color: SOFT }}>
                   Que responda sola, no cualquier cosa.
                 </span>
               </motion.h1>
@@ -262,7 +276,7 @@ export default function AtencionAlClientePage() {
                 animate="visible"
                 custom={0.2}
                 className="text-base lg:text-lg leading-relaxed mx-auto max-w-2xl"
-                style={{ color: '#7A6E64' }}
+                style={{ color: BODY }}
               >
                 Agentes de IA que atienden tus canales las 24 horas: responden en segundos, consultan tus sistemas para dar el dato real, resuelven la gestión completa y derivan a tu equipo cuando de verdad hace falta.
               </motion.p>
@@ -276,13 +290,15 @@ export default function AtencionAlClientePage() {
               >
                 <a
                   href="#contacto"
-                  className="inline-flex items-center gap-2 bg-white text-[#0A0A0A] font-semibold px-6 py-3 rounded-lg hover:bg-[#F5EFE6] transition-colors text-sm"
+                  className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm hover:bg-[#2A2A2A]"
+                  style={{ background: INK }}
                 >
                   Agendar diagnóstico gratuito →
                 </a>
                 <a
                   href="#como-funciona"
-                  className="inline-flex items-center gap-2 border border-[#2A2A2A] text-[#AAA] font-semibold px-6 py-3 rounded-lg hover:border-[#555] hover:text-white transition-colors text-sm"
+                  className="inline-flex items-center gap-2 border font-semibold px-6 py-3 rounded-lg transition-colors text-sm hover:border-[#0A0A0A] hover:text-[#0A0A0A]"
+                  style={{ borderColor: LINE, color: BODY }}
                 >
                   Ver cómo funciona
                 </a>
@@ -297,7 +313,7 @@ export default function AtencionAlClientePage() {
                 className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2.5"
               >
                 {channels.map((c) => (
-                  <span key={c.name} className="inline-flex items-center gap-1.5 text-xs font-medium" style={{ color: '#6A6058' }}>
+                  <span key={c.name} className="inline-flex items-center gap-1.5 text-xs font-medium" style={{ color: SOFT }}>
                     <span className="w-1.5 h-1.5 rounded-full" style={{ background: c.color }} />
                     {c.name}
                   </span>
@@ -319,7 +335,7 @@ export default function AtencionAlClientePage() {
         </section>
 
         {/* ── EL PROBLEMA — comparación fila por fila ── */}
-        <section className="py-24 px-6" style={{ borderBottom: '1px solid #1E1E1E' }}>
+        <section className="py-24 px-6" style={{ borderBottom: `1px solid ${LINE}` }}>
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -328,16 +344,16 @@ export default function AtencionAlClientePage() {
               transition={{ duration: 0.5 }}
               className="max-w-2xl mb-14"
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#7A6E64' }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                 El problema
               </span>
-              <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white leading-tight">
+              <h2 className="mt-3 text-3xl lg:text-4xl font-bold leading-tight" style={{ color: INK }}>
                 No es que tu equipo atienda mal.{' '}
-                <span className="font-display font-normal italic" style={{ color: '#EAE0D5' }}>
+                <span className="font-display font-normal italic" style={{ color: SOFT }}>
                   Es que atiende de a uno.
                 </span>
               </h2>
-              <p className="mt-4 text-base leading-relaxed" style={{ color: '#7A6E64' }}>
+              <p className="mt-4 text-base leading-relaxed" style={{ color: BODY }}>
                 Cinco personas contestando en serie no escalan, y peor: cada una contesta con su criterio y con lo que se acuerda. Mirá la misma situación de los dos lados.
               </p>
             </motion.div>
@@ -345,7 +361,7 @@ export default function AtencionAlClientePage() {
             {/* Encabezados de columna */}
             <div className="hidden md:grid md:grid-cols-[1.1fr_1fr_1fr] gap-6 pb-4 mb-2">
               <span />
-              <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: '#4A4A4A' }}>
+              <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                 Cómo se resuelve hoy
               </span>
               <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: ACCENT }}>
@@ -353,7 +369,7 @@ export default function AtencionAlClientePage() {
               </span>
             </div>
 
-            <div className="space-y-px" style={{ background: '#1A1A1A' }}>
+            <div className="space-y-px" style={{ background: LINE }}>
               {comparison.map((row, i) => (
                 <motion.div
                   key={row.moment}
@@ -362,15 +378,15 @@ export default function AtencionAlClientePage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.45, delay: i * 0.07 }}
                   className="grid md:grid-cols-[1.1fr_1fr_1fr] gap-3 md:gap-6 p-5 md:px-2 md:py-6"
-                  style={{ background: '#0A0A0A' }}
+                  style={{ background: '#FFFFFF' }}
                 >
-                  <div className="text-sm font-semibold text-white leading-snug">{row.moment}</div>
+                  <div className="text-sm font-semibold leading-snug" style={{ color: INK }}>{row.moment}</div>
 
                   <div className="flex gap-2.5 items-start">
-                    <span className="md:hidden text-[10px] font-semibold uppercase tracking-widest pt-0.5 flex-shrink-0" style={{ color: '#4A4A4A' }}>
+                    <span className="md:hidden text-[10px] font-semibold uppercase tracking-widest pt-0.5 flex-shrink-0" style={{ color: SOFT }}>
                       Hoy
                     </span>
-                    <p className="text-sm leading-relaxed" style={{ color: '#5A5049' }}>
+                    <p className="text-sm leading-relaxed" style={{ color: '#A0958A' }}>
                       {row.before}
                     </p>
                   </div>
@@ -379,7 +395,7 @@ export default function AtencionAlClientePage() {
                     <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke={ACCENT} strokeWidth={2} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
-                    <p className="text-sm leading-relaxed" style={{ color: '#AAA' }}>
+                    <p className="text-sm leading-relaxed" style={{ color: BODY }}>
                       {row.after}
                     </p>
                   </div>
@@ -390,7 +406,7 @@ export default function AtencionAlClientePage() {
         </section>
 
         {/* ── CÓMO FUNCIONA — recorrido de 4 pasos ── */}
-        <section id="como-funciona" className="py-24 px-6" style={{ borderBottom: '1px solid #1E1E1E' }}>
+        <section id="como-funciona" className="py-24 px-6" style={{ background: CREAM, borderBottom: `1px solid ${LINE}` }}>
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -399,16 +415,16 @@ export default function AtencionAlClientePage() {
               transition={{ duration: 0.5 }}
               className="max-w-2xl mb-16"
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#7A6E64' }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                 Cómo funciona
               </span>
-              <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white leading-tight">
+              <h2 className="mt-3 text-3xl lg:text-4xl font-bold leading-tight" style={{ color: INK }}>
                 El bot es la última parte del trabajo.{' '}
-                <span className="font-display font-normal italic" style={{ color: '#EAE0D5' }}>
+                <span className="font-display font-normal italic" style={{ color: '#7A6E5F' }}>
                   Y también la más fácil.
                 </span>
               </h2>
-              <p className="mt-4 text-base leading-relaxed" style={{ color: '#7A6E64' }}>
+              <p className="mt-4 text-base leading-relaxed" style={{ color: BODY }}>
                 Las dos primeras semanas no se escribe código: se ordena qué contesta tu empresa y con qué criterio. Automatizar una atención que nadie ordenó antes te da respuestas equivocadas, solo que más rápido y a más gente.
               </p>
             </motion.div>
@@ -417,7 +433,7 @@ export default function AtencionAlClientePage() {
               {/* Línea del recorrido */}
               <div
                 className="absolute left-[19px] top-3 bottom-3 w-px hidden sm:block"
-                style={{ background: 'linear-gradient(180deg, rgba(6,182,212,0.35) 0%, rgba(6,182,212,0.08) 100%)' }}
+                style={{ background: 'linear-gradient(180deg, rgba(6,182,212,0.55) 0%, rgba(6,182,212,0.12) 100%)' }}
               />
 
               <div className="space-y-10">
@@ -434,9 +450,9 @@ export default function AtencionAlClientePage() {
                     <div
                       className="hidden sm:flex absolute left-0 top-0 w-10 h-10 rounded-full items-center justify-center text-xs font-bold"
                       style={{
-                        background: '#0A0A0A',
-                        border: `1px solid ${i === 0 ? 'rgba(6,182,212,0.4)' : '#242424'}`,
-                        color: i === 0 ? ACCENT : '#7A6E64',
+                        background: '#FFFFFF',
+                        border: `1px solid ${i === 0 ? 'rgba(6,182,212,0.5)' : LINE}`,
+                        color: i === 0 ? ACCENT : SOFT,
                       }}
                     >
                       {item.step}
@@ -444,15 +460,15 @@ export default function AtencionAlClientePage() {
 
                     <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-2.5">
                       <span className="sm:hidden text-xs font-bold" style={{ color: ACCENT }}>{item.step}</span>
-                      <h3 className="text-xl lg:text-2xl font-bold text-white leading-tight">{item.title}</h3>
+                      <h3 className="text-xl lg:text-2xl font-bold leading-tight" style={{ color: INK }}>{item.title}</h3>
                       <span
                         className="text-[10px] font-semibold uppercase tracking-widest px-2 py-1 rounded-full border"
-                        style={{ color: '#7A6E64', borderColor: '#242424' }}
+                        style={{ color: SOFT, borderColor: '#DCCFBE', background: '#FFFFFF' }}
                       >
                         {item.duration}
                       </span>
                     </div>
-                    <p className="text-sm lg:text-base leading-relaxed max-w-2xl" style={{ color: '#7A6E64' }}>
+                    <p className="text-sm lg:text-base leading-relaxed max-w-2xl" style={{ color: BODY }}>
                       {item.desc}
                     </p>
                   </motion.div>
@@ -463,7 +479,7 @@ export default function AtencionAlClientePage() {
         </section>
 
         {/* ── EL AGENTE EN ACCIÓN ── */}
-        <section className="py-24 px-6" style={{ borderBottom: '1px solid #1E1E1E' }}>
+        <section className="py-24 px-6" style={{ borderBottom: `1px solid ${LINE}` }}>
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -472,16 +488,16 @@ export default function AtencionAlClientePage() {
               transition={{ duration: 0.5 }}
               className="max-w-2xl mb-12"
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#7A6E64' }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                 El agente en acción
               </span>
-              <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white leading-tight">
+              <h2 className="mt-3 text-3xl lg:text-4xl font-bold leading-tight" style={{ color: INK }}>
                 Un bot responde.{' '}
-                <span className="font-display font-normal italic" style={{ color: '#EAE0D5' }}>
+                <span className="font-display font-normal italic" style={{ color: SOFT }}>
                   Un agente resuelve.
                 </span>
               </h2>
-              <p className="mt-4 text-base leading-relaxed" style={{ color: '#7A6E64' }}>
+              <p className="mt-4 text-base leading-relaxed" style={{ color: BODY }}>
                 A la izquierda, lo que ve el cliente. A la derecha, lo que el agente consulta y ejecuta mientras conversa. Esa columna derecha es todo el servicio: sin acceso a tus sistemas, la conversación es humo.
               </p>
             </motion.div>
@@ -500,7 +516,7 @@ export default function AtencionAlClientePage() {
                 <span
                   key={tag}
                   className="text-xs px-3 py-1.5 rounded-full border"
-                  style={{ color: '#7A6E64', borderColor: '#2A2A2A' }}
+                  style={{ color: BODY, borderColor: LINE }}
                 >
                   {tag}
                 </span>
@@ -510,7 +526,7 @@ export default function AtencionAlClientePage() {
         </section>
 
         {/* ── QUÉ SÍ Y QUÉ NO ── */}
-        <section className="py-24 px-6" style={{ borderBottom: '1px solid #1E1E1E' }}>
+        <section className="py-24 px-6" style={{ background: CREAM, borderBottom: `1px solid ${LINE}` }}>
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -519,16 +535,16 @@ export default function AtencionAlClientePage() {
               transition={{ duration: 0.5 }}
               className="max-w-2xl mb-14"
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#7A6E64' }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                 Los límites
               </span>
-              <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white leading-tight">
+              <h2 className="mt-3 text-3xl lg:text-4xl font-bold leading-tight" style={{ color: INK }}>
                 Nadie automatiza el 100%.{' '}
-                <span className="font-display font-normal italic" style={{ color: '#EAE0D5' }}>
+                <span className="font-display font-normal italic" style={{ color: '#7A6E5F' }}>
                   Y el que te lo promete, miente.
                 </span>
               </h2>
-              <p className="mt-4 text-base leading-relaxed" style={{ color: '#7A6E64' }}>
+              <p className="mt-4 text-base leading-relaxed" style={{ color: BODY }}>
                 Definir qué NO va a tocar el agente es tan importante como definir qué sí. Esta lista se acuerda en la Fase 1 y queda escrita, para que no se descubra con el primer cliente enojado.
               </p>
             </motion.div>
@@ -540,10 +556,13 @@ export default function AtencionAlClientePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 className="rounded-2xl border p-8"
-                style={{ background: 'linear-gradient(160deg, rgba(6,182,212,0.05) 0%, #0D0D0D 55%)', borderColor: 'rgba(6,182,212,0.20)' }}
+                style={{
+                  background: 'linear-gradient(160deg, rgba(6,182,212,0.09) 0%, #FFFFFF 58%)',
+                  borderColor: 'rgba(6,182,212,0.35)',
+                }}
               >
                 <div className="flex items-baseline justify-between gap-3 mb-6">
-                  <h3 className="text-lg font-bold text-white leading-tight">El agente resuelve solo</h3>
+                  <h3 className="text-lg font-bold leading-tight" style={{ color: INK }}>El agente resuelve solo</h3>
                   <span className="text-2xl font-bold tabular-nums flex-shrink-0" style={{ color: ACCENT }}>87%</span>
                 </div>
                 <div className="space-y-3.5">
@@ -552,7 +571,7 @@ export default function AtencionAlClientePage() {
                       <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke={ACCENT} strokeWidth={2} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                       </svg>
-                      <span className="text-sm leading-relaxed" style={{ color: '#AAA' }}>{item}</span>
+                      <span className="text-sm leading-relaxed" style={{ color: BODY }}>{item}</span>
                     </div>
                   ))}
                 </div>
@@ -564,24 +583,24 @@ export default function AtencionAlClientePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="rounded-2xl border p-8"
-                style={{ background: '#0D0D0D', borderColor: '#1E1E1E' }}
+                style={{ background: '#FFFFFF', borderColor: LINE }}
               >
                 <div className="flex items-baseline justify-between gap-3 mb-6">
-                  <h3 className="text-lg font-bold text-white leading-tight">Siempre va a una persona</h3>
-                  <span className="text-2xl font-bold tabular-nums flex-shrink-0" style={{ color: '#9A8E83' }}>13%</span>
+                  <h3 className="text-lg font-bold leading-tight" style={{ color: INK }}>Siempre va a una persona</h3>
+                  <span className="text-2xl font-bold tabular-nums flex-shrink-0" style={{ color: '#7A6E5F' }}>13%</span>
                 </div>
                 <div className="space-y-3.5">
                   {alwaysHuman.map((item) => (
                     <div key={item} className="flex gap-3 items-start">
-                      <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="#9A8E83" strokeWidth={2} viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="#7A6E5F" strokeWidth={2} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                       </svg>
-                      <span className="text-sm leading-relaxed" style={{ color: '#7A6E64' }}>{item}</span>
+                      <span className="text-sm leading-relaxed" style={{ color: BODY }}>{item}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-7 pt-6 border-t" style={{ borderColor: '#1A1A1A' }}>
-                  <p className="text-sm font-medium leading-relaxed" style={{ color: '#EAE0D5' }}>
+                <div className="mt-7 pt-6 border-t" style={{ borderColor: LINE }}>
+                  <p className="text-sm font-semibold leading-relaxed" style={{ color: INK }}>
                     Ese 13% llega con el historial completo y la gestión explicada. Tu equipo decide, no investiga.
                   </p>
                 </div>
@@ -591,7 +610,7 @@ export default function AtencionAlClientePage() {
         </section>
 
         {/* ── EL PULSO — mockup de métricas ── */}
-        <section className="py-24 px-6" style={{ borderBottom: '1px solid #1E1E1E' }}>
+        <section className="py-24 px-6" style={{ borderBottom: `1px solid ${LINE}` }}>
           <div className="max-w-5xl mx-auto">
             <div className="grid lg:grid-cols-[1fr_1.15fr] gap-14 lg:gap-16 items-center">
               <motion.div
@@ -600,19 +619,19 @@ export default function AtencionAlClientePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#7A6E64' }}>
+                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                   El resultado
                 </span>
-                <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white leading-tight">
+                <h2 className="mt-3 text-3xl lg:text-4xl font-bold leading-tight" style={{ color: INK }}>
                   Tus clientes escriben a las tres de la mañana.{' '}
-                  <span className="font-display font-normal italic" style={{ color: '#EAE0D5' }}>
+                  <span className="font-display font-normal italic" style={{ color: SOFT }}>
                     Ahora vas a saber cuántos.
                   </span>
                 </h2>
-                <p className="mt-5 text-base leading-relaxed" style={{ color: '#7A6E64' }}>
+                <p className="mt-5 text-base leading-relaxed" style={{ color: BODY }}>
                   Mirá las barras de la madrugada. Esa es gente que consulta cuando puede, no cuando tu equipo está disponible. Hoy espera hasta la mañana siguiente y llega fría; con el sistema andando se atiende en el momento.
                 </p>
-                <p className="mt-4 text-base leading-relaxed" style={{ color: '#7A6E64' }}>
+                <p className="mt-4 text-base leading-relaxed" style={{ color: BODY }}>
                   Y todo lo demás también se mide: cuánto se tarda en responder, qué porcentaje se resuelve sin intervención, qué tipo de consulta se deriva más y qué tan conforme queda el cliente. Todo contra la línea de base que medimos antes de tocar nada.
                 </p>
               </motion.div>
@@ -630,7 +649,7 @@ export default function AtencionAlClientePage() {
         </section>
 
         {/* ── QUÉ RECIBÍS + INTEGRACIONES ── */}
-        <section className="py-24 px-6" style={{ borderBottom: '1px solid #1E1E1E' }}>
+        <section className="py-24 px-6" style={{ borderBottom: `1px solid ${LINE}` }}>
           <div className="max-w-5xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16">
               <motion.div
@@ -639,10 +658,10 @@ export default function AtencionAlClientePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#7A6E64' }}>
+                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                   Qué recibís
                 </span>
-                <h2 className="mt-3 text-3xl font-bold text-white leading-tight mb-7">
+                <h2 className="mt-3 text-3xl font-bold leading-tight mb-7" style={{ color: INK }}>
                   Entregables concretos, no diapositivas
                 </h2>
                 <div className="space-y-3">
@@ -651,7 +670,7 @@ export default function AtencionAlClientePage() {
                       <svg className="w-4 h-4 flex-shrink-0 mt-1" fill="none" stroke={ACCENT} strokeWidth={2} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                       </svg>
-                      <span className="text-sm leading-relaxed" style={{ color: '#AAA' }}>{d}</span>
+                      <span className="text-sm leading-relaxed" style={{ color: BODY }}>{d}</span>
                     </div>
                   ))}
                 </div>
@@ -663,13 +682,13 @@ export default function AtencionAlClientePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#7A6E64' }}>
+                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                   Integraciones
                 </span>
-                <h2 className="mt-3 text-3xl font-bold text-white leading-tight mb-7">
+                <h2 className="mt-3 text-3xl font-bold leading-tight mb-7" style={{ color: INK }}>
                   Se conecta a lo que ya usás
                 </h2>
-                <p className="text-sm leading-relaxed mb-7" style={{ color: '#7A6E64' }}>
+                <p className="text-sm leading-relaxed mb-7" style={{ color: BODY }}>
                   No te pedimos cambiar de mesa de ayuda ni migrar tus canales. Pedirte que migres de herramientas al mismo tiempo que automatizás es sumar un riesgo que no hace falta correr.
                 </p>
                 <div className="flex flex-wrap gap-3">
@@ -681,7 +700,7 @@ export default function AtencionAlClientePage() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: 0.1 + i * 0.05 }}
                       className="text-sm font-medium px-4 py-2 rounded-full border"
-                      style={{ color: '#EAE0D5', borderColor: '#2A2A2A', background: '#111' }}
+                      style={{ color: BODY, borderColor: LINE, background: '#FFFFFF' }}
                     >
                       {tech}
                     </motion.span>
@@ -693,7 +712,7 @@ export default function AtencionAlClientePage() {
         </section>
 
         {/* ── PREGUNTAS FRECUENTES ── */}
-        <section className="py-24 px-6" style={{ borderBottom: '1px solid #1E1E1E' }}>
+        <section className="py-24 px-6" style={{ borderBottom: `1px solid ${LINE}` }}>
           <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -702,18 +721,18 @@ export default function AtencionAlClientePage() {
               transition={{ duration: 0.5 }}
               className="mb-10"
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#7A6E64' }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                 Lo que siempre nos preguntan
               </span>
-              <h2 className="mt-3 text-3xl lg:text-4xl font-bold text-white leading-tight">
+              <h2 className="mt-3 text-3xl lg:text-4xl font-bold leading-tight" style={{ color: INK }}>
                 Las dudas razonables{' '}
-                <span className="font-display font-normal italic" style={{ color: '#EAE0D5' }}>
+                <span className="font-display font-normal italic" style={{ color: SOFT }}>
                   antes de firmar
                 </span>
               </h2>
             </motion.div>
 
-            <div style={{ borderTop: '1px solid #1A1A1A' }}>
+            <div style={{ borderTop: `1px solid ${LINE}` }}>
               {faqs.map((item, i) => (
                 <Faq key={item.q} item={item} index={i} />
               ))}
@@ -722,7 +741,7 @@ export default function AtencionAlClientePage() {
         </section>
 
         {/* ── CTA FINAL ── */}
-        <section id="contacto" className="py-28 px-6">
+        <section id="contacto" className="py-28 px-6" style={{ background: CREAM }}>
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -730,16 +749,16 @@ export default function AtencionAlClientePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#7A6E64' }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: SOFT }}>
                 Empecemos por el diagnóstico
               </span>
-              <h2 className="mt-4 text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
+              <h2 className="mt-4 text-4xl lg:text-5xl font-bold leading-tight tracking-tight" style={{ color: INK }}>
                 Veamos qué te preguntan tus clientes{' '}
-                <span className="font-display font-normal italic" style={{ color: '#EAE0D5' }}>
+                <span className="font-display font-normal italic" style={{ color: '#7A6E5F' }}>
                   hoy.
                 </span>
               </h2>
-              <p className="mt-5 text-base lg:text-lg leading-relaxed" style={{ color: '#7A6E64' }}>
+              <p className="mt-5 text-base lg:text-lg leading-relaxed" style={{ color: BODY }}>
                 En una llamada de 30 minutos revisamos el volumen y los tipos de consulta que recibe tu equipo, y te decimos qué porcentaje se puede resolver solo. Sin costo y sin compromiso: si no vemos una oportunidad clara, te lo decimos.
               </p>
               <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
@@ -747,13 +766,15 @@ export default function AtencionAlClientePage() {
                   href="https://api.whatsapp.com/send?phone=5491133370937"
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-white text-[#0A0A0A] font-semibold px-8 py-4 rounded-xl hover:bg-[#F5EFE6] transition-colors text-sm"
+                  className="text-white font-semibold px-8 py-4 rounded-xl transition-colors text-sm hover:bg-[#2A2A2A]"
+                  style={{ background: INK }}
                 >
                   Agendar diagnóstico gratuito →
                 </a>
                 <Link
                   href="/#servicios"
-                  className="border border-[#2A2A2A] text-[#AAA] font-semibold px-8 py-4 rounded-xl hover:border-[#555] hover:text-white transition-colors text-sm"
+                  className="border font-semibold px-8 py-4 rounded-xl transition-colors text-sm hover:border-[#0A0A0A] hover:text-[#0A0A0A]"
+                  style={{ borderColor: '#DCCFBE', color: BODY, background: '#FFFFFF' }}
                 >
                   Ver todos los servicios
                 </Link>
