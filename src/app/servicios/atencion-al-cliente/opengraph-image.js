@@ -10,20 +10,38 @@ export const contentType = 'image/png'
 const ACCENT = '#06B6D4'
 const MUTED = '#9A8E83'
 
-const CHANNELS = {
-  whatsapp: { label: 'WhatsApp', color: '#25D366' },
-  instagram: { label: 'Instagram', color: '#E1306C' },
-  web: { label: 'Chat web', color: '#06B6D4' },
-  email: { label: 'Email', color: '#9A8E83' },
-}
+const CHANNELS = [
+  { label: 'WhatsApp', color: '#25D366' },
+  { label: 'Instagram', color: '#E1306C' },
+  { label: 'Chat web', color: '#06B6D4' },
+  { label: 'Email', color: '#9A8E83' },
+]
 
-/* Misma bandeja que el hero: el ticket derivado sostiene la promesa de que
-   hay consultas que siempre terminan en una persona. */
+/* Tres consultas lado a lado en vez del panel vertical del hero: mismo relato,
+   otra UI. La tercera deriva a una persona — la promesa se sostiene también acá. */
 const TICKETS = [
-  { initials: 'MG', name: 'Martín G.', channel: 'whatsapp', text: '¿Dónde está mi pedido #4821?', status: '12s' },
-  { initials: 'CP', name: 'Carla P.', channel: 'instagram', text: '¿Hacen envíos a Córdoba capital?', status: '8s' },
-  { initials: 'JR', name: 'Julián R.', channel: 'email', text: 'Necesito la factura de septiembre', status: '21s' },
-  { initials: 'DA', name: 'Diego A.', channel: 'whatsapp', text: 'El producto llegó roto, quiero reclamar', status: 'Valeria', escalated: true },
+  {
+    initials: 'MG',
+    name: 'Martín G.',
+    channel: { label: 'WhatsApp', color: '#25D366' },
+    text: '¿Dónde está mi pedido #4821?',
+    status: 'Resuelto en 12s',
+  },
+  {
+    initials: 'CP',
+    name: 'Carla P.',
+    channel: { label: 'Instagram', color: '#E1306C' },
+    text: '¿Hacen envíos a Córdoba?',
+    status: 'Resuelto en 8s',
+  },
+  {
+    initials: 'DA',
+    name: 'Diego A.',
+    channel: { label: 'Chat web', color: '#06B6D4' },
+    text: 'Llegó roto, quiero reclamar',
+    status: 'Derivado a Valeria',
+    escalated: true,
+  },
 ]
 
 export default function Image() {
@@ -37,41 +55,42 @@ export default function Image() {
           width: '1200px',
           height: '630px',
           display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
           background: '#0A0A0A',
           fontFamily: 'Inter, system-ui, sans-serif',
           position: 'relative',
           overflow: 'hidden',
         }}
       >
-        {/* Glow cian de ambiente */}
+        {/* Glow centrado — refuerza la simetría del layout */}
         <div
           style={{
             position: 'absolute',
-            top: '-140px',
-            left: '-100px',
+            top: '-220px',
+            left: '190px',
             width: '820px',
-            height: '560px',
-            background: 'radial-gradient(ellipse at center, rgba(6,182,212,0.13) 0%, transparent 65%)',
-            filter: 'blur(60px)',
+            height: '620px',
+            background: 'radial-gradient(ellipse at center, rgba(6,182,212,0.16) 0%, transparent 66%)',
+            filter: 'blur(70px)',
             display: 'flex',
           }}
         />
 
-        {/* ── Columna de texto ── */}
+        {/* ── Bloque de texto centrado ── */}
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
-            width: '640px',
-            padding: '56px 0 56px 60px',
+            alignItems: 'center',
             position: 'relative',
+            padding: '0 70px',
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logo} style={{ height: '30px', objectFit: 'contain', marginBottom: '30px' }} alt="Flip" />
+          <img src={logo} style={{ height: '28px', objectFit: 'contain', marginBottom: '24px' }} alt="Flip" />
 
-          {/* Badge */}
           <div
             style={{
               display: 'flex',
@@ -81,8 +100,7 @@ export default function Image() {
               border: '1px solid rgba(6,182,212,0.3)',
               borderRadius: '999px',
               background: 'rgba(6,182,212,0.07)',
-              alignSelf: 'flex-start',
-              marginBottom: '24px',
+              marginBottom: '22px',
             }}
           >
             <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: ACCENT, display: 'flex' }} />
@@ -95,190 +113,160 @@ export default function Image() {
                 textTransform: 'uppercase',
               }}
             >
-              Atención al cliente
+              Atención al cliente y soporte
             </span>
           </div>
 
-          {/* Titular */}
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
+              alignItems: 'center',
               color: '#FFFFFF',
-              fontSize: '42px',
+              fontSize: '48px',
               fontWeight: 700,
-              lineHeight: 1.1,
-              letterSpacing: '-0.025em',
-              marginBottom: '20px',
+              lineHeight: 1.12,
+              letterSpacing: '-0.028em',
+              textAlign: 'center',
+              marginBottom: '18px',
             }}
           >
-            <span>Automatizá la atención al</span>
-            <span>cliente de tu empresa.</span>
+            <span>Automatizá la atención al cliente</span>
+            <span>de tu empresa.</span>
           </div>
 
-          {/* Bajada */}
           <div
             style={{
               display: 'flex',
               color: '#8A7E74',
-              fontSize: '19px',
-              lineHeight: 1.5,
-              maxWidth: '520px',
-              marginBottom: '32px',
+              fontSize: '20px',
+              lineHeight: 1.45,
+              textAlign: 'center',
+              maxWidth: '760px',
+              marginBottom: '38px',
             }}
           >
-            Agentes de IA que atienden 24/7, consultan tus sistemas y resuelven la gestión completa.
-          </div>
-
-          {/* Canales atendidos */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-            {Object.values(CHANNELS).map((c) => (
-              <div key={c.label} style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
-                <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: c.color, display: 'flex' }} />
-                <span style={{ color: '#6A6058', fontSize: '14px', fontWeight: 500 }}>{c.label}</span>
-              </div>
-            ))}
+            Agentes de IA que responden en segundos, consultan tus sistemas y resuelven la gestión completa.
           </div>
         </div>
 
-        {/* ── Mockup de la bandeja ── */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: '0 50px 0 0',
-            position: 'relative',
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              width: '450px',
-              borderRadius: '16px',
-              border: '1px solid #1E1E1E',
-              background: '#0D0D0D',
-              overflow: 'hidden',
-            }}
-          >
-            {/* Header de app */}
+        {/* ── Tres consultas resueltas, en fila ── */}
+        <div style={{ display: 'flex', gap: '20px', position: 'relative' }}>
+          {TICKETS.map((t) => (
             <div
+              key={t.initials}
               style={{
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: '14px 18px',
-                background: '#111111',
-                borderBottom: '1px solid #1E1E1E',
+                flexDirection: 'column',
+                width: '336px',
+                padding: '18px',
+                borderRadius: '14px',
+                border: `1px solid ${t.escalated ? '#1E1E1E' : 'rgba(6,182,212,0.22)'}`,
+                background: t.escalated
+                  ? '#0C0C0C'
+                  : 'linear-gradient(160deg, rgba(6,182,212,0.07) 0%, #0C0C0C 62%)',
               }}
             >
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <span style={{ color: '#FFFFFF', fontSize: '14px', fontWeight: 600 }}>Bandeja de atención</span>
-                <span style={{ color: '#4A4A4A', fontSize: '11px', marginTop: '2px' }}>4 canales conectados</span>
+              {/* Cliente y canal */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '30px',
+                    height: '30px',
+                    borderRadius: '50%',
+                    background: '#1E1E1E',
+                    color: MUTED,
+                    fontSize: '11px',
+                    fontWeight: 700,
+                  }}
+                >
+                  {t.initials}
+                </div>
+                <span style={{ color: '#FFFFFF', fontSize: '14px', fontWeight: 600 }}>{t.name}</span>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '5px',
+                    padding: '3px 8px',
+                    borderRadius: '5px',
+                    background: `${t.channel.color}14`,
+                  }}
+                >
+                  <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: t.channel.color, display: 'flex' }} />
+                  <span style={{ color: t.channel.color, fontSize: '11px', fontWeight: 500 }}>{t.channel.label}</span>
+                </div>
               </div>
+
+              {/* Consulta */}
+              <div style={{ display: 'flex', color: '#8A8A8A', fontSize: '14px', marginTop: '14px' }}>
+                {t.text}
+              </div>
+
+              {/* Resultado */}
               <div
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '6px',
-                  padding: '4px 10px',
-                  borderRadius: '999px',
-                  background: 'rgba(6,182,212,0.10)',
+                  gap: '7px',
+                  marginTop: '16px',
+                  paddingTop: '14px',
+                  borderTop: '1px solid #1A1A1A',
                 }}
               >
-                <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: ACCENT, display: 'flex' }} />
-                <span style={{ color: ACCENT, fontSize: '11px', fontWeight: 500 }}>En vivo</span>
+                {/* Los glifos ✓ y → no existen en la fuente de Satori: van como SVG. */}
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '17px',
+                    height: '17px',
+                    borderRadius: '50%',
+                    background: t.escalated ? 'rgba(154,142,131,0.18)' : ACCENT,
+                  }}
+                >
+                  <svg
+                    width="10"
+                    height="10"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke={t.escalated ? MUTED : '#0A0A0A'}
+                    strokeWidth={t.escalated ? 2.6 : 3.4}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d={t.escalated ? 'M4 12h15m0 0l-6-6m6 6l-6 6' : 'M4.5 12.75l6 6 9-13.5'} />
+                  </svg>
+                </div>
+                <span
+                  style={{
+                    color: t.escalated ? MUTED : ACCENT,
+                    fontSize: '13px',
+                    fontWeight: 600,
+                  }}
+                >
+                  {t.status}
+                </span>
               </div>
             </div>
-
-            {/* Tickets */}
-            <div style={{ display: 'flex', flexDirection: 'column', padding: '12px', gap: '8px' }}>
-              {TICKETS.map((t) => {
-                const channel = CHANNELS[t.channel]
-                return (
-                  <div
-                    key={t.initials}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                      padding: '11px 12px',
-                      borderRadius: '12px',
-                      border: '1px solid #1A1A1A',
-                      background: '#0B0B0B',
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        width: '28px',
-                        height: '28px',
-                        borderRadius: '50%',
-                        background: '#1E1E1E',
-                        color: MUTED,
-                        fontSize: '11px',
-                        fontWeight: 700,
-                      }}
-                    >
-                      {t.initials}
-                    </div>
-
-                    <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
-                        <span style={{ color: '#FFFFFF', fontSize: '12px', fontWeight: 600 }}>{t.name}</span>
-                        <div
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '4px',
-                            padding: '2px 6px',
-                            borderRadius: '4px',
-                            background: `${channel.color}14`,
-                          }}
-                        >
-                          <div style={{ width: '4px', height: '4px', borderRadius: '50%', background: channel.color, display: 'flex' }} />
-                          <span style={{ color: channel.color, fontSize: '10px', fontWeight: 500 }}>{channel.label}</span>
-                        </div>
-                      </div>
-                      <span style={{ color: '#4A4A4A', fontSize: '11px', marginTop: '3px' }}>{t.text}</span>
-                    </div>
-
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <span
-                        style={{
-                          color: t.escalated ? MUTED : ACCENT,
-                          fontSize: '11px',
-                          fontWeight: 700,
-                        }}
-                      >
-                        {t.escalated ? `→ ${t.status}` : `✓ ${t.status}`}
-                      </span>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-
-            {/* Footer */}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: '12px 18px',
-                borderTop: '1px solid #1A1A1A',
-                background: '#0B0B0B',
-              }}
-            >
-              <span style={{ color: '#4A4A4A', fontSize: '11px' }}>Tiempo de espera en cola</span>
-              <span style={{ color: ACCENT, fontSize: '11px', fontWeight: 600 }}>0 min · 0 personas</span>
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* Línea de acento inferior */}
+        {/* ── Canales atendidos ── */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '22px', marginTop: '34px', position: 'relative' }}>
+          {CHANNELS.map((c) => (
+            <div key={c.label} style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
+              <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: c.color, display: 'flex' }} />
+              <span style={{ color: '#5F564F', fontSize: '14px', fontWeight: 500 }}>{c.label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Línea de acento inferior — firma compartida con el resto del sitio */}
         <div
           style={{
             position: 'absolute',
