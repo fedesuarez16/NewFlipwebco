@@ -6,8 +6,9 @@
  *  - src/app/servicios/<slug>/layout.js → metadata
  *  - src/components/ServicesGrid        → tarjetas del home (number, title, description, tags)
  *
- * `automatizacion-de-ventas` NO vive acá: es el servicio destacado y tiene
- * página propia con mockups a medida.
+ * `automatizacion-de-ventas` y `atencion-al-cliente` NO viven acá: son los
+ * servicios destacados y tienen página propia con mockups a medida. Sus datos
+ * de tarjeta están en src/components/ServicesGrid.
  */
 
 export const services = {

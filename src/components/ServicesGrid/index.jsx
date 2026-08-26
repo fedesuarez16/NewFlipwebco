@@ -3,15 +3,61 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { serviceList } from '@/data/services'
 
-const featured = {
-  href: '/servicios/automatizacion-de-ventas',
-  eyebrow: 'Servicio destacado',
-  title: 'Automatización Integral de Ventas',
-  description:
-    'Primero diseñamos el embudo de ventas que tu empresa no tiene por escrito: etapas, criterios de avance y perfil de cliente ideal. Después construimos los agentes de IA que lo ejecutan solos — captación, calificación, contacto, agendamiento y seguimiento.',
-  tags: ['Embudo de ventas', 'Agentes de IA', 'CRM', 'WhatsApp'],
-  stages: ['Captación', 'Calificación', 'Contacto', 'Reunión', 'Propuesta', 'Cierre'],
-}
+/**
+ * Servicios destacados: tienen página propia con mockups a medida y no viven
+ * en `src/data/services.js`. `mini.kind` define la visualización de la columna
+ * derecha: 'funnel' se angosta etapa a etapa, 'list' mantiene el ancho. Un item
+ * con `muted: true` es el caso que NO se resuelve solo y va en tono neutro.
+ *
+ * `accentRgb` es el canal del acento sin alfa, para componer las variantes
+ * translúcidas en un solo lugar (ver `alpha`).
+ */
+const alpha = (rgb, a) => `rgba(${rgb},${a})`
+
+const featuredServices = [
+  {
+    href: '/servicios/automatizacion-de-ventas',
+    accent: '#10B981',
+    accentRgb: '16,185,129',
+    eyebrow: 'Servicio destacado',
+    title: 'Automatización Integral de Ventas',
+    description:
+      'Primero diseñamos el embudo de ventas que tu empresa no tiene por escrito: etapas, criterios de avance y perfil de cliente ideal. Después construimos los agentes de IA que lo ejecutan solos — captación, calificación, contacto, agendamiento y seguimiento.',
+    tags: ['Embudo de ventas', 'Agentes de IA', 'CRM', 'WhatsApp'],
+    mini: {
+      kind: 'funnel',
+      items: [
+        { label: 'Captación' },
+        { label: 'Calificación' },
+        { label: 'Contacto' },
+        { label: 'Reunión' },
+        { label: 'Propuesta' },
+        { label: 'Cierre' },
+      ],
+    },
+  },
+  {
+    href: '/servicios/atencion-al-cliente',
+    accent: '#06B6D4',
+    accentRgb: '6,182,212',
+    eyebrow: 'Servicio destacado',
+    title: 'Automatización de Atención al Cliente',
+    description:
+      'Primero mapeamos qué te preguntan de verdad tus clientes y cuál es la respuesta correcta a cada cosa. Después construimos los agentes de IA que atienden solos — responden en segundos, consultan tus sistemas, resuelven la gestión y derivan a tu equipo cuando de verdad hace falta.',
+    tags: ['Soporte 24/7', 'Agentes de IA', 'WhatsApp', 'Mesa de ayuda'],
+    mini: {
+      kind: 'list',
+      items: [
+        { label: '¿Dónde está mi pedido?', value: '12s' },
+        { label: '¿Hacen envíos a Córdoba?', value: '8s' },
+        { label: 'Necesito mi factura', value: '21s' },
+        { label: 'Quiero cambiar el talle', value: '34s' },
+        { label: '¿Reprogramo el turno?', value: '16s' },
+        { label: 'Llegó roto, quiero reclamar', value: '→ Valeria', muted: true },
+      ],
+    },
+  },
+]
 
 export default function ServicesGrid() {
   return (
@@ -31,92 +77,119 @@ export default function ServicesGrid() {
           </p>
         </div>
 
-        {/* Servicio destacado */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
-          className="mb-12"
-        >
-          <Link
-            href={featured.href}
-            className="group block rounded-2xl overflow-hidden border transition-colors duration-300"
-            style={{ background: '#0A0A0A', borderColor: '#1E1E1E' }}
-          >
-            <div className="grid lg:grid-cols-[1.35fr_1fr]">
-              {/* Texto */}
-              <div className="p-8 lg:p-11">
-                <span
-                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full border"
-                  style={{ color: '#10B981', borderColor: 'rgba(16,185,129,0.25)', background: 'rgba(16,185,129,0.06)' }}
-                >
-                  <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: '#10B981' }} />
-                  {featured.eyebrow}
-                </span>
-
-                <h3 className="mt-6 text-2xl lg:text-3xl font-bold text-white leading-snug">
-                  {featured.title}
-                </h3>
-                <p className="mt-4 text-sm lg:text-base leading-relaxed" style={{ color: '#7A6E64' }}>
-                  {featured.description}
-                </p>
-
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {featured.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs font-medium px-2.5 py-1 rounded-full border"
-                      style={{ color: '#9A8E83', borderColor: '#2A2A2A' }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white">
-                  Ver el servicio
-                  <svg
-                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
-              </div>
-
-              {/* Mini embudo */}
-              <div
-                className="hidden lg:flex flex-col justify-center gap-2 p-11 border-l"
-                style={{ borderColor: '#1A1A1A', background: '#0D0D0D' }}
+        {/* Servicios destacados */}
+        <div className="mb-12 space-y-6">
+          {featuredServices.map((service) => (
+            <motion.div
+              key={service.href}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
+            >
+              <Link
+                href={service.href}
+                className="group block rounded-2xl overflow-hidden border transition-colors duration-300"
+                style={{ background: '#0A0A0A', borderColor: '#1E1E1E' }}
               >
-                {featured.stages.map((stage, i) => (
-                  <motion.div
-                    key={stage}
-                    initial={{ opacity: 0, x: 12 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.15 + i * 0.08 }}
-                    className="rounded-lg px-3 py-2 flex items-center gap-2.5 mx-auto w-full"
-                    style={{
-                      maxWidth: `${100 - i * 11}%`,
-                      border: '1px solid rgba(16,185,129,0.22)',
-                      background: 'linear-gradient(90deg, rgba(16,185,129,0.12) 0%, rgba(16,185,129,0.03) 100%)',
-                    }}
-                  >
-                    <span className="text-[10px] font-bold" style={{ color: '#10B981' }}>
-                      {String(i + 1).padStart(2, '0')}
+                <div className="grid lg:grid-cols-[1.35fr_1fr]">
+                  {/* Texto */}
+                  <div className="p-8 lg:p-11">
+                    <span
+                      className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full border"
+                      style={{
+                        color: service.accent,
+                        borderColor: alpha(service.accentRgb, 0.25),
+                        background: alpha(service.accentRgb, 0.06),
+                      }}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: service.accent }} />
+                      {service.eyebrow}
                     </span>
-                    <span className="text-xs font-medium text-white truncate">{stage}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </Link>
-        </motion.div>
+
+                    <h3 className="mt-6 text-2xl lg:text-3xl font-bold text-white leading-snug">
+                      {service.title}
+                    </h3>
+                    <p className="mt-4 text-sm lg:text-base leading-relaxed" style={{ color: '#7A6E64' }}>
+                      {service.description}
+                    </p>
+
+                    <div className="mt-7 flex flex-wrap gap-2">
+                      {service.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs font-medium px-2.5 py-1 rounded-full border"
+                          style={{ color: '#9A8E83', borderColor: '#2A2A2A' }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white">
+                      Ver el servicio
+                      <svg
+                        className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </span>
+                  </div>
+
+                  {/* Mini visualización: embudo que se angosta o lista de consultas */}
+                  <div
+                    className="hidden lg:flex flex-col justify-center gap-2 p-11 border-l"
+                    style={{ borderColor: '#1A1A1A', background: '#0D0D0D' }}
+                  >
+                    {service.mini.items.map((item, i) => {
+                      const isFunnel = service.mini.kind === 'funnel'
+                      /* `muted` marca el caso que NO se resuelve solo: va en tono neutro. */
+                      const isNeutral = Boolean(item.muted)
+
+                      return (
+                        <motion.div
+                          key={item.label}
+                          initial={{ opacity: 0, x: 12 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: 0.15 + i * 0.08 }}
+                          className="rounded-lg px-3 py-2 flex items-center gap-2.5 mx-auto w-full"
+                          style={{
+                            maxWidth: isFunnel ? `${100 - i * 11}%` : '100%',
+                            border: `1px solid ${isNeutral ? 'rgba(154,142,131,0.22)' : alpha(service.accentRgb, 0.22)}`,
+                            background: isNeutral
+                              ? 'linear-gradient(90deg, rgba(154,142,131,0.10) 0%, rgba(154,142,131,0.02) 100%)'
+                              : `linear-gradient(90deg, ${alpha(service.accentRgb, 0.12)} 0%, ${alpha(service.accentRgb, 0.03)} 100%)`,
+                          }}
+                        >
+                          <span
+                            className="text-[10px] font-bold flex-shrink-0"
+                            style={{ color: isNeutral ? '#9A8E83' : service.accent }}
+                          >
+                            {String(i + 1).padStart(2, '0')}
+                          </span>
+                          <span className="text-xs font-medium text-white truncate">{item.label}</span>
+                          {item.value && (
+                            <span
+                              className="ml-auto text-[10px] font-semibold tabular-nums flex-shrink-0"
+                              style={{ color: isNeutral ? '#9A8E83' : service.accent }}
+                            >
+                              {item.value}
+                            </span>
+                          )}
+                        </motion.div>
+                      )
+                    })}
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E2D9CC]">
